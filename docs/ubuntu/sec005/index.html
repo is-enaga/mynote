@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="メール送信 Linuxサーバーからメールを送信する． ここではG" />
+  <meta name="description" content="GitHub リポジトリの作成からプッシュまでの流れ GitHub上でリポ" />
 
   
   <link rel="alternate" hreflang="ja" href="https://example.com/mynote/docs/ubuntu/sec005/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://example.com/mynote/docs/ubuntu/sec005/" />
-  <meta property="og:title" content="第5章　応用 | K-Notes" />
-  <meta property="og:description" content="メール送信 Linuxサーバーからメールを送信する． ここではG" /><meta property="og:image" content="https://example.com/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第5章　Git | K-Notes" />
+  <meta property="og:description" content="GitHub リポジトリの作成からプッシュまでの流れ GitHub上でリポ" /><meta property="og:image" content="https://example.com/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://example.com/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第5章　応用 | K-Notes</title>
+  <title>第5章　Git | K-Notes</title>
 
   
   
@@ -812,14 +812,14 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec005/"
     
-  >第5章　応用
+  >第5章　Git
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#%e3%83%a1%e3%83%bc%e3%83%ab%e9%80%81%e4%bf%a1"
+                href="#github"
                 class="hb-docs-link"
-              >メール送信</a>
+              >GitHub</a>
             </li>
           </ul>
   
@@ -829,7 +829,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec006/"
     
-  >第6章　Bash
+  >第6章　応用
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1098,7 +1098,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec005/"
     
-  >第5章　応用
+  >第5章　Git
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1106,7 +1106,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec006/"
     
-  >第6章　Bash
+  >第6章　応用
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1159,7 +1159,13 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%a1%e3%83%bc%e3%83%ab%e9%80%81%e4%bf%a1">メール送信</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#github">GitHub</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%8b%e3%82%89%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5%e3%81%be%e3%81%a7%e3%81%ae%e6%b5%81%e3%82%8c">リポジトリの作成からプッシュまでの流れ</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%81%ae%e5%bc%b7%e5%88%b6%e4%b8%8a%e6%9b%b8%e3%81%8d">リモートの強制上書き</a>
       </li></ul>
 
 
@@ -1186,40 +1192,50 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://example.com/mynote/ubuntu/">Ubuntu</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第5章　応用</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第5章　Git</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第5章　応用</h1>
+        <h1>第5章　Git</h1>
         <!-- ######################################### -->
 <!-- =================================== -->
-<h2 id="メール送信">メール送信</h2>
+<h2 id="github">GitHub</h2>
 <!-- =================================== -->
-<p>Linuxサーバーからメールを送信する．
-ここではG-mailアカウントを使用する場合を考える．</p>
-<p>パッケージインストール</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ssmtp</span>
-</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">mailutils</span>
-</span></span></code></pre></div><p>設定ファイルの書き換え</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssmtp</span><span class="o">/</span><span class="n">ssmtp</span><span class="o">.</span><span class="n">conf</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">root</span><span class="o">=&lt;</span><span class="n">your</span> <span class="n">address</span><span class="o">&gt;</span><span class="nd">@gmail.com</span>
-</span></span><span class="line"><span class="cl"><span class="n">mailhub</span><span class="o">=</span><span class="n">smtp</span><span class="o">.</span><span class="n">gmal</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="mi">587</span>
-</span></span><span class="line"><span class="cl"><span class="n">rewriteDomain</span><span class="o">=</span><span class="n">gmail</span><span class="o">.</span><span class="n">com</span>
-</span></span><span class="line"><span class="cl"><span class="n">hostname</span><span class="o">=</span><span class="n">gmail</span><span class="o">.</span><span class="n">com</span>
-</span></span><span class="line"><span class="cl"><span class="n">AuthUser</span><span class="o">=&lt;</span><span class="n">your</span> <span class="n">address</span><span class="o">&gt;</span><span class="nd">@gmail.com</span>
-</span></span><span class="line"><span class="cl"><span class="n">AuthPass</span><span class="o">=&lt;</span><span class="n">Googleのアプリパスワード</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="n">AuthMethod</span><span class="o">=</span><span class="n">LOGIN</span>
-</span></span><span class="line"><span class="cl"><span class="n">UserSTARTTLS</span><span class="o">=</span><span class="n">YES</span>
-</span></span><span class="line"><span class="cl"><span class="n">FromLineOverride</span><span class="o">=</span><span class="n">YES</span>
-</span></span></code></pre></div><p>設定ファイルの権限の書き換え</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">chmod</span> <span class="mi">610</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ssmtp</span>
-</span></span></code></pre></div><p>以上で完了．
-テストとして以下のようにしてメールを送信してみると良い．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">echo</span> <span class="s2">&#34;&lt;text&gt;&#34;</span> <span class="o">|</span> <span class="n">mail</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&#34;&lt;title&gt;&#34;</span> <span class="o">&lt;</span><span class="n">宛先</span><span class="o">&gt;</span>
-</span></span></code></pre></div><p>\input{../hugo/hugo.tex}
-%</p>
+<!-- ---------------------------------- -->
+<h3 id="リポジトリの作成からプッシュまでの流れ">リポジトリの作成からプッシュまでの流れ</h3>
+<!-- ---------------------------------- -->
+<p>GitHub上でリポジトリを作成し，
+ローカルファイルを初めてリモートにプッシュするまでの手順を示す．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">init</span>
+</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;&lt;message&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">URL</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</span></span></code></pre></div><p>git initでリポジトリを作成する．
+git add .はすべてのファイルをステージングする．
+git commit -m &ldquo;<message>&ldquo;でコミットする．
+git remote add origin <URL>でリモートリポジトリを追加する．
+git push -u origin masterでリモートリポジトリにプッシュする．</p>
+<p>GitHubを使わずローカルでのみ管理する場合は，
+commitまでで十分である．</p>
+<!-- ---------------------------------- -->
+<h3 id="リモートの強制上書き">リモートの強制上書き</h3>
+<!-- ---------------------------------- -->
+<p>git push origin mainを試みるとき，
+リモートとローカルの食い違いが原因で次のようなエラーが出る場合がある：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">To</span> <span class="o">&lt;</span><span class="n">remoteのurl</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="err">!</span> <span class="p">[</span><span class="n">rejected</span><span class="p">]</span>        <span class="n">main</span> <span class="o">-&gt;</span> <span class="n">main</span> <span class="p">(</span><span class="n">fetch</span> <span class="n">first</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">error</span><span class="p">:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">push</span> <span class="n">some</span> <span class="n">refs</span> <span class="n">to</span> <span class="s1">&#39;https://github.com/is-enaga/mynote.git&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="n">Updates</span> <span class="n">were</span> <span class="n">rejected</span> <span class="n">because</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">contains</span> <span class="n">work</span> <span class="n">that</span> <span class="n">you</span> <span class="n">do</span>
+</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">locally</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">usually</span> <span class="n">caused</span> <span class="n">by</span> <span class="n">another</span> <span class="n">repository</span> <span class="n">pushing</span>
+</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="n">to</span> <span class="n">the</span> <span class="n">same</span> <span class="n">ref</span><span class="o">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">want</span> <span class="n">to</span> <span class="n">first</span> <span class="n">integrate</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="s1">&#39;git pull ...&#39;</span><span class="p">)</span> <span class="n">before</span> <span class="n">pushing</span> <span class="n">again</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="n">See</span> <span class="n">the</span> <span class="s1">&#39;Note about fast-forwards&#39;</span> <span class="ow">in</span> <span class="s1">&#39;git push --help&#39;</span> <span class="k">for</span> <span class="n">details</span><span class="o">.</span>
+</span></span></code></pre></div><p>このとき以下のように-fオプションで強制的にプッシュできる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span> <span class="n">origin</span> <span class="n">main</span>
+</span></span></code></pre></div><!-- ######################################### -->
 
       </div>
 
@@ -1259,7 +1275,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第6章　Bash</span
+            >第6章　応用</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
