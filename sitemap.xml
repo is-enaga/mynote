@@ -8,6 +8,9 @@
     <loc>https://example.com/mynote/docs/ubuntu/sec001/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>https://example.com/mynote/docs/win/sec001/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://example.com/mynote/docs/plt/sec001/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
