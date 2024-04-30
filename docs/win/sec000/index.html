@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="直線 以下の方法では，直線が通る１点と傾きを与えることで，無限" />
+  <meta name="description" content="WINフォーマット 詳しくは以下を参照： https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/winformat.html WINフォーマットは" />
 
   
-  <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/plt/sec003/" />
+  <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/win/sec000/" />
 
   
   
@@ -199,7 +199,7 @@
   <link rel="icon" type="image/png" href="/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://is-enaga.github.io/mynote/docs/plt/sec003/" />
+  <link rel="canonical" href="https://is-enaga.github.io/mynote/docs/win/sec000/" />
 
   
   
@@ -225,9 +225,9 @@
     <meta property="twitter:creator" content="@地球物理のためのツール" />
   
   <meta property="og:site_name" content="K-Notes" />
-  <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/plt/sec003/" />
-  <meta property="og:title" content="第3章　図のプロット | K-Notes" />
-  <meta property="og:description" content="直線 以下の方法では，直線が通る１点と傾きを与えることで，無限" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/win/sec000/" />
+  <meta property="og:title" content="第2章　WINおよびhypomh関連ファイルのフォーマット | K-Notes" />
+  <meta property="og:description" content="WINフォーマット 詳しくは以下を参照： https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/winformat.html WINフォーマットは" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第3章　図のプロット | K-Notes</title>
+  <title>第2章　WINおよびhypomh関連ファイルのフォーマット | K-Notes</title>
 
   
   
@@ -320,6 +320,140 @@
 
 
 
+
+  
+  
+  <link type="text/css" rel="stylesheet" href="/mynote/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
+  
+  
+  <script defer src="/mynote/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
+  
+  
+  
+  
+  <script defer src="/mynote/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
 
 
 
@@ -711,7 +845,7 @@
               
             </li></ul>
       </div>
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/plt/"
@@ -738,28 +872,13 @@
   >第2章　軸・ラベル・枠
     </a>
               
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
   >第3章　図のプロット
     </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#%e7%9b%b4%e7%b7%9a"
-                class="hb-docs-link"
-              >直線</a>
-            </li>
-          <li>
-              <a
-                href="#2%e6%ac%a1%e5%85%83%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5-pcolormesh"
-                class="hb-docs-link"
-              >2次元カラーメッシュ pcolormesh</a>
-            </li>
-          </ul>
-  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -848,7 +967,7 @@
               
             </li></ul>
       </div>
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/win/"
@@ -875,13 +994,28 @@
   >第1章　WINシステムのインストール
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/win/sec000/"
     
   >第2章　WINおよびhypomh関連ファイルのフォーマット
     </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#win%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88"
+                class="hb-docs-link"
+              >WINフォーマット</a>
+            </li>
+          <li>
+              <a
+                href="#%e9%80%9f%e5%ba%a6%e6%a7%8b%e9%80%a0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab"
+                class="hb-docs-link"
+              >速度構造ファイル</a>
+            </li>
+          </ul>
+  
               
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -1042,7 +1176,7 @@
               
             </li></ul>
       </div></li>
-        <li class="open"><a
+        <li class=""><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/plt/"
@@ -1068,9 +1202,9 @@
   >第2章　軸・ラベル・枠
     </a>
               
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
   >第3章　図のプロット
@@ -1162,7 +1296,7 @@
               
             </li></ul>
       </div></li>
-        <li class=""><a
+        <li class="open"><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/win/"
@@ -1188,9 +1322,9 @@
   >第1章　WINシステムのインストール
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/win/sec000/"
     
   >第2章　WINおよびhypomh関連ファイルのフォーマット
@@ -1239,13 +1373,13 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%b4%e7%b7%9a">直線</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#win%e3%83%95%e3%82%a9%e3%83%bc%e3%83%9e%e3%83%83%e3%83%88">WINフォーマット</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2%e6%ac%a1%e5%85%83%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5-pcolormesh">2次元カラーメッシュ pcolormesh</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#1%e7%a7%92%e3%83%87%e3%83%bc%e3%82%bf">1秒データ</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5%e5%a2%83%e7%95%8c%e7%b7%9a">メッシュ境界線</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%80%9f%e5%ba%a6%e6%a7%8b%e9%80%a0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab">速度構造ファイル</a>
       </li></ul>
 
 
@@ -1271,40 +1405,138 @@
         <a href="https://is-enaga.github.io/mynote/docs/">個人的ノート集トップ</a>
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
-        <a href="https://is-enaga.github.io/mynote/plt/">Matplotlib</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第3章　図のプロット</div>
+        <a href="https://is-enaga.github.io/mynote/win/">WIN（地震学）</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第2章　WINおよびhypomh関連ファイルのフォーマット</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第3章　図のプロット</h1>
-        <h2 id="直線">直線</h2>
-<p>以下の方法では，直線が通る１点と傾きを与えることで，無限に続く直線をプロットできる．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="o">&lt;</span><span class="n">x</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">y</span><span class="o">&gt;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">slope</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">傾き</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;&lt;style&gt;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">linewidth</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;&lt;color&gt;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p>あるいはslopeの代わりに２点目の座標を与えることで２点を通る直線をプロットできる．</p>
-<h2 id="2次元カラーメッシュ-pcolormesh">2次元カラーメッシュ pcolormesh</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="o">&lt;</span><span class="mi">2</span><span class="n">D</span> <span class="n">data</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
-</span></span></code></pre></div><h3 id="メッシュ境界線">メッシュ境界線</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">edgecolors</span> <span class="o">=</span> <span class="s1">&#39;&lt;none, etc.&gt;&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">)</span>
-</span></span></code></pre></div><p>&rsquo;none&rsquo;にするとメッシュの境界線を描画しない．</p>
-<!--  ### メッシュの塗りつぶし方式 -->
-<!--  ```python -->
-<!--  plt.pcolormesh( -->
-<!--      ..., -->
-<!--      shading = '<flat: 均一 / gouraud: グラデーション>' -->
-<!--      ...) -->
-<!--   ``` -->
+        <h1>第2章　WINおよびhypomh関連ファイルのフォーマット</h1>
+        <!-- ######################################### -->
+<!-- =================================== -->
+<h2 id="winフォーマット">WINフォーマット</h2>
+<!-- =================================== -->
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300">詳しくは以下を参照：
+<a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/winformat.html" target="_blank" rel="noopener">https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/winformat.html</a></span>
+</div>
+<p>WINフォーマットはバイナリ列のデータで，
+あらかじめ定められた先頭からのByte数を基準に，
+どこに何の情報が入っているかが決まっている．</p>
+<p>1秒長がデータの1単位で，
+1秒長のファイルをLinuxのcatコマンドなどで結合することで，より長い時間長のデータを構成することができる．</p>
+<!-- ---------------------------------- -->
+<h3 id="1秒データ">1秒データ</h3>
+<!-- ---------------------------------- -->
+<p>WINフォーマットは各1秒長データ内で完結している．
+具体的には1秒データごとに開始時刻，サンプリングレート，チャンネル名などの最低限の情報が入っている．</p>
+<!-- =================================== -->
+<h2 id="速度構造ファイル">速度構造ファイル</h2>
+<!-- =================================== -->
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300">参考：
+<a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html" target="_blank" rel="noopener">https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html</a></span>
+</div>
+<p>震源決定プログラムhypomhで用いられる速度構造ファイルについて記す．</p>
+<p>hypomhの説明ではstanファイルと記されている．
+行ごとに内容が定められ，かつ固定長である．</p>
+<p>P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])構造だけを指定する．
+深さは0から始まり，km単位で各層の厚さを指定する．</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><p>仕様:</p>
+<ul>
+<li>S波速度Vsは, Vp/Vs=1.73として扱われる．</li>
+<li>標高0kmより高い部分のVpは，0kmにおけるVpとする．</li>
+<li>層の数の上限は20.(層の厚さは21個まで, Vpの数は22個まで)．</li>
+</ul></span>
+</div>
+<!--  %............................. -->
+<!--  #### 1行目　初期震源 -->
+<!--  %............................. -->
+<!--  hypomhの初期震源の位置 -->
+<!--  1分データのフォーマットは以下のようになっている． -->
+<!--  \begin{table}[H] -->
+<!--    \caption{WINフォーマット1秒ブロックの構成} -->
+<!--    \centering -->
+<!--      \begin{tabular}{lllllll} -->
+<!--      \toprule             % --- booktabs: 上の罫線 --- -->
+<!--      BBBB& -->
+<!--      bbbbbbbb& -->
+<!--      BB& -->
+<!--      b&bB& -->
+<!--      BBBB& -->
+<!--      ...   -->
+<!--      \midrule -->
+<!--      ファイルサイズ& -->
+<!--      yymmddHHMMDD& -->
+<!--      チャネル番号& -->
+<!--      サンプルサイズ& -->
+<!--      サンプリングレート& -->
+<!--      1サンプル目& -->
+<!--      ...   -->
+<!--      \bottomrule          % --- booktabs: 底の罫線 --- -->
+<!--      \end{tabular} -->
+<!--  \end{table} -->
+<!--  \begin{table}[H] -->
+<!--    \caption{WINフォーマット1秒ブロックの構成} -->
+<!--    \centering -->
+<!--      \begin{tabular}{lcrrrrrrrc} -->
+<!--      \toprule             % --- booktabs: 上の罫線 --- -->
+<!--      ヘッダー &  -->
+<!--      秒ヘッダー &  -->
+<!--      \multicolumn{4}{l}{1チャネル}& -->
+<!--      2チャネル& -->
+<!--      ...   -->
+<!--      \cmidrule(lr){3-6} -->
+<!--      & -->
+<!--      & -->
+<!--      チャネル番号 & サンプルサイズ & サンプリングレート (Hz) & 振幅データ & -->
+<!--      & -->
+<!--      ...   -->
+<!--      \midrule -->
+<!--      4& -->
+<!--      4& -->
+<!--      2 & 0.5 & 1.5 & 可変& -->
+<!--      & -->
+<!--      ...   -->
+<!--      \bottomrule          % --- booktabs: 底の罫線 --- -->
+<!--      \end{tabular} -->
+<!--  \end{table} -->
+<!--  \begin{table}[H] -->
+<!--   \caption{SI組立単位} -->
+<!--    -->
+<!--   \centering -->
+<!--    \begin{tabular}{lcrrrrrrrc} -->
+<!--     \toprule             % --- booktabs: 上の罫線 --- -->
+<!--     物理量 & 単位 & \multicolumn{7}{l}{SI単位系の基本単位} & 他の単位    -->
+<!--     \cmidrule(lr){3-9}   % --- booktabs: 3 から 9 列の罫線 --- -->
+<!--         & 記号 & m & kg & s & A & K & mol & cd    -->
+<!--     \midrule             % --- booktabs: 中間の罫線 --- -->
+<!--     力 & N & 1 & 1 & -2 & & & & &    -->
+<!--     エネルギー & J & 2 & 1 & -2 & & & & & N $\cdot$ 
+m    -->
+<!--     仕事率 & W & 2 & 1 & -3 & & & & & J $\cdot$ 
+s $^{-1}$ 
+    -->
+<!--     \addlinespace[5mm]   % --- booktabs: 行間スペース --- -->
+<!--     電圧 & V & 2 & 1 & -3 & -1 & & & & W $\cdot$ 
+A $^{-1}$ 
+    -->
+<!--     磁束 & Wb & 2 & 1 & -2 & -1 & & & & V $\cdot$ 
+s    -->
+<!--     \bottomrule          % --- booktabs: 底の罫線 --- -->
+<!--    \end{tabular} -->
+<!--  \end{table} -->
 
       </div>
 
@@ -1323,14 +1555,14 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
-        <a class="group flex no-underline" href="/mynote/docs/plt/sec002/">
+        <a class="group flex no-underline" href="/mynote/docs/win/sec042/">
           <span
             class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
           ><span class="ltr:inline rtl:hidden">&larr;</span></span>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第2章　軸・ラベル・枠</span>
+            >第1章　WINシステムのインストール</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
             </span>
@@ -1340,11 +1572,11 @@
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/mynote/docs/plt/sec004/">
+        <a class="group flex text-right no-underline" href="/mynote/docs/win/sec002/">
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第4章　付加要素</span
+            >第2章　WINおよびhypomh関連ファイルのフォーマット</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               

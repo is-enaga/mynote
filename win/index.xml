@@ -215,8 +215,7 @@ XLaunch(図*※相互参照無効*)があるので起動する．
 &lt;p&gt;WINDOWIDの設定を行う．
 WSL(Ubuntu)のホームディレクトリにある
 「.bashrc」を開き，以下の記述を追加する．&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt; $(cat /etc/resolv.conf | grep nameserver | awk &#39;{print $ 
-2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;):0&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;etc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resolv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;conf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nameserver&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;awk&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WINDOWID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;:0&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;その後ターミナルを再起動するか，「source ~/.basrhc」を実行する．
 ここで「xeyes」を実行してウインドウが表示されれば成功．&lt;/p&gt;
@@ -239,8 +238,7 @@ WINDOWIDを使う動作が伴った際（「HYPO」を押したときなど）
 &lt;p&gt;そこでデフォルトのターミナルからwinをすぐに使うために，
 次のようなbashスクリプトを作成すると便利である．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;xterm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cd  $(pwd); win $ 
-@&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;xterm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cd $(pwd); win $@&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このファイルをxwin.shなどとして保存する．&lt;/p&gt;
 &lt;p&gt;そして次のようにしてパスの通った場所にリンクを作成すると
 どこからでも使用できるようになる．&lt;/p&gt;
@@ -250,6 +248,377 @@ WINDOWIDを使う動作が伴った際（「HYPO」を押したときなど）
 デフォルトのターミナルから
 自動でxtermを立ち上げてwinを実行できる．&lt;/p&gt;
 &lt;!-- ######################################### --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>第1章　WINシステムのインストール</title>
+      <link>https://is-enaga.github.io/mynote/docs/win/sec042/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://is-enaga.github.io/mynote/docs/win/sec042/</guid>
+      <description>&lt;!-- ######################################### --&gt;
+&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;WINシステムホームページ&lt;br&gt;
+&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;p&gt;ここではWINシステムのインストール方法について記す．&lt;/p&gt;
+&lt;p&gt;一連の流れを簡潔にまとめると以下のようになる．&lt;/p&gt;
+&lt;div class=&#34;hb-steps&#34;&gt;
+&lt;h3 id=&#34;事前準備&#34;&gt;事前準備&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tk&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libmosquitto&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libx11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gawk&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;essential&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;winのダウンロードとインストール&#34;&gt;WINのダウンロードとインストール&lt;/h3&gt;
+&lt;p&gt;ダウンロード&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wget&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wwweic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokyo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ac&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xzvf&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;コンパイル&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;./&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;configure&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prefix&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;パスを通す&#34;&gt;パスを通す&lt;/h3&gt;
+&lt;p&gt;「.bashrc」に以下の行を書き加える．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;$PATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;bin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ターミナルに戻り以下を実行．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bashrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;gui環境の準備&#34;&gt;GUI環境の準備&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xserver&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xorg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;utils&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xterm&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Windowsの場合はVcXsrvのインストールと設定が必要．&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;以下でそれぞれについて詳しく記す．&lt;/p&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h2 id=&#34;事前準備-1&#34;&gt;事前準備&lt;/h2&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;あらかじめ必要なパッケージをインストールしておく．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tk&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libmosquitto&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;gawk&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;build&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;essential&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;libx11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;他にも必要なパッケージがあるかもしれない．
+要確認．&lt;/p&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h2 id=&#34;winのダウンロードとインストール-1&#34;&gt;WINのダウンロードとインストール&lt;/h2&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;HTTPダウンロード先&lt;br&gt;
+&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/pub/win/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/pub/win/&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;上記のサイトの中からダウンロードするバージョンを選ぶことができる．&lt;/p&gt;
+&lt;p&gt;Ubuntuでは以下のようにしてインストールできる．
+インストール作業を行う場所は/usr/localとすることが多い．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wget&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wwweic&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;eri&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tokyo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ac&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;jp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WIN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xzvf&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;tar&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;gz&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;なお上記のwgetのあとのurlは，ダウンロードページから
+目的のバージョンのリンクをコピーして貼り付けると良い．&lt;/p&gt;
+&lt;p&gt;tar -xzvfのあとのファイル名はダウンロードしたファイル名に合わせること．&lt;/p&gt;
+&lt;p&gt;展開したディレクトリの中にあるREADMEの手順に従って，
+WINシステムを構成するプログラムのコンパイルを行う．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;./&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;configure&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;prefix&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;make&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;あとはパスを通せばどこからでもwinのコマンドを使える．&lt;/p&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h2 id=&#34;パスの通し方&#34;&gt;パスの通し方&lt;/h2&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;コンパイルしてできたWIN関連の実行ファイル群は
+/usr/local/win/binにある．
+ターミナルでどこからでもこのディレクトリにある
+コマンドを実行できるようにするためには，
+「パスを通す」必要がある．&lt;/p&gt;
+&lt;p&gt;LinuxやWindowsのWSLの場合は，
+ホームディレクトリ（「cd ~」で移動できる）にある
+「.bashrc」に以下の行を書き加えればばよい．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;$PATH&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;bin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ただし「/usr/local/win/bin」の部分は，
+他のディレクトリにWINの実行ファイルがある場合は
+そのディレクトリに読み替えること．&lt;/p&gt;
+&lt;p&gt;この記述を追加した後はターミナルを再起動するか，
+以下のコマンドを実行することでパスが通る．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;source&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bashrc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで試しに「win」とコマンドを打ってみて，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;***&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;2015.12.15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Hi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;net&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;***&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Version&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bit&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Default&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;output&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;byte&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sample&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;size&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;parameter&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;win.prm&amp;#39;&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;found&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;のように表示されれば正しくできている．&lt;/p&gt;
+&lt;p&gt;一方でパスが通っていない場合はつぎのように表示される．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;command&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;found&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- ---------------------------------- --&gt;
+&lt;h2 id=&#34;gui環境の準備-1&#34;&gt;GUI環境の準備&lt;/h2&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;winコマンドではGUIを使って波形を読み取ることができる．
+そのためにはX Window Systemなどの準備が必要になる．&lt;/p&gt;
+&lt;!-- ............................. --&gt;
+&lt;h3 id=&#34;x-window-systemのインストール&#34;&gt;X Window Systemのインストール&lt;/h3&gt;
+&lt;!-- ............................. --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xserver&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xorg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;utils&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xterm&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;apps&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;x11-appsは動作確認用に入れておくと良い．
+これで試しに「xeyes」などのコマンドを実行してみて，
+ウィンドウが表示されればGUIの設定は成功である．&lt;/p&gt;
+&lt;p&gt;ただしWindowsの場合は，テストの前に次節の作業が追加で必要になる．&lt;/p&gt;
+&lt;p&gt;winのテストは，ダウンロードしたディレクトリの中にあるサンプルファイルを使って行う．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;etc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;991109.064607&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- ---------------------------------- --&gt;
+&lt;h2 id=&#34;windowsでの追加作業&#34;&gt;Windowsでの追加作業&lt;/h2&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;WindowsのWSLでUbuntuを動かしている場合は，
+GUIを利用するにあたり
+Xサーバーを立ち上げるソフトが必要である．&lt;/p&gt;
+&lt;!-- ............................. --&gt;
+&lt;h3 id=&#34;vcxsrvのインストール&#34;&gt;VcXsrvのインストール&lt;/h3&gt;
+&lt;!-- ............................. --&gt;
+&lt;p&gt;以下のリンクではVcXsrvをインストールする．&lt;/p&gt;
+&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;VcXsrvのダウンロードページ：&lt;br&gt;
+&lt;a href=&#34;https://sourceforge.net/projects/vcxsrv/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://sourceforge.net/projects/vcxsrv/&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;ダウンロードページ（図*※相互参照無効*）の
+「Download」をクリックする．
+&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/vcxsrv.png&#34;
+    alt=&#34;VcXsrvのダウンロードページ&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;VcXsrvのダウンロードページ&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+ダウンロードされるインストーラを実行し，
+指示に従ってインストールする．
+特別な設定は不要なので，インストール先などにこだわりがなければ
+「Next」で進めて最後に「Install」をクリックするだけで良い．&lt;/p&gt;
+&lt;!-- ............................. --&gt;
+&lt;h3 id=&#34;vcxsrvの設定&#34;&gt;VcXsrvの設定&lt;/h3&gt;
+&lt;!-- ............................. --&gt;
+&lt;p&gt;インストールが終わったらスタートメニューに
+XLaunch(図*※相互参照無効*)があるので起動する．
+&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/start_xlaunch.png&#34;
+    alt=&#34;XLaunch&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;XLaunch&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;起動した画面から以下のように設定して進める．&lt;/p&gt;
+&lt;div class=&#34;hb-steps&#34;&gt;
+&lt;h3 id=&#34;multiple-windowsを選択&#34;&gt;「Multiple windows」を選択．&lt;/h3&gt;
+&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/xlaunch1.png&#34;
+    alt=&#34;1ページ目&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;1ページ目&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;start-no-client&#34;&gt;「Start no client」&lt;/h3&gt;
+&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/xlaunch2.png&#34;
+    alt=&#34;2ページ目&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;2ページ目&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;追加設定&#34;&gt;追加設定&lt;/h3&gt;
+&lt;p&gt;一番下の欄に-acを追加する．うまくいかない場合は「Disable access control」にもチェックを入れる．&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/xlaunch3.png&#34;
+    alt=&#34;3ページ目&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;3ページ目&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;設定の保存&#34;&gt;設定の保存&lt;/h3&gt;
+&lt;p&gt;4ページ目は設定を保存するかどうかの確認画面．
+毎回手動でXLaunchを開く場合はこのまま「完了」を選択して終了する．&lt;br&gt;
+使用頻度が高い場合は，設定を保存しておくと次回から楽になる．
+設定の保存は「Save configuration」を選択し，保存先を指定して「Save」をクリックする．&lt;/p&gt;
+&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/xlaunch4.png&#34;
+    alt=&#34;4ページ目&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;4ページ目&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h3 id=&#34;自動起動設定設定を保存した場合のみ&#34;&gt;自動起動設定（設定を保存した場合のみ）&lt;/h3&gt;
+&lt;p&gt;毎回自動でVcXsrcを起動するために「スタートアップ」に登録する．&lt;br&gt;
+「Win+r」を押すと「ファイル名を指定して実行」が開くので，&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;shell&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;startup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;と入力して「OK」をクリックする．
+開いたフォルダに，先ほど保存したxlaunchの設定ファイル
+（例: config.xlaunch）のショートカットを作成する．&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- ............................. --&gt;
+&lt;h3 id=&#34;bashrcの設定&#34;&gt;.bashrcの設定&lt;/h3&gt;
+&lt;!-- ............................. --&gt;
+&lt;p&gt;WINDOWIDの設定を行う．
+WSL(Ubuntu)のホームディレクトリにある
+「.bashrc」を開き，以下の記述を追加する．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;etc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resolv&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;conf&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nameserver&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;awk&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;{print $2}&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;WINDOWID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;:0&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;その後ターミナルを再起動するか，「source ~/.basrhc」を実行する．
+ここで「xeyes」を実行してウインドウが表示されれば成功．&lt;/p&gt;
+&lt;p&gt;次にwinについてはデフォルトのターミナルではなく，xtermを使う必要がある．
+まずターミナル上で「xterm」と入力して実行．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;xterm&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;xtermのウィンドウが出てきたら，以下のコマンドを実行する．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;etc&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;991109.064607&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これでウィンドウが表示されれば成功．&lt;/p&gt;
+&lt;p&gt;デフォルトのターミナルでもwinの画面は開いて一見問題ないが，
+WINDOWIDを使う動作が伴った際（「HYPO」を押したときなど）
+にエラーが生じて強制終了してしまう．&lt;/p&gt;
+&lt;!-- ............................. --&gt;
+&lt;h3 id=&#34;winをデフォルトのターミナルから使用するには&#34;&gt;WINをデフォルトのターミナルから使用するには&lt;/h3&gt;
+&lt;!-- ............................. --&gt;
+&lt;p&gt;xtermのターミナルはデフォルトのターミナルと比べると画面が見づらく，
+普段の作業には向かない．
+しかしwinを使用する際にわざわざxtermを使うのも面倒である．&lt;/p&gt;
+&lt;p&gt;そこでデフォルトのターミナルからwinをすぐに使うために，
+次のようなbashスクリプトを作成すると便利である．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;ch&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;xterm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;cd $(pwd); win $@&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このファイルをxwin.shなどとして保存する．&lt;/p&gt;
+&lt;p&gt;そして次のようにしてパスの通った場所にリンクを作成すると
+どこからでも使用できるようになる．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;bin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ln&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xwin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;shがあるディレクトリ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xwin&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xwin&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで「xwin &amp;lt;winファイル名&amp;gt;」と入力するだけで
+デフォルトのターミナルから
+自動でxtermを立ち上げてwinを実行できる．&lt;/p&gt;
+&lt;!-- ######################################### --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>第2章　WINおよびhypomh関連ファイルのフォーマット</title>
+      <link>https://is-enaga.github.io/mynote/docs/win/sec000/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://is-enaga.github.io/mynote/docs/win/sec000/</guid>
+      <description>&lt;!-- ######################################### --&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;winフォーマット&#34;&gt;WINフォーマット&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;詳しくは以下を参照：
+&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/winformat.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/winformat.html&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;WINフォーマットはバイナリ列のデータで，
+あらかじめ定められた先頭からのByte数を基準に，
+どこに何の情報が入っているかが決まっている．&lt;/p&gt;
+&lt;p&gt;1秒長がデータの1単位で，
+1秒長のファイルをLinuxのcatコマンドなどで結合することで，より長い時間長のデータを構成することができる．&lt;/p&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h3 id=&#34;1秒データ&#34;&gt;1秒データ&lt;/h3&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;WINフォーマットは各1秒長データ内で完結している．
+具体的には1秒データごとに開始時刻，サンプリングレート，チャンネル名などの最低限の情報が入っている．&lt;/p&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;速度構造ファイル&#34;&gt;速度構造ファイル&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;参考：
+&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;震源決定プログラムhypomhで用いられる速度構造ファイルについて記す．&lt;/p&gt;
+&lt;p&gt;hypomhの説明ではstanファイルと記されている．
+行ごとに内容が定められ，かつ固定長である．&lt;/p&gt;
+&lt;p&gt;P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])構造だけを指定する．
+深さは0から始まり，km単位で各層の厚さを指定する．&lt;/p&gt;
+&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;仕様:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;S波速度Vsは, Vp/Vs=1.73として扱われる．&lt;/li&gt;
+&lt;li&gt;標高0kmより高い部分のVpは，0kmにおけるVpとする．&lt;/li&gt;
+&lt;li&gt;層の数の上限は20.(層の厚さは21個まで, Vpの数は22個まで)．&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;!--  %............................. --&gt;
+&lt;!--  #### 1行目　初期震源 --&gt;
+&lt;!--  %............................. --&gt;
+&lt;!--  hypomhの初期震源の位置 --&gt;
+&lt;!--  1分データのフォーマットは以下のようになっている． --&gt;
+&lt;!--  \begin{table}[H] --&gt;
+&lt;!--    \caption{WINフォーマット1秒ブロックの構成} --&gt;
+&lt;!--    \centering --&gt;
+&lt;!--      \begin{tabular}{lllllll} --&gt;
+&lt;!--      \toprule             % --- booktabs: 上の罫線 --- --&gt;
+&lt;!--      BBBB&amp; --&gt;
+&lt;!--      bbbbbbbb&amp; --&gt;
+&lt;!--      BB&amp; --&gt;
+&lt;!--      b&amp;bB&amp; --&gt;
+&lt;!--      BBBB&amp; --&gt;
+&lt;!--      ...   --&gt;
+&lt;!--      \midrule --&gt;
+&lt;!--      ファイルサイズ&amp; --&gt;
+&lt;!--      yymmddHHMMDD&amp; --&gt;
+&lt;!--      チャネル番号&amp; --&gt;
+&lt;!--      サンプルサイズ&amp; --&gt;
+&lt;!--      サンプリングレート&amp; --&gt;
+&lt;!--      1サンプル目&amp; --&gt;
+&lt;!--      ...   --&gt;
+&lt;!--      \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--      \end{tabular} --&gt;
+&lt;!--  \end{table} --&gt;
+&lt;!--  \begin{table}[H] --&gt;
+&lt;!--    \caption{WINフォーマット1秒ブロックの構成} --&gt;
+&lt;!--    \centering --&gt;
+&lt;!--      \begin{tabular}{lcrrrrrrrc} --&gt;
+&lt;!--      \toprule             % --- booktabs: 上の罫線 --- --&gt;
+&lt;!--      ヘッダー &amp;  --&gt;
+&lt;!--      秒ヘッダー &amp;  --&gt;
+&lt;!--      \multicolumn{4}{l}{1チャネル}&amp; --&gt;
+&lt;!--      2チャネル&amp; --&gt;
+&lt;!--      ...   --&gt;
+&lt;!--      \cmidrule(lr){3-6} --&gt;
+&lt;!--      &amp; --&gt;
+&lt;!--      &amp; --&gt;
+&lt;!--      チャネル番号 &amp; サンプルサイズ &amp; サンプリングレート (Hz) &amp; 振幅データ &amp; --&gt;
+&lt;!--      &amp; --&gt;
+&lt;!--      ...   --&gt;
+&lt;!--      \midrule --&gt;
+&lt;!--      4&amp; --&gt;
+&lt;!--      4&amp; --&gt;
+&lt;!--      2 &amp; 0.5 &amp; 1.5 &amp; 可変&amp; --&gt;
+&lt;!--      &amp; --&gt;
+&lt;!--      ...   --&gt;
+&lt;!--      \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--      \end{tabular} --&gt;
+&lt;!--  \end{table} --&gt;
+&lt;!--  \begin{table}[H] --&gt;
+&lt;!--   \caption{SI組立単位} --&gt;
+&lt;!--    --&gt;
+&lt;!--   \centering --&gt;
+&lt;!--    \begin{tabular}{lcrrrrrrrc} --&gt;
+&lt;!--     \toprule             % --- booktabs: 上の罫線 --- --&gt;
+&lt;!--     物理量 &amp; 単位 &amp; \multicolumn{7}{l}{SI単位系の基本単位} &amp; 他の単位    --&gt;
+&lt;!--     \cmidrule(lr){3-9}   % --- booktabs: 3 から 9 列の罫線 --- --&gt;
+&lt;!--         &amp; 記号 &amp; m &amp; kg &amp; s &amp; A &amp; K &amp; mol &amp; cd    --&gt;
+&lt;!--     \midrule             % --- booktabs: 中間の罫線 --- --&gt;
+&lt;!--     力 &amp; N &amp; 1 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp;    --&gt;
+&lt;!--     エネルギー &amp; J &amp; 2 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp; N $\cdot$ 
+m    --&gt;
+&lt;!--     仕事率 &amp; W &amp; 2 &amp; 1 &amp; -3 &amp; &amp; &amp; &amp; &amp; J $\cdot$ 
+s $^{-1}$ 
+    --&gt;
+&lt;!--     \addlinespace[5mm]   % --- booktabs: 行間スペース --- --&gt;
+&lt;!--     電圧 &amp; V &amp; 2 &amp; 1 &amp; -3 &amp; -1 &amp; &amp; &amp; &amp; W $\cdot$ 
+A $^{-1}$ 
+    --&gt;
+&lt;!--     磁束 &amp; Wb &amp; 2 &amp; 1 &amp; -2 &amp; -1 &amp; &amp; &amp; &amp; V $\cdot$ 
+s    --&gt;
+&lt;!--     \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--    \end{tabular} --&gt;
+&lt;!--  \end{table} --&gt;
 </description>
     </item>
     
