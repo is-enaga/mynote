@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home | K-Notes</title>
-    <link>https://example.com/mynote/</link>
-      <atom:link href="https://example.com/mynote/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://is-enaga.github.io//mynote/</link>
+      <atom:link href="https://is-enaga.github.io//mynote/index.xml" rel="self" type="application/rss+xml" />
     <description>Home</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>ja</language><lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://example.com/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png</url>
+      <url>https://is-enaga.github.io//mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png</url>
       <title>Home</title>
-      <link>https://example.com/mynote/</link>
+      <link>https://is-enaga.github.io//mynote/</link>
     </image>
     
     <item>
       <title>第1章　Ubuntu一般</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec001/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec001/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec001/</guid>
       <description>&lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;ユーザー管理&#34;&gt;ユーザー管理&lt;/h2&gt;
 &lt;!-- =================================== --&gt;
@@ -386,9 +386,9 @@ Windowsでいうタスクマネージャーのような感じ．&lt;/p&gt;
     
     <item>
       <title>第1章　WIN</title>
-      <link>https://example.com/mynote/docs/win/sec001/</link>
+      <link>https://is-enaga.github.io//mynote/docs/win/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/win/sec001/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/win/sec001/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
@@ -442,9 +442,9 @@ Windowsでいうタスクマネージャーのような感じ．&lt;/p&gt;
     
     <item>
       <title>第1章　基礎・一般</title>
-      <link>https://example.com/mynote/docs/plt/sec001/</link>
+      <link>https://is-enaga.github.io//mynote/docs/plt/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/plt/sec001/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/plt/sec001/</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;本書では以下のようにmatpotlibを「plt」としてをインポートする．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;plt&lt;/span&gt;
@@ -485,9 +485,9 @@ Windowsでいうタスクマネージャーのような感じ．&lt;/p&gt;
     
     <item>
       <title>第1章　導入</title>
-      <link>https://example.com/mynote/docs/pygmt/sec001/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec001/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec001/</guid>
       <description>&lt;h2 id=&#34;pygmtのインストール手順&#34;&gt;PyGMTのインストール手順&lt;/h2&gt;
 &lt;p&gt;WindowsのAnacondaであればAnaconda Prompt上でインストールを行う．
 WindowsのWSL上やLinuxにインストールしたAnacondaであれば通常のターミナルで良い．&lt;/p&gt;
@@ -527,9 +527,9 @@ mambaの部分をcondaに書き換えるだけ．&lt;/p&gt;
     
     <item>
       <title>第2章　プログラミング</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec002/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec002/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec002/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec002/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;fortran&#34;&gt;Fortran&lt;/h2&gt;
@@ -581,9 +581,9 @@ gfortでコンパイルできないものもifortではコンパイルできる�
     
     <item>
       <title>第2章　必須手順</title>
-      <link>https://example.com/mynote/docs/pygmt/sec002/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec002/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec002/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec002/</guid>
       <description>&lt;h2 id=&#34;figureの生成&#34;&gt;Figureの生成&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pygmt&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Figure&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
@@ -684,9 +684,9 @@ projectionの設定はそのままに，regionを次のように指定する．&
     
     <item>
       <title>第2章　軸・ラベル・枠</title>
-      <link>https://example.com/mynote/docs/plt/sec002/</link>
+      <link>https://is-enaga.github.io//mynote/docs/plt/sec002/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/plt/sec002/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/plt/sec002/</guid>
       <description>&lt;p&gt;本章では断りのない限り，以下のようなグラフを作った場合を前提とする．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplots&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;figsize&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
@@ -858,9 +858,9 @@ projectionの設定はそのままに，regionを次のように指定する．&
     
     <item>
       <title>第3章　パッケージ</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec003/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec003/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec003/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec003/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;管理の基本&#34;&gt;管理の基本&lt;/h2&gt;
@@ -954,9 +954,9 @@ projectionの設定はそのままに，regionを次のように指定する．&
     
     <item>
       <title>第3章　一般</title>
-      <link>https://example.com/mynote/docs/pygmt/sec003/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec003/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec003/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec003/</guid>
       <description>&lt;h2 id=&#34;regionや点の座標の書式&#34;&gt;regionや点の座標の書式&lt;/h2&gt;
 &lt;p&gt;basemapメソッドの描画範囲指定(\code{region})や
 plotメソッド等の座標指定(\code{x, y, z})などで与える座標値は，
@@ -1109,9 +1109,9 @@ transparencyはcmapを使う場合や，描画対象全体を透過させる場�
     
     <item>
       <title>第3章　図のプロット</title>
-      <link>https://example.com/mynote/docs/plt/sec003/</link>
+      <link>https://is-enaga.github.io//mynote/docs/plt/sec003/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/plt/sec003/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/plt/sec003/</guid>
       <description>&lt;h2 id=&#34;直線&#34;&gt;直線&lt;/h2&gt;
 &lt;p&gt;以下の方法では，直線が通る１点と傾きを与えることで，無限に続く直線をプロットできる．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;axline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -1143,9 +1143,9 @@ transparencyはcmapを使う場合や，描画対象全体を透過させる場�
     
     <item>
       <title>第4章　ファイル管理</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec004/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec004/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec004/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec004/</guid>
       <description>&lt;!--  ####################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;ファイル情報表示&#34;&gt;ファイル情報表示&lt;/h2&gt;
@@ -1251,9 +1251,9 @@ inode番号が共通である．&lt;/p&gt;
     
     <item>
       <title>第4章　付加要素</title>
-      <link>https://example.com/mynote/docs/plt/sec004/</link>
+      <link>https://is-enaga.github.io//mynote/docs/plt/sec004/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/plt/sec004/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/plt/sec004/</guid>
       <description>&lt;h2 id=&#34;カラーバー&#34;&gt;カラーバー&lt;/h2&gt;
 &lt;h3 id=&#34;両端の三角&#34;&gt;両端の三角&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;colorbar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;extend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;max/min/both&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -1264,9 +1264,9 @@ inode番号が共通である．&lt;/p&gt;
     
     <item>
       <title>第4章　点・図形のプロット</title>
-      <link>https://example.com/mynote/docs/pygmt/sec004/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec004/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec004/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec004/</guid>
       <description>&lt;h2 id=&#34;シンボルスタイルの指定&#34;&gt;シンボル(スタイル)の指定&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;symbol&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plotメソッドのシンボルの種類とサイズを指定する．
@@ -1388,9 +1388,9 @@ Same as -Se, except azimuth (in degrees east of north) should be given instead o
     
     <item>
       <title>第5章　Git</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec005/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec005/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec005/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec005/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;github&#34;&gt;GitHub&lt;/h2&gt;
@@ -1433,9 +1433,9 @@ commitまでで十分である．&lt;/p&gt;
     
     <item>
       <title>第5章　作品例</title>
-      <link>https://example.com/mynote/docs/plt/sec005/</link>
+      <link>https://is-enaga.github.io//mynote/docs/plt/sec005/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/plt/sec005/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/plt/sec005/</guid>
       <description>&lt;h2 id=&#34;数学風グラフ&#34;&gt;数学風グラフ&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;plt&lt;/span&gt;
@@ -1531,9 +1531,9 @@ commitまでで十分である．&lt;/p&gt;
     
     <item>
       <title>第5章　線のプロット</title>
-      <link>https://example.com/mynote/docs/pygmt/sec005/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec005/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec005/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec005/</guid>
       <description>&lt;h2 id=&#34;線分折れ線&#34;&gt;線分・折れ線&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; 
@@ -1643,9 +1643,9 @@ commitまでで十分である．&lt;/p&gt;
     
     <item>
       <title>第6章　グラフ内のテキスト</title>
-      <link>https://example.com/mynote/docs/pygmt/sec006/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec006/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec006/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec006/</guid>
       <description>&lt;h2 id=&#34;テキストボックス&#34;&gt;テキストボックス&lt;/h2&gt;
 &lt;h3 id=&#34;余白&#34;&gt;余白&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -1792,9 +1792,9 @@ qは&amp;quot;\underline{q}uoted line&amp;quot;の頭文字のようだ．
     
     <item>
       <title>第6章　応用</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec006/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec006/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec006/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec006/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;メール送信&#34;&gt;メール送信&lt;/h2&gt;
@@ -1826,9 +1826,9 @@ qは&amp;quot;\underline{q}uoted line&amp;quot;の頭文字のようだ．
     
     <item>
       <title>第7章　WSL</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec007/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec007/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec007/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec007/</guid>
       <description>&lt;!--  ##  --&gt;
 &lt;!--   --&gt;
 </description>
@@ -1836,9 +1836,9 @@ qは&amp;quot;\underline{q}uoted line&amp;quot;の頭文字のようだ．
     
     <item>
       <title>第7章　地図のプロット</title>
-      <link>https://example.com/mynote/docs/pygmt/sec007/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec007/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec007/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec007/</guid>
       <description>&lt;h2 id=&#34;海岸線海陸のプロット&#34;&gt;海岸線，海陸のプロット&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;coast&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;shorelines&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;width&amp;gt;,&amp;lt;color&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -1877,9 +1877,9 @@ outfileを指定するとファイルが出力される代わりに何も返っ�
     
     <item>
       <title>第8章　軸・枠回り</title>
-      <link>https://example.com/mynote/docs/pygmt/sec008/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec008/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec008/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec008/</guid>
       <description>&lt;p&gt;\code{pygmt.Figure.basemap(frame=&amp;lt;&amp;gt;)}などで枠や軸を作ることができる．
 frameはfig.plot()で指定しても良い．&lt;/p&gt;
 &lt;h2 id=&#34;軸目盛りグリッドの追加&#34;&gt;軸目盛り，グリッドの追加&lt;/h2&gt;
@@ -2279,9 +2279,9 @@ frameにおけるグリッドや目盛りの間隔の設定で度分秒を使う
     
     <item>
       <title>第9章　周辺要素</title>
-      <link>https://example.com/mynote/docs/pygmt/sec009/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec009/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec009/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec009/</guid>
       <description>&lt;p&gt;グラフの周囲に付加する要素．&lt;/p&gt;
 &lt;h2 id=&#34;タイトル&#34;&gt;タイトル&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;basemap&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -2468,9 +2468,9 @@ plot()の中でsize=が変数で与えられていると単純にlabel=&lt;name&
     
     <item>
       <title>第10章　データの処理</title>
-      <link>https://example.com/mynote/docs/pygmt/sec010/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec010/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec010/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec010/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;地理的条件による点データの抽出&#34;&gt;地理的条件による点データの抽出&lt;/h2&gt;
@@ -2652,9 +2652,9 @@ plot()の中でsize=が変数で与えられていると単純にlabel=&lt;name&
     
     <item>
       <title>第11章　グリッドデータの利用</title>
-      <link>https://example.com/mynote/docs/pygmt/sec011/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec011/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec011/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec011/</guid>
       <description>&lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;グリッドデータの型について&#34;&gt;グリッドデータの型について&lt;/h2&gt;
 &lt;!-- =================================== --&gt;
@@ -2736,9 +2736,9 @@ plot()の中でsize=が変数で与えられていると単純にlabel=&lt;name&
     
     <item>
       <title>第12章　xyzデータの利用</title>
-      <link>https://example.com/mynote/docs/pygmt/sec012/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec012/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec012/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec012/</guid>
       <description>&lt;p&gt;ここでいうxyzデータとは，名前の通りx,y,z座標が並べられたテキストデータである．各グリッド（点）は改行で区切られている．&lt;/p&gt;
 &lt;h2 id=&#34;グリッドデータへの変換&#34;&gt;グリッドデータへの変換&lt;/h2&gt;
 &lt;p&gt;xyzデータで標高データなどを与えられた場合，それをgrdデータに変換することで，前章と同様に等値線などでプロットできる．次のコマンドで変換できる：&lt;/p&gt;
@@ -2790,9 +2790,9 @@ region=[xs,xe,ys,ye]であるが，spacingをregionの幅xe-xs, ye-ysを整数�
     
     <item>
       <title>第13章　発展・応用</title>
-      <link>https://example.com/mynote/docs/pygmt/sec013/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec013/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec013/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec013/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;描画位置の原点の移動&#34;&gt;描画位置の原点の移動&lt;/h2&gt;
@@ -2902,9 +2902,9 @@ shift_origin(-&amp;gt;第*※相互参照無効*節)と組み合わせれば，
     
     <item>
       <title>第14章　地理院・国交省データの利用</title>
-      <link>https://example.com/mynote/docs/pygmt/sec014/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec014/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec014/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec014/</guid>
       <description>&lt;h2 id=&#34;標高メッシュデータ&#34;&gt;標高メッシュデータ&lt;/h2&gt;
 &lt;h3 id=&#34;データの下準備&#34;&gt;データの下準備&lt;/h3&gt;
 &lt;p&gt;地理院からデータをダウンロードするとzipで圧縮されている．中にはXML形式のファイルが入っている．
@@ -2974,9 +2974,9 @@ shift_origin(-&amp;gt;第*※相互参照無効*節)と組み合わせれば，
     
     <item>
       <title>第15章　その他</title>
-      <link>https://example.com/mynote/docs/pygmt/sec015/</link>
+      <link>https://is-enaga.github.io//mynote/docs/pygmt/sec015/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/pygmt/sec015/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/pygmt/sec015/</guid>
       <description>&lt;h2 id=&#34;sessionファイル大容量ゴミの削除&#34;&gt;sessionファイル（大容量ゴミ）の削除&lt;/h2&gt;
 &lt;p&gt;ターミナル上で以下を実行．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;gmt&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;clear&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sessions&lt;/span&gt;
@@ -2993,9 +2993,9 @@ fill引数に置き換わった．&lt;/p&gt;
     
     <item>
       <title>プライバシーポリシー　Privacy Policy</title>
-      <link>https://example.com/mynote/privacy/</link>
+      <link>https://is-enaga.github.io//mynote/privacy/</link>
       <pubDate>Mon, 04 Mar 2024 00:00:00 +0900</pubDate>
-      <guid>https://example.com/mynote/privacy/</guid>
+      <guid>https://is-enaga.github.io//mynote/privacy/</guid>
       <description>&lt;p&gt;当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。このGoogleアナリティクスはデータの収集のためにCookieを使用しています。このデータは匿名で収集されており、個人を特定するものではありません。&lt;/p&gt;
 &lt;p&gt;この機能はCookieを無効にすることで収集を拒否することが出来ますので、お使いのブラウザの設定をご確認ください。この規約に関しての詳細は&lt;a href=&#34;https://marketingplatform.google.com/about/analytics/terms/jp/&#34;&gt;Googleアナリティクスサービス利用規約&lt;/a&gt;や&lt;a href=&#34;https://policies.google.com/technologies/ads?hl=ja&#34;&gt;Googleポリシーと規約&lt;/a&gt;をご覧ください。&lt;/p&gt;
 &lt;!-- Add your privacy policy here and set `draft: false` to publish it. Otherwise, delete this file if you don&#39;t need it. --&gt;

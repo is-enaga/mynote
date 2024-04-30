@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu (Linux) | K-Notes</title>
-    <link>https://example.com/mynote/ubuntu/</link>
-      <atom:link href="https://example.com/mynote/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://is-enaga.github.io//mynote/ubuntu/</link>
+      <atom:link href="https://is-enaga.github.io//mynote/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <description>Ubuntu (Linux)</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>ja</language>
     <image>
-      <url>https://example.com/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png</url>
+      <url>https://is-enaga.github.io//mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png</url>
       <title>Ubuntu (Linux)</title>
-      <link>https://example.com/mynote/ubuntu/</link>
+      <link>https://is-enaga.github.io//mynote/ubuntu/</link>
     </image>
     
     <item>
       <title>第1章　Ubuntu一般</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec001/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec001/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec001/</guid>
       <description>&lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;ユーザー管理&#34;&gt;ユーザー管理&lt;/h2&gt;
 &lt;!-- =================================== --&gt;
@@ -386,9 +386,9 @@ Windowsでいうタスクマネージャーのような感じ．&lt;/p&gt;
     
     <item>
       <title>第2章　プログラミング</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec002/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec002/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec002/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec002/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;fortran&#34;&gt;Fortran&lt;/h2&gt;
@@ -440,9 +440,9 @@ gfortでコンパイルできないものもifortではコンパイルできる�
     
     <item>
       <title>第3章　パッケージ</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec003/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec003/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec003/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec003/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;管理の基本&#34;&gt;管理の基本&lt;/h2&gt;
@@ -536,9 +536,9 @@ gfortでコンパイルできないものもifortではコンパイルできる�
     
     <item>
       <title>第4章　ファイル管理</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec004/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec004/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec004/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec004/</guid>
       <description>&lt;!--  ####################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;ファイル情報表示&#34;&gt;ファイル情報表示&lt;/h2&gt;
@@ -644,9 +644,9 @@ inode番号が共通である．&lt;/p&gt;
     
     <item>
       <title>第5章　Git</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec005/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec005/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec005/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec005/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;github&#34;&gt;GitHub&lt;/h2&gt;
@@ -689,9 +689,9 @@ commitまでで十分である．&lt;/p&gt;
     
     <item>
       <title>第6章　応用</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec006/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec006/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec006/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec006/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;メール送信&#34;&gt;メール送信&lt;/h2&gt;
@@ -723,9 +723,9 @@ commitまでで十分である．&lt;/p&gt;
     
     <item>
       <title>第7章　WSL</title>
-      <link>https://example.com/mynote/docs/ubuntu/sec007/</link>
+      <link>https://is-enaga.github.io//mynote/docs/ubuntu/sec007/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/ubuntu/sec007/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/ubuntu/sec007/</guid>
       <description>&lt;!--  ##  --&gt;
 &lt;!--   --&gt;
 </description>

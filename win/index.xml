@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WIN（地震学）について | K-Notes</title>
-    <link>https://example.com/mynote/win/</link>
-      <atom:link href="https://example.com/mynote/win/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://is-enaga.github.io//mynote/win/</link>
+      <atom:link href="https://is-enaga.github.io//mynote/win/index.xml" rel="self" type="application/rss+xml" />
     <description>WIN（地震学）について</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>ja</language>
     <image>
-      <url>https://example.com/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png</url>
+      <url>https://is-enaga.github.io//mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png</url>
       <title>WIN（地震学）について</title>
-      <link>https://example.com/mynote/win/</link>
+      <link>https://is-enaga.github.io//mynote/win/</link>
     </image>
     
     <item>
       <title>第1章　WIN</title>
-      <link>https://example.com/mynote/docs/win/sec001/</link>
+      <link>https://is-enaga.github.io//mynote/docs/win/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://example.com/mynote/docs/win/sec001/</guid>
+      <guid>https://is-enaga.github.io//mynote/docs/win/sec001/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;

@@ -1,3 +1,3 @@
 User-agent: *
 
-Sitemap: https://example.com/mynote/sitemap.xml
+Sitemap: https://is-enaga.github.io/mynote/sitemap.xml
