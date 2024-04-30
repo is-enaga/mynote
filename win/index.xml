@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>WIN（地震学）について | K-Notes</title>
+    <title>WINシステム（地震学）のノート | K-Notes</title>
     <link>https://is-enaga.github.io/mynote/win/</link>
       <atom:link href="https://is-enaga.github.io/mynote/win/index.xml" rel="self" type="application/rss+xml" />
-    <description>WIN（地震学）について</description>
+    <description>WINシステム（地震学）のノート</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>ja</language>
     <image>
       <url>https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png</url>
-      <title>WIN（地震学）について</title>
+      <title>WINシステム（地震学）のノート</title>
       <link>https://is-enaga.github.io/mynote/win/</link>
     </image>
     
     <item>
-      <title>第1章　WINシステムの導入</title>
+      <title>第1章　WINシステムのインストール</title>
       <link>https://is-enaga.github.io/mynote/docs/win/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/win/sec001/</guid>
@@ -131,13 +131,13 @@ WINシステムを構成するプログラムのコンパイルを行う．&lt;/
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cd&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;usr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;local&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WIN_pkg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;3.0.11&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;etc&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;win&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;991109.064607&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- ---------------------------------- --&gt;
-&lt;h3 id=&#34;windowsの場合&#34;&gt;Windowsの場合&lt;/h3&gt;
+&lt;h2 id=&#34;windowsでの追加作業&#34;&gt;Windowsでの追加作業&lt;/h2&gt;
 &lt;!-- ---------------------------------- --&gt;
 &lt;p&gt;WindowsのWSLでUbuntuを動かしている場合は，
 GUIを利用するにあたり
 Xサーバーを立ち上げるソフトが必要である．&lt;/p&gt;
 &lt;!-- ............................. --&gt;
-&lt;h4 id=&#34;vcxsrvのインストール&#34;&gt;VcXsrvのインストール&lt;/h4&gt;
+&lt;h3 id=&#34;vcxsrvのインストール&#34;&gt;VcXsrvのインストール&lt;/h3&gt;
 &lt;!-- ............................. --&gt;
 &lt;p&gt;以下のリンクではVcXsrvをインストールする．&lt;/p&gt;
 &lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
@@ -160,7 +160,7 @@ Xサーバーを立ち上げるソフトが必要である．&lt;/p&gt;
 特別な設定は不要なので，インストール先などにこだわりがなければ
 「Next」で進めて最後に「Install」をクリックするだけで良い．&lt;/p&gt;
 &lt;!-- ............................. --&gt;
-&lt;h4 id=&#34;vcxsrvの設定&#34;&gt;VcXsrvの設定&lt;/h4&gt;
+&lt;h3 id=&#34;vcxsrvの設定&#34;&gt;VcXsrvの設定&lt;/h3&gt;
 &lt;!-- ............................. --&gt;
 &lt;p&gt;インストールが終わったらスタートメニューに
 XLaunch(図*※相互参照無効*)があるので起動する．
@@ -210,7 +210,7 @@ XLaunch(図*※相互参照無効*)があるので起動する．
 （例: config.xlaunch）のショートカットを作成する．&lt;/p&gt;
 &lt;/div&gt;
 &lt;!-- ............................. --&gt;
-&lt;h4 id=&#34;bashrcの設定&#34;&gt;.bashrcの設定&lt;/h4&gt;
+&lt;h3 id=&#34;bashrcの設定&#34;&gt;.bashrcの設定&lt;/h3&gt;
 &lt;!-- ............................. --&gt;
 &lt;p&gt;WINDOWIDの設定を行う．
 WSL(Ubuntu)のホームディレクトリにある
@@ -231,7 +231,7 @@ WSL(Ubuntu)のホームディレクトリにある
 WINDOWIDを使う動作が伴った際（「HYPO」を押したときなど）
 にエラーが生じて強制終了してしまう．&lt;/p&gt;
 &lt;!-- ............................. --&gt;
-&lt;h4 id=&#34;winをデフォルトのターミナルから使用するには&#34;&gt;WINをデフォルトのターミナルから使用するには&lt;/h4&gt;
+&lt;h3 id=&#34;winをデフォルトのターミナルから使用するには&#34;&gt;WINをデフォルトのターミナルから使用するには&lt;/h3&gt;
 &lt;!-- ............................. --&gt;
 &lt;p&gt;xtermのターミナルはデフォルトのターミナルと比べると画面が見づらく，
 普段の作業には向かない．

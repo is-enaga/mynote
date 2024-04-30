@@ -228,7 +228,7 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/win/" />
-  <meta property="og:title" content="WIN（地震学）について | K-Notes" />
+  <meta property="og:title" content="WINシステム（地震学）のノート | K-Notes" />
   <meta property="og:description" content="地球物理で使うツールの使い方をまとめています．Python(PyGMT, matplotlib)や東大のWINシステムなど．" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
@@ -240,7 +240,7 @@
 
 
 
-  <title>WIN（地震学）について | K-Notes</title>
+  <title>WINシステム（地震学）のノート | K-Notes</title>
 
   
   
@@ -845,9 +845,15 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#win%e3%81%a8%e3%81%af"
+                href="#%e5%86%85%e5%ae%b9"
                 class="hb-docs-link"
-              >WINとは</a>
+              >内容</a>
+            </li>
+          <li>
+              <a
+                href="#win%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%a8%e3%81%af"
+                class="hb-docs-link"
+              >WINシステムとは</a>
             </li>
           <li>
               <a
@@ -869,7 +875,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/win/sec001/"
     
-  >第1章　WINシステムの導入
+  >第1章　WINシステムのインストール
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1166,7 +1172,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/win/sec001/"
     
-  >第1章　WINシステムの導入
+  >第1章　WINシステムのインストール
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1212,7 +1218,10 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#win%e3%81%a8%e3%81%af">WINとは</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%86%85%e5%ae%b9">内容</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#win%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%a8%e3%81%af">WINシステムとは</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e3%82%80%e3%81%a4%e3%81%8b%e3%81%97%e3%81%84%e7%82%b9">ちょっとむつかしい点</a>
@@ -1248,10 +1257,12 @@
       </div>
 
       <div class="content text-base">
-        <h1>WIN（地震学）について</h1>
+        <h1>WINシステム（地震学）のノート</h1>
         <p>準備中．</p>
-<p>東京大学によるWINシステムについてのメモ．</p>
-<h2 id="winとは">WINとは</h2>
+<h2 id="内容">内容</h2>
+<p>東京大学地震研究所によるWINシステムについて．
+インストール方法やフォーマットの概要など．</p>
+<h2 id="winシステムとは">WINシステムとは</h2>
 <p>日本で標準的に使われている地震波形データのフォーマット，およびそれを処理するプログラム群です．
 地震波形を読み取るためのGUIソフトウェアや，それを補助するためのプログラムから成ります．</p>
 <p>フリーソフトなので無料でインストールできます．
@@ -1280,6 +1291,9 @@ WINフォーマット
 WIN32フォーマット
 </a>
 （<a href="https://www.bosai.go.jp/">NIED</a>による拡張版）で管理されているので知っておくと良いでしょう．</p>
+<p>震源決定の論文でたまに見られる，
+Hirata, Matsu&rsquo;uraの手法による震源決定プログラムhypomhも，
+WINに付随しています．</p>
 <h2 id="ちょっとむつかしい点">ちょっとむつかしい点</h2>
 <p>フォーマットが複雑です．
 処理に必要なデータが複数ファイルに分かれていることや，FORTRAN用の固定長ファイルの書式が独特である点など．</p>
@@ -1288,6 +1302,7 @@ WIN32フォーマット
 公式でWIN→SAC変換用の<a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/wintosac.html">wintosac</a>やwin2sacというコマンドが配布されています
 （ここでも2種類あるのがまたややこしい）．</p>
 <p>またソフト自体がかなり古いので，Unix環境でしか動作せず，GUIの操作性にもやや癖があります．</p>
+<p>あと，名前のせいで検索してもWindowsの情報が</p>
 <p>上記のような点が，初心者が導入や使用をする上でのハードルを上げているように感じます．</p>
 <h2 id="参考">参考</h2>
 
@@ -1307,6 +1322,12 @@ WIN32フォーマット
   
     <span class="hb-card-title pt-4 px-4">
         <svg style="height: 1em; width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44"/></svg>WIN公式マニュアル</span><div class="hb-card-subtitle">東京大学地震研究所</div></a>
+
+  <a
+    class="hb-card group"href="https://doi.org/10.1016/0031-9201%2887%2990066-5" target="_blank" rel="noreferrer">
+  
+    <span class="hb-card-title pt-4 px-4">
+        <svg style="height: 1em; width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9"/></svg>hypomhの手法の論文：Maximum-likelihood estimation of hypocenter with origin time eliminated using nonlinear inversion technique</span><div class="hb-card-subtitle">Naoshi Hirata, Mitsuhiro Matsu&rsquo;ura; doi 10.1016/0031-9201(87)90066-5</div></a>
 
 
   <a
