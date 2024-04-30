@@ -1,0 +1,2019 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: April 30, 2024 --><html lang="ja" dir="ltr"
+      data-wc-theme-default="light">
+  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.2.0" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="K. Shiraiwa" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="\code{pygmt.Figure.basemap(fra" />
+
+  
+  <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io//mynote/docs/pygmt/sec008/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="//mynote/css/themes/indigo.min.css" />
+  
+
+  
+  
+    
+    <link href="//mynote/dist/wc.min.css" rel="stylesheet" />
+  
+
+  
+  
+  
+
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SR97P4JMJ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-SR97P4JMJ9', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+  
+  <link rel="icon" type="image/png" href="//mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="//mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://is-enaga.github.io//mynote/docs/pygmt/sec008/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@地球物理のためのツール" />
+    <meta property="twitter:creator" content="@地球物理のためのツール" />
+  
+  <meta property="og:site_name" content="K-Notes" />
+  <meta property="og:url" content="https://is-enaga.github.io//mynote/docs/pygmt/sec008/" />
+  <meta property="og:title" content="第8章　軸・枠回り | K-Notes" />
+  <meta property="og:description" content="\code{pygmt.Figure.basemap(fra" /><meta property="og:image" content="https://is-enaga.github.io//mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://is-enaga.github.io//mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
+  
+    
+    
+  
+
+  
+
+
+
+  
+
+
+  <title>第8章　軸・枠回り | K-Notes</title>
+
+  
+  
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(//mynote/dist/font/Inter.var.woff2) format("woff2");
+    }
+  </style>
+
+  
+
+  
+
+  
+
+
+
+
+<link type="text/css" rel="stylesheet" href="//mynote/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+
+
+<script src="//mynote/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    new PagefindUI({ element: "#search", showSubResults: true });
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+    let element = document.getElementById('search');
+    let trigger = document.getElementById('search_toggle');
+
+    if (trigger) {
+      trigger.addEventListener('click', () => {
+        element.classList.toggle('hidden');
+        element.querySelector("input").value = ""
+        element.querySelector("input").focus()
+
+        if (!element.classList.contains('hidden')) {
+          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
+
+          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
+            clear_trigger.setAttribute('listenerOnClick', 'true');
+
+            clear_trigger.addEventListener('click', () => {
+              element.classList.toggle('hidden');
+            });
+          }
+        }
+
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link type="text/css" rel="stylesheet" href="//mynote/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
+  
+  
+  <script defer src="//mynote/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
+  
+  
+  
+  
+  <script defer src="//mynote/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="//mynote/js/hugo-blox-en.min.e5fa931947cac2d947732ea37a770aae2b5bd4a50b6048060cd129b46159a06d.js"
+    integrity="sha256-5fqTGUfKwtlHcy6jencKritb1KULYEgGDNEptGFZoG0="
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+    <nav class="navbar px-3 flex justify-left">
+      <div class="order-0 h-100">
+        
+        <a class="navbar-brand" href="/mynote/" title="K-Notes">
+          K-Note
+        </a>
+      </div>
+      
+      <input id="nav-toggle" type="checkbox" class="hidden" />
+      <label
+        for="nav-toggle"
+        class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+        <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+          <title>Open Menu</title>
+          <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+        </svg>
+        <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+          <title>Close Menu</title>
+          <polygon
+            points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+            transform="rotate(45 10 10)"></polygon>
+        </svg>
+      </label>
+      
+  
+      
+      
+      <ul
+        id="nav-menu"
+        class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+        ">
+        
+        
+        
+        
+        
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            
+            href="/mynote/"
+          >トップ</a
+          >
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            
+            href="/mynote/pygmt/"
+          >PyGMT</a
+          >
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            
+            href="/mynote/plt/"
+          >Matplotlib</a
+          >
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            
+            href="/mynote/ubuntu/"
+          >Ubuntu</a
+          >
+        </li>
+        
+        
+        
+        
+        
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            
+            href="/mynote/win/"
+          >WINシステム</a
+          >
+        </li>
+        
+        
+        
+        <li class="mt-4 inline-block lg:hidden">
+          <a
+            class=""
+            href="https://is-enaga.github.io/">
+            作成者HP
+          </a>
+        </li>
+        
+      </ul>
+  
+      <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+  
+        
+        
+        
+        <button
+          aria-label="search"
+          class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+          id="search_toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+        </button>
+        
+  
+        
+        
+        <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+              [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+          <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="dark:hidden">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
+        
+  
+        
+        
+  
+        
+        
+        <a
+          href="https://is-enaga.github.io/"
+          class="inline-block rounded border px-5 py-2 font-semibold transition
+          md:ml-4 px-4 py-1.5 text-sm
+          border-black  hover:bg-black dark:hover:bg-white dark:hover:text-black hover:text-white dark:border-white dark:text-white dark:hover:bg-white
+          hidden lg:inline-block">
+          作成者HP
+        </a>
+        
+      </div>
+    </nav>
+  </header>
+  
+  
+  <div id="search" class="hidden p-3"></div>
+  
+        
+      
+    </div>
+    <div class="page-body  my-10">
+      <div class="mx-auto flex max-w-screen-xl">
+  
+
+  
+  <div class="hb-sidebar-mobile-menu fixed inset-0 z-10 bg-white dark:bg-black/80 hidden"></div>
+
+
+
+<aside class="hb-sidebar-container max-lg:[transform:translate3d(0,-100%,0)] lg:sticky">
+  
+  <div class="px-4 pt-4 lg:hidden">
+    
+    
+  </div>
+  <div class="hb-scrollbar lg:h-[calc(100vh-var(--navbar-height))]">
+    <ul class="flex flex-col gap-1 lg:hidden">
+      
+      
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/privacy/"
+    
+  >プライバシーポリシー　Privacy Policy
+    </a></li>
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/"
+    
+  >個人的ノート集トップ
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/pygmt/"
+    
+  >PyGMT
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec001/"
+    
+  >第1章　導入
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec002/"
+    
+  >第2章　必須手順
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec003/"
+    
+  >第3章　一般
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec004/"
+    
+  >第4章　点・図形のプロット
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec005/"
+    
+  >第5章　線のプロット
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec006/"
+    
+  >第6章　グラフ内のテキスト
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec007/"
+    
+  >第7章　地図のプロット
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/mynote/docs/pygmt/sec008/"
+    
+  >第8章　軸・枠回り
+    </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#%e8%bb%b8%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%81%ae%e8%bf%bd%e5%8a%a0"
+                class="hb-docs-link"
+              >軸目盛り，グリッドの追加</a>
+            </li>
+          <li>
+              <a
+                href="#%e3%82%a2%e3%83%8e%e3%83%86%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e8%aa%bf%e6%95%b4"
+                class="hb-docs-link"
+              >アノテーションの調整</a>
+            </li>
+          <li>
+              <a
+                href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e7%b7%9a%e3%81%ae%e8%aa%bf%e6%95%b4"
+                class="hb-docs-link"
+              >グリッド線の調整</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%ba%a7%e6%a8%99%e8%bb%b8%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%81%ae%e8%aa%bf%e6%95%b4"
+                class="hb-docs-link"
+              >座標軸・目盛りの調整</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%9e%a0%e3%81%ae%e8%a6%8b%e3%81%9f%e7%9b%ae%e3%81%ae%e8%aa%bf%e6%95%b4"
+                class="hb-docs-link"
+              >枠の見た目の調整</a>
+            </li>
+          <li>
+              <a
+                href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%81%ae%e5%85%b1%e9%80%9a%e8%a8%ad%e5%ae%9a"
+                class="hb-docs-link"
+              >グリッド・目盛りの共通設定</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%9c%b0%e5%9b%b3%e3%81%aeregion%e3%81%ae%e5%8f%96%e5%be%97"
+                class="hb-docs-link"
+              >地図のregionの取得</a>
+            </li>
+          </ul>
+  
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec009/"
+    
+  >第9章　周辺要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec010/"
+    
+  >第10章　データの処理
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec011/"
+    
+  >第11章　グリッドデータの利用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec012/"
+    
+  >第12章　xyzデータの利用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec013/"
+    
+  >第13章　発展・応用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec014/"
+    
+  >第14章　地理院・国交省データの利用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec015/"
+    
+  >第15章　その他
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/plt/"
+    
+  >Matplotlib
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec001/"
+    
+  >第1章　基礎・一般
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec002/"
+    
+  >第2章　軸・ラベル・枠
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec003/"
+    
+  >第3章　図のプロット
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec004/"
+    
+  >第4章　付加要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec005/"
+    
+  >第5章　作品例
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/ubuntu/"
+    
+  >Ubuntu
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec001/"
+    
+  >第1章　Ubuntu一般
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec002/"
+    
+  >第2章　プログラミング
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec003/"
+    
+  >第3章　パッケージ
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec004/"
+    
+  >第4章　ファイル管理
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec005/"
+    
+  >第5章　Git
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec006/"
+    
+  >第6章　応用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec007/"
+    
+  >第7章　WSL
+    </a>
+              
+            </li></ul>
+      </div>
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/win/"
+    
+  >WIN（地震学）
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a>
+              <div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/win/sec001/"
+    
+  >第1章　WIN
+    </a>
+              
+            </li></ul>
+      </div>
+            </li></ul>
+      </div></li>
+      <li class="[word-break:break-word] mt-5 mb-2 px-2 py-1.5 text-sm font-semibold text-gray-900 first:mt-0 dark:text-gray-100 cursor-default">
+        <span>Author</span>
+      </li>
+    
+      <li><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="https://is-enaga.github.io/"
+    target="_blank" rel="noreferer"
+  >K. Shiraiwa</a></li>
+    
+    </ul>
+
+    <ul class="flex flex-col gap-1 max-lg:hidden">
+        
+        <li class="open"><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/pygmt/"
+    
+  >PyGMT
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec001/"
+    
+  >第1章　導入
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec002/"
+    
+  >第2章　必須手順
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec003/"
+    
+  >第3章　一般
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec004/"
+    
+  >第4章　点・図形のプロット
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec005/"
+    
+  >第5章　線のプロット
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec006/"
+    
+  >第6章　グラフ内のテキスト
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec007/"
+    
+  >第7章　地図のプロット
+    </a>
+              
+            </li><li class="flex flex-col open"><a
+    class="hb-sidebar-custom-link
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+    href="/mynote/docs/pygmt/sec008/"
+    
+  >第8章　軸・枠回り
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec009/"
+    
+  >第9章　周辺要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec010/"
+    
+  >第10章　データの処理
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec011/"
+    
+  >第11章　グリッドデータの利用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec012/"
+    
+  >第12章　xyzデータの利用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec013/"
+    
+  >第13章　発展・応用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec014/"
+    
+  >第14章　地理院・国交省データの利用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/pygmt/sec015/"
+    
+  >第15章　その他
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/plt/"
+    
+  >Matplotlib
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec001/"
+    
+  >第1章　基礎・一般
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec002/"
+    
+  >第2章　軸・ラベル・枠
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec003/"
+    
+  >第3章　図のプロット
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec004/"
+    
+  >第4章　付加要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec005/"
+    
+  >第5章　作品例
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/ubuntu/"
+    
+  >Ubuntu
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec001/"
+    
+  >第1章　Ubuntu一般
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec002/"
+    
+  >第2章　プログラミング
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec003/"
+    
+  >第3章　パッケージ
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec004/"
+    
+  >第4章　ファイル管理
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec005/"
+    
+  >第5章　Git
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec006/"
+    
+  >第6章　応用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec007/"
+    
+  >第7章　WSL
+    </a>
+              
+            </li></ul>
+      </div></li>
+        <li class=""><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/win/"
+    
+  >WIN（地震学）
+        <span data-hb-sidebar-toggle>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
+        </span>
+    </a><div class="ltr:pr-0 overflow-hidden">
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/win/sec001/"
+    
+  >第1章　WIN
+    </a>
+              
+            </li></ul>
+      </div></li>
+        
+      <li class="[word-break:break-word] mt-5 mb-2 px-2 py-1.5 text-sm font-semibold text-gray-900 first:mt-0 dark:text-gray-100 cursor-default">
+        <span>Author</span>
+      </li>
+    
+      <li><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="https://is-enaga.github.io/"
+    target="_blank" rel="noreferer"
+  >K. Shiraiwa</a></li>
+    
+      </ul>
+    </div>
+
+</aside>
+  
+
+<nav class="hb-toc order-last hidden w-64 shrink-0 xl:block print:hidden px-4" aria-label="table of contents">
+  
+
+
+
+
+
+
+
+
+
+
+
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bb%b8%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%81%ae%e8%bf%bd%e5%8a%a0">軸目盛り，グリッドの追加</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9f%ba%e6%9c%ac">基本</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%b8%8a%e4%b8%8b%e5%b7%a6%e5%8f%b3%e5%88%a5%e3%81%aeframe%e3%81%ae%e8%bf%bd%e5%8a%a0">上下左右別のframeの追加</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%81%a8%e8%a3%9c%e5%8a%a9%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%81%ae%e8%bf%bd%e5%8a%a0">目盛りと補助目盛りの追加</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%a2%e3%83%8e%e3%83%86%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e8%aa%bf%e6%95%b4">アノテーションの調整</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%b7%af%e5%ba%a6%e7%b5%8c%e5%ba%a6%e3%81%ae%e6%9b%b8%e5%bc%8f">緯度経度の書式</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9b%9e%e8%bb%a2">回転</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e7%b7%9a%e3%81%ae%e8%aa%bf%e6%95%b4">グリッド線の調整</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%81%ae%e5%a4%89%e6%9b%b4">スタイルの変更</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ba%a7%e6%a8%99%e8%bb%b8%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%81%ae%e8%aa%bf%e6%95%b4">座標軸・目盛りの調整</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bb%b8%e3%83%a9%e3%83%99%e3%83%ab%e3%81%ae%e8%bf%bd%e5%8a%a0">軸ラベルの追加</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%af%be%e6%95%b0%e8%bb%b8">対数軸</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%ae%e7%9b%9b%e3%82%8a%e7%b7%9aticks%e3%81%ae%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab%e3%81%ae%e8%aa%bf%e6%95%b4">目盛り線（ticks）のスタイルの調整</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%9e%a0%e3%81%ae%e8%a6%8b%e3%81%9f%e7%9b%ae%e3%81%ae%e8%aa%bf%e6%95%b4">枠の見た目の調整</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#map_frame_type%e3%81%ae%e5%a4%89%e6%9b%b4">MAP_FRAME_TYPEの変更</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%9e%a0%e7%b7%9a%e3%81%ae%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab">枠線のスタイル</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%81%ae%e5%85%b1%e9%80%9a%e8%a8%ad%e5%ae%9a">グリッド・目盛りの共通設定</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%ba%a6%e5%88%86%e7%a7%92%e3%81%ab%e3%82%88%e3%82%8b%e6%8c%87%e5%ae%9a">度分秒による指定</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%b9%b3%e8%a1%8c%e7%a7%bb%e5%8b%95">平行移動</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9c%b0%e5%9b%b3%e3%81%aeregion%e3%81%ae%e5%8f%96%e5%be%97">地図のregionの取得</a>
+      </li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  </nav>
+
+
+  <article class="flex w-full min-w-0 min-h-[calc(100vh-var(--navbar-height))] justify-center break-words pb-8 pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+    <main class="prose prose-slate lg:prose-xl dark:prose-invert w-full min-w-0 max-w-6xl px-6 pt-4 md:px-12">
+      <div class="mb-1">
+        <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400">
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://is-enaga.github.io//mynote/docs/">個人的ノート集トップ</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://is-enaga.github.io//mynote/pygmt/">PyGMT</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第8章　軸・枠回り</div>
+</div>
+
+      </div>
+
+      <div class="content text-base">
+        <h1>第8章　軸・枠回り</h1>
+        <p>\code{pygmt.Figure.basemap(frame=&lt;&gt;)}などで枠や軸を作ることができる．
+frameはfig.plot()で指定しても良い．</p>
+<h2 id="軸目盛りグリッドの追加">軸目盛り，グリッドの追加</h2>
+<h3 id="基本">基本</h3>
+<p>frame引数において&rsquo;agf&rsquo;の文字列でそれぞれアノテーション（目盛り数値），グリッド，目盛り線の有無を指定する．例えば&rsquo;g&rsquo;のみにするとグリッドのみが追加される．</p>
+<p>また，それぞれの文字のあとに数字を入れることで間隔を指定できる：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;a&lt;アノテーション間隔&gt;g&lt;グリッド間隔&gt;f&lt;目盛り線間隔&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span></code></pre></div><p>さらに配列にして複数にわけ，先頭にx, yをつけることで軸ごとに設定を指定できる：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x&lt;agf&gt;&#39;</span><span class="p">,</span><span class="s1">&#39;y&lt;agf&gt;&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span></code></pre></div><h3 id="上下左右別のframeの追加">上下左右別のframeの追加</h3>
+<p>frame = []の中を「, 」で区切り，次の例のようにする：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="n">frame</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;&lt;NEWS news tlrb&gt;&#39;</span><span class="p">,</span><span class="s1">&#39;&lt;agf&gt;&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>前半の部分で軸とアノテーションの有無を上下左右ごとに指定している．上下左右は東西南北のnewsまたはNEWS，さらにあるいはtlrb (top, left, right, bottomの頭文字) で表す．
+小文字のnewsで書くと軸と目盛り線のみが描画され，大文字NEWSで書くとアノテーションがつく．何も書かなかった方向は軸が描画されない．</p>
+<p>またtlrbはframeのタイプ(cf. 第*※相互参照無効*節)が「plain」のときに有効で（fancy&ndash;縞々の枠&ndash;のときはnewsと同じか）．newsでは描画される目盛り線も消えて枠線のみを残すことができる．</p>
+<p>＜注意＞basemap()より先にplot()などを使うと，先に勝手に左と下にアノテーションがついた軸が描画されてしまう場合がある．この状態だと後に記したbasemap()で’NEsw’としても，重ね描きの結果，先にplotで作成された’NEWS’の見た目が残ってしまう．</p>
+<p>例）plain枠におけるNEWS,news,tlrb,指定なしの違い．出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="s2">&#34;X6c/3c&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tWs&#39;</span><span class="p">,</span><span class="s1">&#39;af&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/framenews.png"
+    alt="plain枠におけるframeの上下左右別指定．上がt, 左がE, 下がb, 右が指定なし．fancy枠ではnewsとtlrbの違いはなしか．"><figcaption>
+      <p>plain枠におけるframeの上下左右別指定．上がt, 左がE, 下がb, 右が指定なし．fancy枠ではnewsとtlrbの違いはなしか．</p>
+    </figcaption>
+</figure>
+
+<h3 id="目盛りと補助目盛りの追加">目盛りと補助目盛りの追加</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="c1"># 主目盛り</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s2">&#34;p&lt;agf&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 補助目盛り</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s2">&#34;s&lt;agf&gt;&#34;</span>
+</span></span></code></pre></div><p>frameでアノテーションなどを指定するとき，初めにs,pをつければそれぞれ主，補助目盛りになるようだ．しかしうまくいかないときもある気がする．</p>
+<p>ここでsが主目盛りなのだが，これを守って主・補助の両方を指定すると図*※相互参照無効*のように主目盛り線がやたらと長くなり不格好．
+こうなるのは補助目盛りのアノテーションのスペースを確保するためであろうか．</p>
+<p>なので主目盛りのみにアノテーションを付す場合は，
+警告メッセージが大量に出るがあえて逆に指定する方が図*※相互参照無効*のように目盛り線の長さは自然になる．</p>
+<p>あるいは目盛り線の長さを明示的に指定して調整することもできる (cf. 第*※相互参照無効*節)．</p>
+<!--  % =================================================================== -->
+<h2 id="アノテーションの調整">アノテーションの調整</h2>
+<h3 id="緯度経度の書式">緯度経度の書式</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FORMAT_GEO_MAP</span> <span class="o">=</span> <span class="s2">&#34;ddd.xx&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span></code></pre></div><p>地図のプロットの場合，枠のラベルの書式を度分ではなく小数度にできる．
+例）緯度経度の書式．出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FONT</span> <span class="o">=</span> <span class="s1">&#39;8p&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">FORMAT_GEO_MAP</span> <span class="o">=</span> <span class="s1">&#39;ddd&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;agf&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;CT&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ddd&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">justify</span> <span class="o">=</span> <span class="s1">&#39;CB&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">offset</span> <span class="o">=</span> <span class="s1">&#39;0/10p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">no_clip</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">font</span> <span class="o">=</span> <span class="s1">&#39;9p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span><span class="s1">&#39;4.5c&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">FORMAT_GEO_MAP</span> <span class="o">=</span> <span class="s1">&#39;ddd.x&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;agf&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;CT&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ddd.x&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">justify</span> <span class="o">=</span> <span class="s1">&#39;CB&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">offset</span> <span class="o">=</span> <span class="s1">&#39;0/10p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">no_clip</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">font</span> <span class="o">=</span> <span class="s1">&#39;9p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span><span class="s1">&#39;4.5c&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">FORMAT_GEO_MAP</span> <span class="o">=</span> <span class="s1">&#39;ddd.xx&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;agf&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fig</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;CT&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;ddd.xx&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">justify</span> <span class="o">=</span> <span class="s1">&#39;CB&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">offset</span> <span class="o">=</span> <span class="s1">&#39;0/10p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">no_clip</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">font</span> <span class="o">=</span> <span class="s1">&#39;9p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/annot_format.png"
+    alt="アノテーションの緯度経度の書式を小数点形式に変更．"><figcaption>
+      <p>アノテーションの緯度経度の書式を小数点形式に変更．</p>
+    </figcaption>
+</figure>
+
+<h3 id="回転">回転</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;...+a&lt;angle(°)&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span></code></pre></div><p>projectionが「X」の場合のみ．
+アノテーションを回転できる．
+地図で用いようとすると「basemap [ERROR]: Option -B: Cannot use +a for geographic basemaps」というエラーが出て使用できない．
+例）出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;X4c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;neS&#39;</span><span class="p">,</span><span class="s1">&#39;agf&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FONT_ANNOT</span> <span class="o">=</span> <span class="s1">&#39;8p,red&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;X4c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;W&#39;</span><span class="p">,</span><span class="s1">&#39;yagf+a90&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/annot_rotate.png"
+    alt="アノテーションの回転（直交座標の場合のみ可能）．"><figcaption>
+      <p>アノテーションの回転（直交座標の場合のみ可能）．</p>
+    </figcaption>
+</figure>
+
+<!--  ================================================================= -->
+<h2 id="グリッド線の調整">グリッド線の調整</h2>
+<h3 id="スタイルの変更">スタイルの変更</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 主グリッド</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_GRID_PEN_PRIMARY</span> <span class="o">=</span> <span class="s1">&#39;&lt;width,color,style&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 補助グリッド</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_GRID_PEN_SECONDARY</span> <span class="o">=</span> <span class="s1">&#39;&lt;width,color,style&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span></code></pre></div><p>このwith構文内のメソッドでプロットしたグリッドにスタイルを適用できる．
+スタイルはplotメソッドにおける線のスタイルと共通．</p>
+<p>なお，styleについて「dash」（あるいは「- -」）の場合は太さの指定が適用されないようだ．代わりにwidthで破線の間隔が指定されるようだ．</p>
+<p>例）出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_GRID_PEN_PRIMARY</span> <span class="o">=</span> <span class="s1">&#39;0.5p,blue,.&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_GRID_PEN_SECONDARY</span> <span class="o">=</span> <span class="s1">&#39;0.8p,red,:&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;X4c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;pg0.5f0.5&#39;</span><span class="p">,</span><span class="s1">&#39;sa2g2f2&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/grid_ps.png"
+    alt="主グリッド（赤），補助グリッド（青）のスタイルの指定．"><figcaption>
+      <p>主グリッド（赤），補助グリッド（青）のスタイルの指定．</p>
+    </figcaption>
+</figure>
+
+<!--  =================================================================== -->
+<h2 id="座標軸目盛りの調整">座標軸・目盛りの調整</h2>
+<h3 id="軸ラベルの追加">軸ラベルの追加</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x&lt;agf&gt;+l&lt;xlabel&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;y&lt;agf&gt;+&lt;ylabel&gt;&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span></code></pre></div><p>x, yなどの軸ごとに「+l」を付加することでその軸のラベルを加えることができる．</p>
+<h3 id="対数軸">対数軸</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;X&lt;x-size&gt;l/&lt;y-size&gt;l&#39;</span>
+</span></span></code></pre></div><p>projectionで直交座標を指定したうえで，自然対数にしたい軸のサイズの後に「l」をつければよい．</p>
+<p>アノテーションやグリッドの幅はデフォルトだと自動で決まるが，指定する方法がやや独特であまり理解できていない．
+frameでアノテーションなどの間隔を指定するときに，数字の後に「p」をつけると指数表記（ $10^n$ 
+）になる．
+そして幅の値を負にするとその指数の間隔（-nとすると $10^n$ 
+倍間隔）にできるっぽい．
+正の値は1だと10倍間隔，2だとよくわからない，3だと10.1, 10.2,…のように10等分間隔に指定できる $\cdots\cdots$ 
+のか？</p>
+<p>例）出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000000</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mf">0.5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MAP_FRAME_PEN</span><span class="o">=</span><span class="s1">&#39;0.5p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MAP_GRID_PEN_SECONDARY</span><span class="o">=</span><span class="s1">&#39;0.1p,#777777&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">MAP_GRID_PEN_PRIMARY</span><span class="o">=</span><span class="s1">&#39;0.5p,black&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pen</span> <span class="o">=</span> <span class="s1">&#39;1p,black&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;X6cl/5cl&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sxg3p&#39;</span><span class="p">,</span><span class="s1">&#39;syg3p&#39;</span><span class="p">,</span><span class="s1">&#39;pxa-1pg-1pf3p&#39;</span><span class="p">,</span><span class="s1">&#39;pya-1pg-1pf3p&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/log.png"
+    alt="$\sqrt{x}$ 
+の両対数軸プロット．"><figcaption>
+      <p>$\sqrt{x}$ 
+の両対数軸プロット．</p>
+    </figcaption>
+</figure>
+
+<h3 id="目盛り線ticksのスタイルの調整">目盛り線（ticks）のスタイルの調整</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_TICK_LENGTH</span> <span class="o">=</span> <span class="s1">&#39;&lt;length&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_TICK_PEN</span> <span class="o">=</span> <span class="s1">&#39;&lt;width&gt;,&lt;color&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span></code></pre></div><p>ここでMAP_TICK_LENGTHを負の値にすると目盛りを内側に付けることができる．
+なお目盛り線の間隔はfig.basemap()などの中のframe=で指定する．</p>
+<p>例）出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_FRAME_WIDTH</span> <span class="o">=</span> <span class="s1">&#39;1p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_TICK_LENGTH</span> <span class="o">=</span> <span class="s1">&#39;-5p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_TICK_PEN</span> <span class="o">=</span> <span class="s1">&#39;1p,red&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;X4c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;neWS&#39;</span><span class="p">,</span><span class="s1">&#39;af&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/ticklength.png"
+    alt="目盛り線（ticks）のスタイルの変更．"><figcaption>
+      <p>目盛り線（ticks）のスタイルの変更．</p>
+    </figcaption>
+</figure>
+
+<!--  ======================================================================================= -->
+<h2 id="枠の見た目の調整">枠の見た目の調整</h2>
+<h3 id="map_frame_typeの変更">MAP_FRAME_TYPEの変更</h3>
+<p>地理系の投影図法のデフォルトの枠は縞々のフレーム（fancy）である．
+これを通常の線のフレーム (plain) や円い角の縞々枠 (fancy+) に変更できる．
+withの中で指定したframeに対して設定が適用される：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_FRAME_TYPE</span> <span class="o">=</span> <span class="s1">&#39;&lt;type&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">frame</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span></code></pre></div><p>ただし以下の例のように，直交座標をfancyにすることはできないようである．</p>
+<p>例）出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_FRAME_TYPE</span> <span class="o">=</span> <span class="s1">&#39;plain&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FONT</span> <span class="o">=</span> <span class="s1">&#39;8p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;agf&#39;</span><span class="p">,</span><span class="s1">&#39;+tM,plain&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span><span class="s1">&#39;4c&#39;</span><span class="p">,</span><span class="s1">&#39;0c&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_FRAME_TYPE</span> <span class="o">=</span> <span class="s1">&#39;fancy+&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FONT</span> <span class="o">=</span> <span class="s1">&#39;8p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;agf&#39;</span><span class="p">,</span><span class="s1">&#39;+tM,fancy+&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span><span class="s1">&#39;4c&#39;</span><span class="p">,</span><span class="s1">&#39;0c&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_FRAME_TYPE</span> <span class="o">=</span> <span class="s1">&#39;fancy&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FONT</span> <span class="o">=</span> <span class="s1">&#39;8p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;X3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;agf&#39;</span><span class="p">,</span><span class="s1">&#39;+tX,fancy&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/frametype.png"
+    alt="地図の枠の変更．直交座標 (X) にはframeのタイプの指定は反映されない．"><figcaption>
+      <p>地図の枠の変更．直交座標 (X) にはframeのタイプの指定は反映されない．</p>
+    </figcaption>
+</figure>
+
+<h3 id="枠線のスタイル">枠線のスタイル</h3>
+<p>with pygmt.configを使い，with構文内で枠線を作成するメソッドを使用してスタイルを変更できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_FRAME_PEN</span> <span class="o">=</span> <span class="s1">&#39;&lt;width&gt;, &lt;color&gt;&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span></code></pre></div><p>地図ではなく普通のグラフにも使える．</p>
+<p>枠線の太さだけを変更したい場合は次のようにする．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_FRAME_WIDTH</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span></code></pre></div><p>しかし地図ではない普通のグラフではこれは動作しなかった．
+枠が「fancy」ではない場合はMAP_FRAME_PENで指定するのが良さそう．</p>
+<!--  =========================================================================== -->
+<h2 id="グリッド目盛りの共通設定">グリッド・目盛りの共通設定</h2>
+<h3 id="度分秒による指定">度分秒による指定</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;a&lt;度&gt;d&lt;分&gt;m&lt;秒&gt;s...&#39;</span>
+</span></span></code></pre></div><p>点や描画範囲 (region) などの座標（第*※相互参照無効*節）の場合とは異なり，
+frameにおけるグリッドや目盛りの間隔の設定で度分秒を使うには「d/m/s」いずれかの単位を付す．</p>
+<h3 id="平行移動">平行移動</h3>
+<p>グリッドや目盛りの位置は平行移動できる．
+例えばデフォルトでは[0,10,20,&hellip;]の位置にグリッドが描かれる場合であっても，
+[5,15,25,&hellip;]のようにグリッドの位置を指定することができる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;&lt;agf&gt;+&lt;平行移動量&gt;&#39;</span>
+</span></span></code></pre></div><p>すなわち，最後に「+&lt;数値&gt;」を付すことで任意の量だけグリッドや目盛りを移動できる．</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><p>&lt;注意&gt;</p>
+<p>アノテーションを小数表記にした地図（cf. 第*※相互参照無効*節）および直交座標（X）のグラフにのみ適用可能なようである．</p>
+<p>第*※相互参照無効*節にある度分秒表記とは相性が悪いようで，
+正常に動作しない（バグ? 仕様?）．
+移動が適用されなかったり，移動してもアノテーションの「分」以下の数字が切り捨てられて表示されたりする．</p>
+</span>
+</div>
+<p>例）出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_TICK_PEN</span> <span class="o">=</span> <span class="s1">&#39;0.5p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_GRID_PEN</span> <span class="o">=</span> <span class="s1">&#39;2p,black,solid&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FORMAT_GEO_MAP</span> <span class="o">=</span> <span class="s1">&#39;ddd.x&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># FONT = &#39;8p&#39;,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># default</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">shorelines</span> <span class="o">=</span> <span class="s1">&#39;0.5p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;#b0ffdd&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">water</span> <span class="o">=</span> <span class="s1">&#39;#b0ddff&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="s1">&#39;133:30/137:30/33/37&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xa1g1f0.5&#39;</span><span class="p">,</span><span class="s1">&#39;ya1g1f0.5&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span><span class="s1">&#39;4.5c&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># shifted</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">shorelines</span> <span class="o">=</span> <span class="s1">&#39;0.5p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;#b0ffdd&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">water</span> <span class="o">=</span> <span class="s1">&#39;#b0ddff&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="s1">&#39;133:30/137:30/33/37&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M3c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xa1g1f0.5+0.5&#39;</span><span class="p">,</span><span class="s1">&#39;ya1g1f0.5+0.5&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/originshift.png"
+    alt="グリッド・目盛りの平行移動．左がデフォルト位置，右が0.5°平行移動した位置．"><figcaption>
+      <p>グリッド・目盛りの平行移動．左がデフォルト位置，右が0.5°平行移動した位置．</p>
+    </figcaption>
+</figure>
+
+<!-- =================================== -->
+<h2 id="地図のregionの取得">地図のregionの取得</h2>
+<!-- =================================== -->
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">region</span>
+</span></span></code></pre></div><p>regionのリストが返ってくる．</p>
+<p>使い時はあまりなさそうだが，
+作成したFigureのregionをあとから取得できる．</p>
+<!--  ################################################################### -->
+
+      </div>
+
+      <div class="mt-16"></div>
+      
+      
+  
+    
+    
+    
+      
+      
+    
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      
+        <a class="group flex no-underline" href="/mynote/docs/pygmt/sec007/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >第7章　地図のプロット</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+        <a class="group flex text-right no-underline" href="/mynote/docs/pygmt/sec009/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >第9章　周辺要素</span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+            </span>
+          </span>
+          <span
+            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline">&rarr;</span></span>
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+      
+
+
+
+    </main>
+  </article>
+</div>
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+<p class="text-center">
+  
+  <a href="/mynote/privacy/">プライバシーポリシー　Privacy Policy</a>
+  
+  
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2024 Kei Shiraiwa. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
