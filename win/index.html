@@ -857,6 +857,12 @@
             </li>
           <li>
               <a
+                href="#%e5%8b%95%e4%bd%9c%e7%92%b0%e5%a2%83"
+                class="hb-docs-link"
+              >動作環境</a>
+            </li>
+          <li>
+              <a
                 href="#%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e3%82%80%e3%81%a4%e3%81%8b%e3%81%97%e3%81%84%e7%82%b9"
                 class="hb-docs-link"
               >ちょっとむつかしい点</a>
@@ -1224,6 +1230,9 @@
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#win%e3%82%b7%e3%82%b9%e3%83%86%e3%83%a0%e3%81%a8%e3%81%af">WINシステムとは</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%8b%95%e4%bd%9c%e7%92%b0%e5%a2%83">動作環境</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e3%82%80%e3%81%a4%e3%81%8b%e3%81%97%e3%81%84%e7%82%b9">ちょっとむつかしい点</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -1262,6 +1271,14 @@
 <h2 id="内容">内容</h2>
 <p>東京大学地震研究所によるWINシステムについて．
 インストール方法やフォーマットの概要など．</p>
+<div class="flex px-4 py-3 rounded-md bg-yellow-100 dark:bg-yellow-900">
+<span class="pr-3 pt-1 text-red-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0zM12 15.75h.007v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300">本サイトのノートは自動変換でPDFから移植されたものです．
+そのため意図しない箇所に改行が入っていたり，文字が消えたり増えたりしている場合があります．
+ご了承ください．</span>
+</div>
 <h2 id="winシステムとは">WINシステムとは</h2>
 <!-- <figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/win_example.png"
     alt="winコマンドでの地震波形読み取り画面"><figcaption>
@@ -1307,6 +1324,11 @@ WIN32フォーマット
 Hirata, Matsu&rsquo;uraの手法による震源決定プログラム
 <a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/hypomh.html">hypomh</a>も，
 WINに付随しています．</p>
+<h2 id="動作環境">動作環境</h2>
+<p>対応しているのはUnixのみです．<br>
+しかし最近はWindowsでも<a href="https://learn.microsoft.com/ja-jp/windows/wsl/install">WSL(Windows Subsystem for Linux)</a>
+を使用して気軽に利用できます．
+ただし一度設定を終えれば快適に利用できますが，WSLでのGUIの設定は少し大変です．</p>
 <h2 id="ちょっとむつかしい点">ちょっとむつかしい点</h2>
 <p>フォーマットが複雑です．
 処理に必要なデータが複数ファイルに分かれていることや，FORTRAN用の固定長ファイルの書式が独特である点など．</p>
@@ -1315,7 +1337,6 @@ WINに付随しています．</p>
 公式でWIN→SAC変換用の<a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/wintosac.html">wintosac</a>やwin2sacというコマンドが配布されています
 （ここでも2種類あるのがまたややこしい）．</p>
 <p>またソフト自体がかなり古いので，Unix環境でしか動作せず，GUIの操作性にもやや癖があります．</p>
-<p>あと，名前のせいで検索してもWindowsの情報が</p>
 <p>上記のような点が，初心者が導入や使用をする上でのハードルを上げているように感じます．</p>
 <h2 id="参考">参考</h2>
 
