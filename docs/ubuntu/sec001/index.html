@@ -847,7 +847,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec002/"
     
-  >第2章　プログラミング
+  >第2章　ファイル管理
     </a>
               
             </li><li class="flex flex-col "><a
@@ -855,7 +855,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec003/"
     
-  >第3章　パッケージ
+  >第3章　Git
     </a>
               
             </li><li class="flex flex-col "><a
@@ -863,7 +863,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec004/"
     
-  >第4章　ファイル管理
+  >第4章　パッケージ
     </a>
               
             </li><li class="flex flex-col "><a
@@ -871,7 +871,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec005/"
     
-  >第5章　Git
+  >第5章　プログラミング
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1159,7 +1159,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec002/"
     
-  >第2章　プログラミング
+  >第2章　ファイル管理
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1167,7 +1167,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec003/"
     
-  >第3章　パッケージ
+  >第3章　Git
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1175,7 +1175,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec004/"
     
-  >第4章　ファイル管理
+  >第4章　パッケージ
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1183,7 +1183,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec005/"
     
-  >第5章　Git
+  >第5章　プログラミング
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1444,7 +1444,7 @@
 </span></span><span class="line"><span class="cl">  <span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">cifs</span> <span class="o">//</span><span class="mf">172.17.26.172</span><span class="o">/</span><span class="n">disk1</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">nas</span> <span class="o">-</span><span class="n">o</span> <span class="n">username</span><span class="o">=&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="p">,</span><span class="n">password</span><span class="o">=&lt;</span><span class="n">pw</span><span class="o">&gt;</span>
 </span></span></code></pre></div><p>GUIでNASに接続するのは容易であるが，CUIでもNASに接続できる．
 cfi-utilsをインストールしていなければインストールする．
-\code{username}と\code{password}はあらかじめNASに登録したユーザーIDとパスワード．</p>
+<code>username</code>と<code>password</code>はあらかじめNASに登録したユーザーIDとパスワード．</p>
 <!-- ---------------------------------- -->
 <h3 id="onedriveのマウント">OneDriveのマウント</h3>
 <!-- ---------------------------------- -->
@@ -1710,7 +1710,7 @@ LVMを認識する作業が必要である．</p>
 <h3 id="プロセスの確認">プロセスの確認</h3>
 <!-- ---------------------------------- -->
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ps</span> <span class="o">-&lt;</span><span class="n">option</span><span class="o">&gt;</span>
-</span></span></code></pre></div><p>\code{ps -x}など．実行中のプロセスを表示する．</p>
+</span></span></code></pre></div><p><code>ps -x</code>など．実行中のプロセスを表示する．</p>
 <p>または，</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">top</span>
 </span></span></code></pre></div><p>でリアルタイムでプロセスを確認できる．
@@ -1721,7 +1721,7 @@ Windowsでいうタスクマネージャーのような感じ．</p>
 <!-- ............................. -->
 <h4 id="出力の確認">出力の確認</h4>
 <!-- ............................. -->
-<p>出力は\code{/proc/<process ID>/fd/1}に格納されている．
+<p>出力は<code>/proc/&lt;process ID&gt;/fd/1</code>に格納されている．
 したがって</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cat</span> <span class="o">/</span><span class="n">proc</span><span class="o">/&lt;</span><span class="n">process</span> <span class="n">ID</span><span class="o">&gt;/</span><span class="n">fd</span><span class="o">/</span><span class="mi">1</span>
 </span></span></code></pre></div><p>で確認可能．プロセスIDはpsなどで調べておく．
@@ -1741,7 +1741,7 @@ Windowsでいうタスクマネージャーのような感じ．</p>
 5分後であれば「shutdown -h +5」，3時であれば「shutdown -h 03:00」のようにする．</p>
 <p>なお，時刻指定をした場合は次のコマンドでシャットダウン/再起動の予定をキャンセルできる：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">shutdown</span> <span class="o">-</span><span class="n">c</span>
-</span></span></code></pre></div><!-- ######################################### -->
+</span></span></code></pre></div><!--  ####################################### -->
 
       </div>
 
@@ -1767,7 +1767,7 @@ Windowsでいうタスクマネージャーのような感じ．</p>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第2章　プログラミング</span
+            >第2章　ファイル管理</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
