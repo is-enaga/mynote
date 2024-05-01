@@ -741,13 +741,16 @@ mambaの部分をcondaに書き換えるだけ．&lt;/p&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;参考：
-&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html&lt;/a&gt;&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;hypomh.f 989行目~&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;p&gt;震源決定プログラムhypomhで用いられる速度構造ファイルについて記す．&lt;/p&gt;
 &lt;p&gt;hypomhの説明ではstanファイルと記されている．
-行ごとに内容が定められ，かつ固定長である．&lt;/p&gt;
-&lt;p&gt;P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])構造だけを指定する．
+震源決定プログラムhypomhで用いられる速度構造ファイル．&lt;/p&gt;
+&lt;p&gt;行ごとに内容が定められ，かつ固定長である．
+P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])構造だけを指定する．
 深さは0から始まり，km単位で各層の厚さを指定する．&lt;/p&gt;
 &lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
@@ -757,13 +760,31 @@ mambaの部分をcondaに書き換えるだけ．&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;S波速度Vsは, Vp/Vs=1.73として扱われる．&lt;/li&gt;
 &lt;li&gt;標高0kmより高い部分のVpは，0kmにおけるVpとする．&lt;/li&gt;
-&lt;li&gt;層の数の上限は20.(層の厚さは21個まで, Vpの数は22個まで)．&lt;/li&gt;
+&lt;li&gt;各層の上端のVpを与え，それらを線形で結んだ速度構造として扱う．&lt;/li&gt;
+&lt;li&gt;「層の数」の上限は20(層の厚さは21個まで, Vpの数は22個まで)．&lt;/li&gt;
+&lt;li&gt;初期震源の時刻の不確かさは入力が必要だが，使われない．&lt;/li&gt;
 &lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
-&lt;!--  %............................. --&gt;
-&lt;!--  #### 1行目　初期震源 --&gt;
-&lt;!--  %............................. --&gt;
-&lt;!--  hypomhの初期震源の位置 --&gt;
+&lt;p&gt;ファイルの構成は以下の通り：&lt;/p&gt;
+&lt;p&gt;-[1行目:] 初期震源の位置&lt;br&gt;
+緯度，経度，深さ[km]を各10文字区切りで．
+-[2行目:] 層の数と名前&lt;br&gt;
+層の数は5文字の整数．2文字のスペースをあけて，3文字の構造名を記す．
+-[3行目:] 層上端のVp&lt;br&gt;
+各10文字区切り．7つごとに改行する．
+-[4行目:] 各層の厚さ[km]&lt;br&gt;
+各10文字区切り．7つごとに改行する．&lt;/p&gt;
+&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/stan.png&#34;
+    alt=&#34;stanファイルの書式．&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;stanファイルの書式．&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+ソースコードでは2行目の名前の後に続けて，
+書式「F10.3」の値を二つ読み取っているが，
+マニュアルに未記載で何なのかわからない．
+サンプルファイルには１つ目に「1」とあるが，2つ目は空白．
+要確認．&lt;/p&gt;
 &lt;!--  1分データのフォーマットは以下のようになっている． --&gt;
 &lt;!--  \begin{table}[H] --&gt;
 &lt;!--    \caption{WINフォーマット1秒ブロックの構成} --&gt;

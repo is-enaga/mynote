@@ -1444,13 +1444,16 @@
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300">参考：
-<a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html" target="_blank" rel="noopener">https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html</a></span>
+  <span class="dark:text-neutral-300"><p>参考：</p>
+<ul>
+<li><a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html" target="_blank" rel="noopener">https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/win.html</a></li>
+<li>hypomh.f 989行目~</li>
+</ul></span>
 </div>
-<p>震源決定プログラムhypomhで用いられる速度構造ファイルについて記す．</p>
 <p>hypomhの説明ではstanファイルと記されている．
-行ごとに内容が定められ，かつ固定長である．</p>
-<p>P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])構造だけを指定する．
+震源決定プログラムhypomhで用いられる速度構造ファイル．</p>
+<p>行ごとに内容が定められ，かつ固定長である．
+P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])構造だけを指定する．
 深さは0から始まり，km単位で各層の厚さを指定する．</p>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
 <span class="pr-3 pt-1 text-primary-400">
@@ -1460,13 +1463,31 @@
 <ul>
 <li>S波速度Vsは, Vp/Vs=1.73として扱われる．</li>
 <li>標高0kmより高い部分のVpは，0kmにおけるVpとする．</li>
-<li>層の数の上限は20.(層の厚さは21個まで, Vpの数は22個まで)．</li>
+<li>各層の上端のVpを与え，それらを線形で結んだ速度構造として扱う．</li>
+<li>「層の数」の上限は20(層の厚さは21個まで, Vpの数は22個まで)．</li>
+<li>初期震源の時刻の不確かさは入力が必要だが，使われない．</li>
 </ul></span>
 </div>
-<!--  %............................. -->
-<!--  #### 1行目　初期震源 -->
-<!--  %............................. -->
-<!--  hypomhの初期震源の位置 -->
+<p>ファイルの構成は以下の通り：</p>
+<p>-[1行目:] 初期震源の位置<br>
+緯度，経度，深さ[km]を各10文字区切りで．
+-[2行目:] 層の数と名前<br>
+層の数は5文字の整数．2文字のスペースをあけて，3文字の構造名を記す．
+-[3行目:] 層上端のVp<br>
+各10文字区切り．7つごとに改行する．
+-[4行目:] 各層の厚さ[km]<br>
+各10文字区切り．7つごとに改行する．</p>
+<p><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/stan.png"
+    alt="stanファイルの書式．"><figcaption>
+      <p>stanファイルの書式．</p>
+    </figcaption>
+</figure>
+
+ソースコードでは2行目の名前の後に続けて，
+書式「F10.3」の値を二つ読み取っているが，
+マニュアルに未記載で何なのかわからない．
+サンプルファイルには１つ目に「1」とあるが，2つ目は空白．
+要確認．</p>
 <!--  1分データのフォーマットは以下のようになっている． -->
 <!--  \begin{table}[H] -->
 <!--    \caption{WINフォーマット1秒ブロックの構成} -->
