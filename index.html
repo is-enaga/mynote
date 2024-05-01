@@ -242,7 +242,13 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite","url": "https://is-enaga.github.io/mynote/"
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://is-enaga.github.io/mynote/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://is-enaga.github.io/mynote/"
 }
 </script>
 

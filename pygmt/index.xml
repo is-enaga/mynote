@@ -65,7 +65,7 @@ mambaの部分をcondaに書き換えるだけ．&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Figureオブジェクトを作成してから作図を進める．&lt;/p&gt;
 &lt;!--  ============================================================================ --&gt;
 &lt;h2 id=&#34;図法&#34;&gt;図法&lt;/h2&gt;
-&lt;p&gt;\code{projection}引数に与える投影図法．
+&lt;p&gt;&lt;code&gt;projection&lt;/code&gt;引数に与える投影図法．
 最初の描画系メソッドの引数にregion(\rightarrow 第*※相互参照無効*節)とともに指定する必要がある．&lt;/p&gt;
 &lt;h3 id=&#34;直交座標&#34;&gt;直交座標&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;X&amp;lt;size&amp;gt;&amp;#39;&lt;/span&gt;
@@ -163,8 +163,8 @@ projectionの設定はそのままに，regionを次のように指定する．&
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/pygmt/sec003/</guid>
       <description>&lt;h2 id=&#34;regionや点の座標の書式&#34;&gt;regionや点の座標の書式&lt;/h2&gt;
-&lt;p&gt;basemapメソッドの描画範囲指定(\code{region})や
-plotメソッド等の座標指定(\code{x, y, z})などで与える座標値は，
+&lt;p&gt;basemapメソッドの描画範囲指定(&lt;code&gt;region&lt;/code&gt;)や
+plotメソッド等の座標指定(&lt;code&gt;x, y, z&lt;/code&gt;)などで与える座標値は，
 整数または文字列で与えられる．&lt;/p&gt;
 &lt;p&gt;整数で与えた場合は十進法である．
 文字列では十進法のほか，「:」で区切ることで緯度経度に向いた六十進法(度分秒)で与えることもできる：&lt;/p&gt;
@@ -255,8 +255,7 @@ latex is not installed or not in your executable path - cannot process LaTeX to 
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@%%&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;または&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;@~&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@~&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;文字番号12がギリシャ文字のフォントであるため，これを用いるとギリシャ文字を入力できる．ギリシャ文字は対応するアルファベットで指定する．例えば「 $\tau」$ 
-なら「t」と入力する．&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;文字番号12がギリシャ文字のフォントであるため，これを用いるとギリシャ文字を入力できる．ギリシャ文字は対応するアルファベットで指定する．例えば「$\tau」$なら「t」と入力する．&lt;/p&gt;
 &lt;h3 id=&#34;度&#34;&gt;「度（°）」&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;@.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;普通に「°」と入力しようとしても文字化けしてうまくいかない．しかし「@.」と入力すると「°」を入力することができる．ラベルでも軸でもどこでも使える．&lt;/p&gt;
@@ -743,7 +742,7 @@ outfileを指定するとファイルが出力される代わりに何も返っ�
       <link>https://is-enaga.github.io/mynote/docs/pygmt/sec008/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/pygmt/sec008/</guid>
-      <description>&lt;p&gt;\code{pygmt.Figure.basemap(frame=&amp;lt;&amp;gt;)}などで枠や軸を作ることができる．
+      <description>&lt;p&gt;&lt;code&gt;pygmt.Figure.basemap(frame=&amp;lt;&amp;gt;)&lt;/code&gt;などで枠や軸を作ることができる．
 frameはfig.plot()で指定しても良い．&lt;/p&gt;
 &lt;h2 id=&#34;軸目盛りグリッドの追加&#34;&gt;軸目盛り，グリッドの追加&lt;/h2&gt;
 &lt;h3 id=&#34;基本&#34;&gt;基本&lt;/h3&gt;
