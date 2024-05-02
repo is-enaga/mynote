@@ -1288,11 +1288,13 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">init</span>
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;&lt;message&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">URL</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
 </span></span></code></pre></div><p>git initでリポジトリを作成する．
 git add .はすべてのファイルをステージングする．
 git commit -m &ldquo;<message>&ldquo;でコミットする．
+git branch -M mainでブランチをmainに変更する．
 git remote add origin <URL>でリモートリポジトリを追加する．
 git push -u origin masterでリモートリポジトリにプッシュする．</p>
 <p>GitHubを使わずローカルでのみ管理する場合は，
