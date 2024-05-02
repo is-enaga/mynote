@@ -881,7 +881,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
               
             </li></ul>
@@ -1193,7 +1193,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
               
             </li></ul>
@@ -1348,13 +1348,14 @@
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
   <span class="dark:text-neutral-300"><p>オプション：</p>
-<p>-[+j:] justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)
--[+w:] width. スケールで示す距離．(ex. +w100k)
--[+f:] fancy. 縞々スケールにする．
--[+l:] label.スケール上部にラベルを付ける．(ex. +llabel)
--[+u:] unit. +wの単位に基づき，スケールの数字に単位をつける．
--[+c:] どの緯度 (経度) におけるスケールを示すかを指定する．</p>
-</span>
+<ul>
+<li>+j:: justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)</li>
+<li>+w:: width. スケールで示す距離．(ex. +w100k)</li>
+<li>+f:: fancy. 縞々スケールにする．</li>
+<li>+l:: label.スケール上部にラベルを付ける．(ex. +llabel)</li>
+<li>+u:: unit. +wの単位に基づき，スケールの数字に単位をつける．</li>
+<li>+c:: どの緯度 (経度) におけるスケールを示すかを指定する．</li>
+</ul></span>
 </div>
 <p>図*※相互参照無効*も参照．</p>
 <h2 id="太さ">太さ</h2>
@@ -1406,17 +1407,25 @@ position=で場所や方向を指定する．
 </span>
   <span class="dark:text-neutral-300"><pre><code>frame引数でのオプション：
 </code></pre>
-<p>-[+l:] label.</p>
-<pre><code>他もbasemapなどで使うframeと共通でagf等が使える．
-<p>position引数でのオプション：
-</code></pre></p>
-<p>-[+j:] justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)
--[+w:] width. 「+w&lt;長さ&gt;/&lt;太さ&gt;」の形で使用．カラーバーの長さと太さ．
--[+e:] これを付けると，カラーバーの両端に三角が付く．さらに数字を加えると三角の大きさを指定できる．</p>
-<pre><code>frameとpositionの引数で各項目を調整する．
+<ul>
+<li>
+<p>+l:: label.</p>
+<p>他もbasemapなどで使うframeと共通でagf等が使える．</p>
+<p>position引数でのオプション：</p>
+</li>
+<li>
+<p>+j:: justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)</p>
+</li>
+<li>
+<p>+w:: width. 「+w&lt;長さ&gt;/&lt;太さ&gt;」の形で使用．カラーバーの長さと太さ．</p>
+</li>
+<li>
+<p>+e:: これを付けると，カラーバーの両端に三角が付く．さらに数字を加えると三角の大きさを指定できる．</p>
+<p>frameとpositionの引数で各項目を調整する．
 +wで長さのみならず太さも指定できる．また+eでカラーバーの両端に三角を付けられる．
-このように調整方法が距離スケールバーとはやや異なるので注意．
-</code></pre>
+このように調整方法が距離スケールバーとはやや異なるので注意．</p>
+</li>
+</ul>
 </span>
 </div>
 <!--  ============================================================================ -->

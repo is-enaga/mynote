@@ -510,14 +510,26 @@ Same as -Se, except azimuth (in degrees east of north) should be given instead o
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;[leftmargin=7em]
--[&amp;lt;図形間隔&amp;gt;：] 正の数にすれば図形の間隔．負の数にすれば図形の数で指定できる．
--[+&amp;lt;l/r&amp;gt;：] left or right．指定しなければcenterになる．
--[+&amp;lt;図形の種類&amp;gt;：] box, circle, fault (default), slip, or triangle．bやcを+l/rと使うと半分の四角や半円になるようだ．
--[+i; invisible：] 直線を消して図形のみにできる．
--[+p; pen：] 図形のpenを曲線と別に指定できる．図形の枠線をなくしたい場合は+pとのみ入力する．&lt;/p&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;[leftmargin=7em]&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;lt;図形間隔&amp;gt;：: 正の数にすれば図形の間隔．負の数にすれば図形の数で指定できる．&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+&amp;lt;l/r&amp;gt;：: left or right．指定しなければcenterになる．&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+&amp;lt;図形の種類&amp;gt;：: box, circle, fault (default), slip, or triangle．bやcを+l/rと使うと半分の四角や半円になるようだ．&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+i; invisible：: 直線を消して図形のみにできる．&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+p; pen：: 図形のpenを曲線と別に指定できる．図形の枠線をなくしたい場合は+pとのみ入力する．&lt;/p&gt;
 &lt;p&gt;参考）PyGMT公式&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.pygmt.org/latest/gallery/lines/linefronts.html#sphx-glr-gallery-lines-linefronts-py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.pygmt.org/latest/gallery/lines/linefronts.html#sphx-glr-gallery-lines-linefronts-py&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/span&gt;
 &lt;/div&gt;
 &lt;p&gt;私鉄の線路のような「キ」の字スタイルについては，図形を示す記号はいらない．他の場合はcなど図形の種類を+で指定する．&lt;/p&gt;
@@ -635,37 +647,39 @@ qは&amp;quot;\underline{q}uoted line&amp;quot;の頭文字のようだ．
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;controlling algorithm:&lt;/p&gt;
-&lt;p&gt;-[d:] ここで指定した間隔ごとにテキストを設置する．狭くしすぎるとテキストが重なってしまう．
--[n:] 一番楽に使えそう．線上にテキストを配置する数を指定．これを1にすると線の中心にテキストが追加される．2以上なら繰り返し同じテキストが等間隔に配置される．
--[N:] N1なら終点に，N-1なら始点に「テキストの左端」がくるようにテキストが配置される．N2なら線の両端に「文字の中心」がくるように２つのテキストが配置される．+jオプションで文字列のどの位置を線の端に合せるかを指定可能．+vオプションをつけるとテキストが表示されなかったりエラーで停止するので注意．&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;d:: ここで指定した間隔ごとにテキストを設置する．狭くしすぎるとテキストが重なってしまう．&lt;/li&gt;
+&lt;li&gt;n:: 一番楽に使えそう．線上にテキストを配置する数を指定．これを1にすると線の中心にテキストが追加される．2以上なら繰り返し同じテキストが等間隔に配置される．&lt;/li&gt;
+&lt;li&gt;N:: N1なら終点に，N-1なら始点に「テキストの左端」がくるようにテキストが配置される．N2なら線の両端に「文字の中心」がくるように２つのテキストが配置される．+jオプションで文字列のどの位置を線の端に合せるかを指定可能．+vオプションをつけるとテキストが表示されなかったりエラーで停止するので注意．&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;オプション:&lt;/p&gt;
-&lt;p&gt;-[+l:] これでテキストを指定．テキストファイルを与えないなら必須．
--[+v:] テキストを曲線に沿わせる．これをつけないとテキストはまっすぐに配置される．
--[+i:] 線を透明にしてテキストだけ表示する．線は不要で文字だけ表示したいならこれ．
--[+w:] よくわからないが曲がり具合の判定に使う点の数？+vを使ったときに文字の間隔がおかしいときなどにこれをいじると良くなったりする．デフォルトは10．
--[ ]
--[+f:] 文字サイズや色の指定．例：+f10p,black
--[+j:] 文字を線に揃える位置．上端を線にそろえるとか．左：L，右：R，上：T，下：B．例：+jMC, +jMT.
--[+n:] テキストの位置を平行移動．+vとの併用不可．Nとの併用もできないようだ．x方向で線に沿った方向，y方向で線に直交する方向の移動量を指定する．例：+n0/10p
--[ ]
--[+a:] テキストのアングル．線に沿う方向なら指定不要．90にすると線に直交．
--[+e:] テキストが最前面に描画されるようにしてくれる．
--[ ]
--[+u:] テキストの後に加える文字を指定．（単位など）
--[+=:] テキストの前に加える文字を指定．
--[ ]
--[+g:] テキストボックスの色．
--[+p:] テキストボックスの枠．ex.) +p1p,black
--[+o:] テキストボックスの角を円くする．+vとの併用不可．
--[ ]
--[+r:] これよりも曲がりが急な部分にテキストを表示しない．デフォルトは0なのでどんだけ急に曲がっているところにもテキストが配置される．&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;+l:: これでテキストを指定．テキストファイルを与えないなら必須．&lt;/li&gt;
+&lt;li&gt;+v:: テキストを曲線に沿わせる．これをつけないとテキストはまっすぐに配置される．&lt;/li&gt;
+&lt;li&gt;+i:: 線を透明にしてテキストだけ表示する．線は不要で文字だけ表示したいならこれ．&lt;/li&gt;
+&lt;li&gt;+w:: よくわからないが曲がり具合の判定に使う点の数？+vを使ったときに文字の間隔がおかしいときなどにこれをいじると良くなったりする．デフォルトは10．&lt;/li&gt;
+&lt;li&gt;:&lt;/li&gt;
+&lt;li&gt;+f:: 文字サイズや色の指定．例：+f10p,black&lt;/li&gt;
+&lt;li&gt;+j:: 文字を線に揃える位置．上端を線にそろえるとか．左：L，右：R，上：T，下：B．例：+jMC, +jMT.&lt;/li&gt;
+&lt;li&gt;+n:: テキストの位置を平行移動．+vとの併用不可．Nとの併用もできないようだ．x方向で線に沿った方向，y方向で線に直交する方向の移動量を指定する．例：+n0/10p&lt;/li&gt;
+&lt;li&gt;:&lt;/li&gt;
+&lt;li&gt;+a:: テキストのアングル．線に沿う方向なら指定不要．90にすると線に直交．&lt;/li&gt;
+&lt;li&gt;+e:: テキストが最前面に描画されるようにしてくれる．&lt;/li&gt;
+&lt;li&gt;:&lt;/li&gt;
+&lt;li&gt;+u:: テキストの後に加える文字を指定．（単位など）&lt;/li&gt;
+&lt;li&gt;+=:: テキストの前に加える文字を指定．&lt;/li&gt;
+&lt;li&gt;:&lt;/li&gt;
+&lt;li&gt;+g:: テキストボックスの色．&lt;/li&gt;
+&lt;li&gt;+p:: テキストボックスの枠．ex.) +p1p,black&lt;/li&gt;
+&lt;li&gt;+o:: テキストボックスの角を円くする．+vとの併用不可．&lt;/li&gt;
+&lt;li&gt;:&lt;/li&gt;
+&lt;li&gt;+r:: これよりも曲がりが急な部分にテキストを表示しない．デフォルトは0なのでどんだけ急に曲がっているところにもテキストが配置される．&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;p&gt;例）コサイン曲線に沿ったテキスト．出力：図*※相互参照無効*&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pygmt&lt;/span&gt;
@@ -715,12 +729,13 @@ qは&amp;quot;\underline{q}uoted line&amp;quot;の頭文字のようだ．
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;解像度resolutionは低い順に以下の通り．&lt;br&gt;
 (参考: &lt;a href=&#34;https://www.pygmt.org/dev/tutorials/basics/coastlines.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.pygmt.org/dev/tutorials/basics/coastlines.html&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;-[c:] crude
--[l:] low: 規定値
--[i:] intermediate
--[h:] high
--[f:] full&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;c:: crude&lt;/li&gt;
+&lt;li&gt;l:: low: 規定値&lt;/li&gt;
+&lt;li&gt;i:: intermediate&lt;/li&gt;
+&lt;li&gt;h:: high&lt;/li&gt;
+&lt;li&gt;f:: full&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;断面図&#34;&gt;断面図&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;pygmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;project&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -1165,13 +1180,14 @@ frameにおけるグリッドや目盛りの間隔の設定で度分秒を使う
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;オプション：&lt;/p&gt;
-&lt;p&gt;-[+j:] justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)
--[+w:] width. スケールで示す距離．(ex. +w100k)
--[+f:] fancy. 縞々スケールにする．
--[+l:] label.スケール上部にラベルを付ける．(ex. +llabel)
--[+u:] unit. +wの単位に基づき，スケールの数字に単位をつける．
--[+c:] どの緯度 (経度) におけるスケールを示すかを指定する．&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;+j:: justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)&lt;/li&gt;
+&lt;li&gt;+w:: width. スケールで示す距離．(ex. +w100k)&lt;/li&gt;
+&lt;li&gt;+f:: fancy. 縞々スケールにする．&lt;/li&gt;
+&lt;li&gt;+l:: label.スケール上部にラベルを付ける．(ex. +llabel)&lt;/li&gt;
+&lt;li&gt;+u:: unit. +wの単位に基づき，スケールの数字に単位をつける．&lt;/li&gt;
+&lt;li&gt;+c:: どの緯度 (経度) におけるスケールを示すかを指定する．&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;p&gt;図*※相互参照無効*も参照．&lt;/p&gt;
 &lt;h2 id=&#34;太さ&#34;&gt;太さ&lt;/h2&gt;
@@ -1223,17 +1239,25 @@ position=で場所や方向を指定する．
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;pre&gt;&lt;code&gt;frame引数でのオプション：
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;-[+l:] label.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;他もbasemapなどで使うframeと共通でagf等が使える．
-&lt;p&gt;position引数でのオプション：
-&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
-&lt;p&gt;-[+j:] justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)
--[+w:] width. 「+w&amp;lt;長さ&amp;gt;/&amp;lt;太さ&amp;gt;」の形で使用．カラーバーの長さと太さ．
--[+e:] これを付けると，カラーバーの両端に三角が付く．さらに数字を加えると三角の大きさを指定できる．&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;frameとpositionの引数で各項目を調整する．
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;+l:: label.&lt;/p&gt;
+&lt;p&gt;他もbasemapなどで使うframeと共通でagf等が使える．&lt;/p&gt;
+&lt;p&gt;position引数でのオプション：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+j:: justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+w:: width. 「+w&amp;lt;長さ&amp;gt;/&amp;lt;太さ&amp;gt;」の形で使用．カラーバーの長さと太さ．&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;+e:: これを付けると，カラーバーの両端に三角が付く．さらに数字を加えると三角の大きさを指定できる．&lt;/p&gt;
+&lt;p&gt;frameとpositionの引数で各項目を調整する．
 +wで長さのみならず太さも指定できる．また+eでカラーバーの両端に三角を付けられる．
-このように調整方法が距離スケールバーとはやや異なるので注意．
-&lt;/code&gt;&lt;/pre&gt;
+このように調整方法が距離スケールバーとはやや異なるので注意．&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/span&gt;
 &lt;/div&gt;
 &lt;!--  ============================================================================ --&gt;
@@ -1689,9 +1713,11 @@ PyGMTではmapprojectがまだ未実装なようである．&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tmp&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;read&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;このコードで得られる「size」はcm単位の文字列．
 -Wに続くオプションによって，縦横いずれのサイズを出力するかを指定する：&lt;/p&gt;
-&lt;p&gt;-[h:] 高さのみ出力
--[w:] 横幅のみ出力
--[なし:] 高さ，横幅の両方を出力&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;h:: 高さのみ出力&lt;/li&gt;
+&lt;li&gt;w:: 横幅のみ出力&lt;/li&gt;
+&lt;li&gt;なし:: 高さ，横幅の両方を出力&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;これで得られた画像サイズを
 shift_origin(-&amp;gt;第*※相互参照無効*節)と組み合わせれば，
 適切な位置とサイズで図を追加できる．&lt;/p&gt;
@@ -1848,8 +1874,6 @@ shift_origin(-&amp;gt;第*※相互参照無効*節)と組み合わせれば，
 &lt;h3 id=&#34;colorの廃止&#34;&gt;colorの廃止&lt;/h3&gt;
 &lt;p&gt;plotのシンボルの塗りつぶしなどに以前はcolor引数が用いられていたが，
 fill引数に置き換わった．&lt;/p&gt;
-&lt;!--   --&gt;
-&lt;p&gt;%&lt;/p&gt;
 </description>
     </item>
     

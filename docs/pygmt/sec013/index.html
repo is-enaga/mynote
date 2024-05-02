@@ -857,7 +857,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
               
             </li></ul>
@@ -1169,7 +1169,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
               
             </li></ul>
@@ -1313,9 +1313,11 @@ PyGMTではmapprojectがまだ未実装なようである．</p>
 </span></span><span class="line"><span class="cl">        <span class="n">size</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </span></span></code></pre></div><p>このコードで得られる「size」はcm単位の文字列．
 -Wに続くオプションによって，縦横いずれのサイズを出力するかを指定する：</p>
-<p>-[h:] 高さのみ出力
--[w:] 横幅のみ出力
--[なし:] 高さ，横幅の両方を出力</p>
+<ul>
+<li>h:: 高さのみ出力</li>
+<li>w:: 横幅のみ出力</li>
+<li>なし:: 高さ，横幅の両方を出力</li>
+</ul>
 <p>これで得られた画像サイズを
 shift_origin(-&gt;第*※相互参照無効*節)と組み合わせれば，
 適切な位置とサイズで図を追加できる．</p>

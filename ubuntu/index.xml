@@ -267,9 +267,10 @@ qで終了する．&lt;/p&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;オプション:&lt;/p&gt;
-&lt;p&gt;-[-f:] 強制アンマウント
--[-l:] -fでアンマウントできない場合でも強制的にアンマウント&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;-f:: 強制アンマウント&lt;/li&gt;
+&lt;li&gt;-l:: -fでアンマウントできない場合でも強制的にアンマウント&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;!-- ---------------------------------- --&gt;
 &lt;h2 id=&#34;lvmの構成&#34;&gt;LVMの構成&lt;/h2&gt;
@@ -400,10 +401,11 @@ Windowsでいうタスクマネージャーのような感じ．&lt;/p&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;オプション:&lt;/p&gt;
-&lt;p&gt;-[-l:] 詳細情報を含んで一覧表示．
--[-h:] -lで表示される容量に応じて適当な単位をつける．
--[-i:] -lと合わせて使用し，ファイルのinode番号（idのようなもの）を表示する．ハードリンクは同じIDを有する． 同じIDのファイルは，片方を変更するともう片方にも変更が反映される（同一のファイルなので）．&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;-l:: 詳細情報を含んで一覧表示．&lt;/li&gt;
+&lt;li&gt;-h:: -lで表示される容量に応じて適当な単位をつける．&lt;/li&gt;
+&lt;li&gt;-i:: -lと合わせて使用し，ファイルのinode番号（idのようなもの）を表示する．ハードリンクは同じIDを有する． 同じIDのファイルは，片方を変更するともう片方にも変更が反映される（同一のファイルなので）．&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;!-- ---------------------------------- --&gt;
 &lt;h3 id=&#34;ファイル形式の確認&#34;&gt;ファイル形式の確認&lt;/h3&gt;
@@ -420,9 +422,10 @@ Windowsでいうタスクマネージャーのような感じ．&lt;/p&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;オプション:&lt;/p&gt;
-&lt;p&gt;-[-h:] 容量に応じてわかりやすい単位で表示する．
--[-s:] 与えたファイルやディレクトリの合計容量を表示する．&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;-h:: 容量に応じてわかりやすい単位で表示する．&lt;/li&gt;
+&lt;li&gt;-s:: 与えたファイルやディレクトリの合計容量を表示する．&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;!--  --------------------------------------------- --&gt;
 &lt;h3 id=&#34;容量0のファイルの表示&#34;&gt;容量0のファイルの表示&lt;/h3&gt;
@@ -474,16 +477,17 @@ inode番号が共通である．&lt;/p&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;options:&lt;/p&gt;
-&lt;p&gt;-[-a:] archive mode
--[-v:] verbose
--[-u:] skip files that are newer on the receiver
--[-h:] natural unit; human readable
--[-H:] preserve hard-links
--[-R:] 同期元のディレクトリ構造を保持する（最下層ディレクトリだけでなく，親ディレクトリも同期される．ただし親ディレクトリから枝分かれしている他の子ディレクトリまでは同期しない）．
--[&amp;ndash;delete:] 同期元にはなく同期先にはあるファイルを削除する．
--[&amp;ndash;exclude:] 引き数のファイル（ワイルドカード使用可）を同期しない．
--[&amp;ndash;exclude-from:] 引き数に与えたテキストファイル内にあるファイルを同期しない．複数のファイルを同期対象外としたいときに便利．&lt;/p&gt;
-&lt;/span&gt;
+&lt;ul&gt;
+&lt;li&gt;-a:: archive mode&lt;/li&gt;
+&lt;li&gt;-v:: verbose&lt;/li&gt;
+&lt;li&gt;-u:: skip files that are newer on the receiver&lt;/li&gt;
+&lt;li&gt;-h:: natural unit; human readable&lt;/li&gt;
+&lt;li&gt;-H:: preserve hard-links&lt;/li&gt;
+&lt;li&gt;-R:: 同期元のディレクトリ構造を保持する（最下層ディレクトリだけでなく，親ディレクトリも同期される．ただし親ディレクトリから枝分かれしている他の子ディレクトリまでは同期しない）．&lt;/li&gt;
+&lt;li&gt;&amp;ndash;delete:: 同期元にはなく同期先にはあるファイルを削除する．&lt;/li&gt;
+&lt;li&gt;&amp;ndash;exclude:: 引き数のファイル（ワイルドカード使用可）を同期しない．&lt;/li&gt;
+&lt;li&gt;&amp;ndash;exclude-from:: 引き数に与えたテキストファイル内にあるファイルを同期しない．複数のファイルを同期対象外としたいときに便利．&lt;/li&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rsync&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;avuhHR&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;delete&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;同期元&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;同期先&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;のようにして使う．&lt;/p&gt;
@@ -732,17 +736,80 @@ gfortでコンパイルできないものもifortではコンパイルできる�
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以上で完了．
 テストとして以下のようにしてメールを送信してみると良い．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;text&amp;gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mail&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;lt;title&amp;gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;宛先&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;\input{../hugo/hugo.tex}&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- ######################################### --&gt;
 </description>
     </item>
     
     <item>
-      <title>第7章　WSL</title>
+      <title>第7章　WSL2</title>
       <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec007/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec007/</guid>
-      <description>&lt;!--  ##  --&gt;
-&lt;!--   --&gt;
+      <description>&lt;!-- ######################################### --&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;外付けストレージのマウント&#34;&gt;外付けストレージのマウント&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h3 id=&#34;成功した手順&#34;&gt;成功した手順&lt;/h3&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;!-- ............................. --&gt;
+&lt;h4 id=&#34;デバイスidの確認&#34;&gt;デバイスIDの確認&lt;/h4&gt;
+&lt;!-- ............................. --&gt;
+&lt;p&gt;まずPowerShellを管理者権限で開く．HDDのデバイスIDを確認するためにPowerShellで&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;GET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CimInstance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;query&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;SELECT * from Win32_DiskDrive&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;とする．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;GET&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CimInstance&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;query&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;SELECT * from Win32_DiskDrive&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;DeviceID&lt;/span&gt;           &lt;span class=&#34;n&#34;&gt;Caption&lt;/span&gt;                     &lt;span class=&#34;n&#34;&gt;Partitions&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Size&lt;/span&gt;          &lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;--------&lt;/span&gt;           &lt;span class=&#34;o&#34;&gt;-------&lt;/span&gt;                     &lt;span class=&#34;o&#34;&gt;----------&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;----&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;-----&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HDPH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;USB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Device&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;          &lt;span class=&#34;mi&#34;&gt;5000978465280&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HDPH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;USB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Device&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SAMSUNG&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MZVL2512HCJQ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B07&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;          &lt;span class=&#34;mi&#34;&gt;512105932800&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;SAMSUNG&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MZVL2512HCJQ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B07&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ここにあるマウントしたいHDD等のDeviceID（一番左に書いてあるもの）を以降のコマンドで使う．
+SizeやModelをもとに目的のストレージを特定するとよい．&lt;/p&gt;
+&lt;!-- ............................. --&gt;
+&lt;h4 id=&#34;マウント&#34;&gt;マウント&lt;/h4&gt;
+&lt;!-- ............................. --&gt;
+&lt;p&gt;前の節で得たデバイスIDを使って，PowerShell上で次のようにする（IDは適宜書き換え）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mount&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bare&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;続いてWSL(Ubuntu)のターミナルを開く．
+そこで&lt;code&gt;lsblk&lt;/code&gt;を実行すると，それまではなかった新たにマウントされたデバイスが確認できる．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lsblk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;NAME&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;MAJ&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MIN&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RM&lt;/span&gt;   &lt;span class=&#34;n&#34;&gt;SIZE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RO&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;TYPE&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MOUNTPOINT&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sda&lt;/span&gt;      &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;    &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;365.6&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sdb&lt;/span&gt;      &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;G&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disk&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;SWAP&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sdc&lt;/span&gt;      &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;32&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;   &lt;span class=&#34;mf&#34;&gt;4.6&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disk&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;├─&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sdc1&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;33&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;M&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;part&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;└─&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sdc2&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;34&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;   &lt;span class=&#34;mf&#34;&gt;4.6&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;part&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mnt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sdd&lt;/span&gt;      &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;48&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;256&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;G&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;disk&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mnt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;wslg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;distro&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;この場合，容量とMOUNTPOINTが空欄（まだマウントされていない）を見て
+sdc2が目的のHDDだとわかったので，次のコマンドでマウントした：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mount&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sdc2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mnt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;d&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;すなわち/dev/sdc2を/mnt/dにマウントするということである．
+これで/mnt/dからHDDの中で作業できるようになった．&lt;/p&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h4 id=&#34;アンマウント&#34;&gt;アンマウント&lt;/h4&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;マウントしている間，
+エクスプローラーからはそのストレージにアクセスできないらしい（表示されなくなる）．
+そのため再度エクスプローラーで使う際はPowerShell上でアンマウントする必要があるようだ．
+ここでもマウント時に用いたデバイスIDを使用する：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unmount&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;出力:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;この操作を正しく終了しました&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで再びエクスプローラー上にHDDが表示される．&lt;/p&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h3 id=&#34;失敗した手順&#34;&gt;失敗した手順&lt;/h3&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;参照したマイクロソフトのページ
+（&lt;a href=&#34;https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk&lt;/a&gt;）
+には単に&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mount&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;DiskPath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;とする方法も書かれていたが，これではディスクがbusyだ，みたいなエラーが出て失敗した．&lt;/p&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;wsl2の起動に時間がかかる場合の対処&#34;&gt;WSL2の起動に時間がかかる場合の対処&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;p&gt;事象：WSL2の起動に数分かかる．起動してからは問題なく動作する．&lt;/p&gt;
+&lt;!--  \input{../hugo/hugo.tex} --&gt;
 </description>
     </item>
     

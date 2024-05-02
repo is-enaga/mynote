@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="" />
+  <meta name="description" content="外付けストレージのマウント 成功した手順 デバイスIDの確認 まず" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/ubuntu/sec007/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/ubuntu/sec007/" />
-  <meta property="og:title" content="第7章　WSL | K-Notes" />
-  <meta property="og:description" content="" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第7章　WSL2 | K-Notes" />
+  <meta property="og:description" content="外付けストレージのマウント 成功した手順 デバイスIDの確認 まず" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第7章　WSL | K-Notes</title>
+  <title>第7章　WSL2 | K-Notes</title>
 
   
   
@@ -842,8 +842,22 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#%e5%a4%96%e4%bb%98%e3%81%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%81%ae%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88"
+                class="hb-docs-link"
+              >外付けストレージのマウント</a>
+            </li>
+          <li>
+              <a
+                href="#wsl2%e3%81%ae%e8%b5%b7%e5%8b%95%e3%81%ab%e6%99%82%e9%96%93%e3%81%8c%e3%81%8b%e3%81%8b%e3%82%8b%e5%a0%b4%e5%90%88%e3%81%ae%e5%af%be%e5%87%a6"
+                class="hb-docs-link"
+              >WSL2の起動に時間がかかる場合の対処</a>
+            </li>
+          </ul>
   
               
             </li></ul>
@@ -1155,7 +1169,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
               
             </li></ul>
@@ -1226,7 +1240,28 @@
 
 
 
-  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4">
+  <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%a4%96%e4%bb%98%e3%81%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%81%ae%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88">外付けストレージのマウント</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%88%90%e5%8a%9f%e3%81%97%e3%81%9f%e6%89%8b%e9%a0%86">成功した手順</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%87%e3%83%90%e3%82%a4%e3%82%b9id%e3%81%ae%e7%a2%ba%e8%aa%8d">デバイスIDの確認</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88">マウント</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%a2%e3%83%b3%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88">アンマウント</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%a4%b1%e6%95%97%e3%81%97%e3%81%9f%e6%89%8b%e9%a0%86">失敗した手順</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#wsl2%e3%81%ae%e8%b5%b7%e5%8b%95%e3%81%ab%e6%99%82%e9%96%93%e3%81%8c%e3%81%8b%e3%81%8b%e3%82%8b%e5%a0%b4%e5%90%88%e3%81%ae%e5%af%be%e5%87%a6">WSL2の起動に時間がかかる場合の対処</a>
+      </li></ul>
 
 
 
@@ -1252,15 +1287,78 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/ubuntu/">Ubuntu</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第7章　WSL</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第7章　WSL2</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第7章　WSL</h1>
-        <!--  ##  -->
-<!--   -->
+        <h1>第7章　WSL2</h1>
+        <!-- ######################################### -->
+<!-- =================================== -->
+<h2 id="外付けストレージのマウント">外付けストレージのマウント</h2>
+<!-- =================================== -->
+<!-- ---------------------------------- -->
+<h3 id="成功した手順">成功した手順</h3>
+<!-- ---------------------------------- -->
+<!-- ............................. -->
+<h4 id="デバイスidの確認">デバイスIDの確認</h4>
+<!-- ............................. -->
+<p>まずPowerShellを管理者権限で開く．HDDのデバイスIDを確認するためにPowerShellで</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">GET</span><span class="o">-</span><span class="n">CimInstance</span> <span class="o">-</span><span class="n">query</span> <span class="s2">&#34;SELECT * from Win32_DiskDrive&#34;</span>
+</span></span></code></pre></div><p>とする．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">GET</span><span class="o">-</span><span class="n">CimInstance</span> <span class="o">-</span><span class="n">query</span> <span class="s2">&#34;SELECT * from Win32_DiskDrive&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">DeviceID</span>           <span class="n">Caption</span>                     <span class="n">Partitions</span> <span class="n">Size</span>          <span class="n">Model</span>
+</span></span><span class="line"><span class="cl"><span class="o">--------</span>           <span class="o">-------</span>                     <span class="o">----------</span> <span class="o">----</span>          <span class="o">-----</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span> <span class="mi">1</span>          <span class="mi">5000978465280</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span>\<span class="n">PHYSICALDRIVE0</span> <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>  <span class="mi">4</span>          <span class="mi">512105932800</span>  <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>
+</span></span></code></pre></div><p>ここにあるマウントしたいHDD等のDeviceID（一番左に書いてあるもの）を以降のコマンドで使う．
+SizeやModelをもとに目的のストレージを特定するとよい．</p>
+<!-- ............................. -->
+<h4 id="マウント">マウント</h4>
+<!-- ............................. -->
+<p>前の節で得たデバイスIDを使って，PowerShell上で次のようにする（IDは適宜書き換え）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="o">--</span><span class="n">mount</span>   <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="o">--</span><span class="n">bare</span>
+</span></span></code></pre></div><p>続いてWSL(Ubuntu)のターミナルを開く．
+そこで<code>lsblk</code>を実行すると，それまではなかった新たにマウントされたデバイスが確認できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">lsblk</span>
+</span></span><span class="line"><span class="cl"><span class="n">NAME</span>   <span class="n">MAJ</span><span class="p">:</span><span class="n">MIN</span> <span class="n">RM</span>   <span class="n">SIZE</span> <span class="n">RO</span> <span class="n">TYPE</span> <span class="n">MOUNTPOINT</span>
+</span></span><span class="line"><span class="cl"><span class="n">sda</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">0</span>    <span class="mi">0</span> <span class="mf">365.6</span><span class="n">M</span>  <span class="mi">1</span> <span class="n">disk</span>
+</span></span><span class="line"><span class="cl"><span class="n">sdb</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">16</span>   <span class="mi">0</span>     <span class="mi">2</span><span class="n">G</span>  <span class="mi">0</span> <span class="n">disk</span> <span class="p">[</span><span class="n">SWAP</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">sdc</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">32</span>   <span class="mi">0</span>   <span class="mf">4.6</span><span class="n">T</span>  <span class="mi">0</span> <span class="n">disk</span>
+</span></span><span class="line"><span class="cl"><span class="err">├─</span><span class="n">sdc1</span>   <span class="mi">8</span><span class="p">:</span><span class="mi">33</span>   <span class="mi">0</span>   <span class="mi">128</span><span class="n">M</span>  <span class="mi">0</span> <span class="n">part</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─</span><span class="n">sdc2</span>   <span class="mi">8</span><span class="p">:</span><span class="mi">34</span>   <span class="mi">0</span>   <span class="mf">4.6</span><span class="n">T</span>  <span class="mi">0</span> <span class="n">part</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">d</span>
+</span></span><span class="line"><span class="cl"><span class="n">sdd</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">48</span>   <span class="mi">0</span>   <span class="mi">256</span><span class="n">G</span>  <span class="mi">0</span> <span class="n">disk</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">wslg</span><span class="o">/</span><span class="n">distro</span>
+</span></span></code></pre></div><p>この場合，容量とMOUNTPOINTが空欄（まだマウントされていない）を見て
+sdc2が目的のHDDだとわかったので，次のコマンドでマウントした：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdc2</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">d</span>
+</span></span></code></pre></div><p>すなわち/dev/sdc2を/mnt/dにマウントするということである．
+これで/mnt/dからHDDの中で作業できるようになった．</p>
+<!-- ---------------------------------- -->
+<h4 id="アンマウント">アンマウント</h4>
+<!-- ---------------------------------- -->
+<p>マウントしている間，
+エクスプローラーからはそのストレージにアクセスできないらしい（表示されなくなる）．
+そのため再度エクスプローラーで使う際はPowerShell上でアンマウントする必要があるようだ．
+ここでもマウント時に用いたデバイスIDを使用する：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">wsl</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="n">unmount</span>   <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span>
+</span></span></code></pre></div><p>出力:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">この操作を正しく終了しました</span><span class="err">。</span>
+</span></span></code></pre></div><p>これで再びエクスプローラー上にHDDが表示される．</p>
+<!-- ---------------------------------- -->
+<h3 id="失敗した手順">失敗した手順</h3>
+<!-- ---------------------------------- -->
+<p>参照したマイクロソフトのページ
+（<a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk" target="_blank" rel="noopener">https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk</a>）
+には単に</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="o">--</span><span class="n">mount</span> <span class="o">&lt;</span><span class="n">DiskPath</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p>とする方法も書かれていたが，これではディスクがbusyだ，みたいなエラーが出て失敗した．</p>
+<!-- =================================== -->
+<h2 id="wsl2の起動に時間がかかる場合の対処">WSL2の起動に時間がかかる場合の対処</h2>
+<!-- =================================== -->
+<p>事象：WSL2の起動に数分かかる．起動してからは問題なく動作する．</p>
+<!--  \input{../hugo/hugo.tex} -->
 
       </div>
 

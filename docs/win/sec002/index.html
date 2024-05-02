@@ -976,7 +976,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
               
             </li></ul>
@@ -1303,7 +1303,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL
+  >第7章　WSL2
     </a>
               
             </li></ul>
@@ -1470,14 +1470,16 @@ P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])�
 </ul></span>
 </div>
 <p>ファイルの構成は以下の通り：</p>
-<p>-[1行目:] 初期震源の位置<br>
-緯度，経度，深さ[km]を各10文字区切りで．
--[2行目:] 層の数と名前<br>
-層の数は5文字の整数．2文字のスペースをあけて，3文字の構造名を記す．
--[3行目:] 層上端のVp<br>
-各10文字区切り．7つごとに改行する．
--[4行目:] 各層の厚さ[km]<br>
-各10文字区切り．7つごとに改行する．</p>
+<ul>
+<li>1行目:: 初期震源の位置<br>
+緯度，経度，深さ[km]を各10文字区切りで．</li>
+<li>2行目:: 層の数と名前<br>
+層の数は5文字の整数．2文字のスペースをあけて，3文字の構造名を記す．</li>
+<li>3行目:: 層上端のVp<br>
+各10文字区切り．7つごとに改行する．</li>
+<li>4行目:: 各層の厚さ[km]<br>
+各10文字区切り．7つごとに改行する．</li>
+</ul>
 <p><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/stan.png"
     alt="stanファイルの書式．"><figcaption>
       <p>stanファイルの書式．</p>
