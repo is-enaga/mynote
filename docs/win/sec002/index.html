@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 4, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: May 8, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1016,9 +1016,15 @@
             </li>
           <li>
               <a
-                href="#%e9%80%9f%e5%ba%a6%e6%a7%8b%e9%80%a0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab"
+                href="#%e9%80%9f%e5%ba%a6%e6%a7%8b%e9%80%a0stan%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab"
                 class="hb-docs-link"
-              >速度構造ファイル</a>
+              >速度構造(stan)ファイル</a>
+            </li>
+          <li>
+              <a
+                href="#%e9%9c%87%e6%ba%90%e7%b5%90%e6%9e%9cfinal%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab"
+                class="hb-docs-link"
+              >震源結果(final)ファイル</a>
             </li>
           </ul>
   
@@ -1396,7 +1402,10 @@
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#1%e7%a7%92%e3%83%87%e3%83%bc%e3%82%bf">1秒データ</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%80%9f%e5%ba%a6%e6%a7%8b%e9%80%a0%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab">速度構造ファイル</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%80%9f%e5%ba%a6%e6%a7%8b%e9%80%a0stan%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab">速度構造(stan)ファイル</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%9c%87%e6%ba%90%e7%b5%90%e6%9e%9cfinal%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab">震源結果(final)ファイル</a>
       </li></ul>
 
 
@@ -1452,7 +1461,7 @@
 <p>WINフォーマットは各1秒長データ内で完結している．
 具体的には1秒データごとに開始時刻，サンプリングレート，チャンネル名などの最低限の情報が入っている．</p>
 <!-- =================================== -->
-<h2 id="速度構造ファイル">速度構造ファイル</h2>
+<h2 id="速度構造stanファイル">速度構造(stan)ファイル</h2>
 <!-- =================================== -->
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
 <span class="pr-3 pt-1 text-primary-400">
@@ -1469,18 +1478,19 @@
 <p>行ごとに内容が定められ，かつ固定長である．
 P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])構造だけを指定する．
 深さは0から始まり，km単位で各層の厚さを指定する．</p>
+<p>stanファイルについて，震源決定において以下の仕様があることに留意せよ．</p>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300"><p>仕様:</p>
+  <span class="dark:text-neutral-300"><p>震源決定時の仕様:</p>
 <ul>
 <li>S波速度Vsは, Vp/Vs=1.73として扱われる．</li>
 <li>標高0kmより高い部分のVpは，0kmにおけるVpとする．</li>
 <li>各層の上端のVpを与え，それらを線形で結んだ速度構造として扱う．</li>
 <li>「層の数」の上限は20(層の厚さは21個まで, Vpの数は22個まで)．</li>
 <li>初期震源の時刻の不確かさは入力が必要だが，使われない．</li>
-<li>直接hypomhを使わずに，winから震源決定するときは初期震源の緯度と経度は使われない．</li>
+<li>直接hypomhを使わずにwinで震源決定するときは，初期震源の緯度と経度は使われない（深さは使われるようだ）．</li>
 </ul></span>
 </div>
 <p>ファイルの構成は以下の通り：</p>
@@ -1505,6 +1515,59 @@ P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])�
 マニュアルに未記載で何なのかわからない．
 サンプルファイルには１つ目に「1」とあるが，2つ目は空白．
 要確認．</p>
+<!-- =================================== -->
+<h2 id="震源結果finalファイル">震源結果(final)ファイル</h2>
+<!-- =================================== -->
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><p>参考：</p>
+<ul>
+<li><a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html" target="_blank" rel="noopener">https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html</a></li>
+<li>hypomh.f 289行目~</li>
+</ul></span>
+</div>
+<p>hypomhによる震源決定で出力されるfinalファイルのフォーマットについて記す．
+winから震源決定を行った場合はpickファイルの「#f」で始まる行に出力される．</p>
+<p>ファイルの構成は以下の通り：</p>
+<ul>
+<li>1行目: 震源決定の解<br>
+順に発震時刻，緯度，経度，深さ[km]，マグニチュード．</li>
+<li>2行目: 解の診断と誤差<br>
+順に解についての診断（CONV:収束, NOCN:発散，DEEP:深部．AIRF:遠地）と
+発震時刻，緯度，経度，深さ方向それぞれの誤差．<br>
+診断については，CONV以外は正確な結果を期待できない（CONVだからといって「正しい」とも限らないが）．
+また発震時刻の誤差は常に0が出力される．</li>
+<li>3行目: 誤差共分散行列の成分<br>
+順に体格行列の成分Cxx,Cxy,Cxz,Cyy,Cyz,Czz．
+Cxx,Cyy,Czzはそれぞれ緯度，経度，深さ方向の誤差の二乗．
+震源位置の誤差楕円を描く際に使用．</li>
+<li>4行目: 計算で用いられた初期震源<br>
+順に緯度，その不確かさ[km]，経度，その不確かさ[km]，深さ，その不確かさ[km]．</li>
+<li>5行目: 計算に関する他の情報<br>
+順に観測点数，速度構造名，Pピックデータ数，Sピックデータ数，初期データ数．<br>
+ただし，初期データ数は初期震源の座標の数であり，常に3が出力される．
+またP, Sそれぞれの寄与率がカッコ内に出力されるが，公式マニュアルによるとそれらの値は信用できないらしい．</li>
+<li>6行目: 観測点ごとの検測情報<br>
+順に観測点コード，P初動極性，震央距離[km]，観測点方位角，射出角，入射角，
+P読み取り時刻[s]，P読み取り精度[s]，PのO-C時間（理論と結果の差）[s]，
+S読み取り時刻[s]，S読み取り精度[s]，SのO-C時間（理論と結果の差）[s]，
+最大振幅[m/s]またはF-P時間[s]，
+マグニチュード．<br>
+F-P時間は最大振幅が読み取られておらず，かつイベント継続時間読まみとられている際に表示される．
+そうでないときは最大振幅の値である．<br>
+観測点の数だけ行が続く．</li>
+<li>7行目: 全観測点をまとめたP,SのO-C<br>
+順にP, SのO-C時間の標準偏差[s]．</li>
+</ul>
+<!--  精度よい結果が得られると，各観測点のO-C時間がこれらの値より同程度以下になる． -->
+<figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/final.png"
+    alt="finalファイルの書式．"><figcaption>
+      <p>finalファイルの書式．</p>
+    </figcaption>
+</figure>
+
 <!--  1分データのフォーマットは以下のようになっている． -->
 <!--  \begin{table}[H] -->
 <!--    \caption{WINフォーマット1秒ブロックの構成} -->
