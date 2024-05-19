@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 16, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: May 19, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="数学風グラフ import numpy as np import matplotlib.pyplot as plt fig, ax = plt.subplots(figsize=(4,4)) # frame ax.spines[:].set_position(&#39;zero&#39;) ax.set_aspect(&#39;equal&#39;,&#39;box&#39;) ax.tick_params(direction = &#39;inout&#39;) ax.set_ylim(-1.5,1.5) ax.set_xlim(-1.5,1.5) # ax.grid() #" />
+  <meta name="description" content="カラーバー 両端の三角 fig.colorbar(extend = &#39;&lt;max/min/both&gt;&#39;) カラーバーの端に三角形をつけ，上限" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/plt/sec005/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/plt/sec005/" />
-  <meta property="og:title" content="第5章　作品例 | K-Notes" />
-  <meta property="og:description" content="数学風グラフ import numpy as np import matplotlib.pyplot as plt fig, ax = plt.subplots(figsize=(4,4)) # frame ax.spines[:].set_position(&#39;zero&#39;) ax.set_aspect(&#39;equal&#39;,&#39;box&#39;) ax.tick_params(direction = &#39;inout&#39;) ax.set_ylim(-1.5,1.5) ax.set_xlim(-1.5,1.5) # ax.grid() #" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第5章　付加要素 | K-Notes" />
+  <meta property="og:description" content="カラーバー 両端の三角 fig.colorbar(extend = &#39;&lt;max/min/both&gt;&#39;) カラーバーの端に三角形をつけ，上限" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第5章　作品例 | K-Notes</title>
+  <title>第5章　付加要素 | K-Notes</title>
 
   
   
@@ -741,7 +741,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec001/"
     
-  >第1章　基礎・一般
+  >第1章　画像生成とフォント設定
     </a>
               
             </li><li class="flex flex-col "><a
@@ -749,7 +749,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec002/"
     
-  >第2章　軸・ラベル・枠
+  >第2章　点，線のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -757,7 +757,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　図のプロット
+  >第3章　軸・ラベル・枠
     </a>
               
             </li><li class="flex flex-col "><a
@@ -765,7 +765,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　付加要素
+  >第4章　図のプロット
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -773,17 +773,25 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　作品例
+  >第5章　付加要素
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#%e6%95%b0%e5%ad%a6%e9%a2%a8%e3%82%b0%e3%83%a9%e3%83%95"
+                href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc"
                 class="hb-docs-link"
-              >数学風グラフ</a>
+              >カラーバー</a>
             </li>
           </ul>
   
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec006/"
+    
+  >第6章　作品例
+    </a>
               
             </li></ul>
       </div>
@@ -1070,7 +1078,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec001/"
     
-  >第1章　基礎・一般
+  >第1章　画像生成とフォント設定
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1078,7 +1086,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec002/"
     
-  >第2章　軸・ラベル・枠
+  >第2章　点，線のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1086,7 +1094,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　図のプロット
+  >第3章　軸・ラベル・枠
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1094,7 +1102,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　付加要素
+  >第4章　図のプロット
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -1102,7 +1110,15 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　作品例
+  >第5章　付加要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec006/"
+    
+  >第6章　作品例
     </a>
               
             </li></ul>
@@ -1250,7 +1266,10 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%95%b0%e5%ad%a6%e9%a2%a8%e3%82%b0%e3%83%a9%e3%83%95">数学風グラフ</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc">カラーバー</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%b8%a1%e7%ab%af%e3%81%ae%e4%b8%89%e8%a7%92">両端の三角</a>
       </li></ul>
 
 
@@ -1277,103 +1296,18 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/plt/">Matplotlib</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第5章　作品例</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第5章　付加要素</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第5章　作品例</h1>
-        <h2 id="数学風グラフ">数学風グラフ</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># frame</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[:]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span><span class="s1">&#39;box&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;inout&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ax.grid()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># data</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;zero&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="o">=</span><span class="mi">2</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;pole&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># label</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mf">1.05</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Re&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mf">1.05</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;Im&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># unit circle</span>
-</span></span><span class="line"><span class="cl"><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
-</span></span><span class="line"><span class="cl"><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">lw</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ax</span><span class="o">.</span><span class="n">get_xlim</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">width</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">head_width</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">head_length</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">overhang</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fc</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">ax</span><span class="o">.</span><span class="n">get_ylim</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="n">width</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">head_width</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">head_length</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">overhang</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">length_includes_head</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">fc</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">lw</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># frameon=False,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fancybox</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span><span class="o">.</span><span class="n">get_frame</span><span class="p">()</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mf">0.8</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/plt/fig/ex_mathematical.png"
-    alt="数学風グラフ．"><figcaption>
-      <p>数学風グラフ．</p>
-    </figcaption>
-</figure>
-
+        <h1>第5章　付加要素</h1>
+        <h2 id="カラーバー">カラーバー</h2>
+<h3 id="両端の三角">両端の三角</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">extend</span> <span class="o">=</span> <span class="s1">&#39;&lt;max/min/both&gt;&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>カラーバーの端に三角形をつけ，上限や下限の外の値の存在を示す．</p>
+<!--  ============================= -->
 
       </div>
 
@@ -1399,7 +1333,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第4章　付加要素</span>
+            >第4章　図のプロット</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
             </span>
@@ -1408,6 +1342,21 @@
       
     </div>
     <div class="">
+      
+        <a class="group flex text-right no-underline" href="/mynote/docs/plt/sec006/">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >第6章　作品例</span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+            </span>
+          </span>
+          <span
+            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline">&rarr;</span></span>
+        </a>
       
     </div>
   </div>

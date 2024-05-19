@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 16, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: May 19, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="直線 以下の方法では，直線が通る１点と傾きを与えることで，無限" />
+  <meta name="description" content="本章では断りのない限り，以下のようなグラフを作った場合を前提" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/plt/sec003/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/plt/sec003/" />
-  <meta property="og:title" content="第3章　図のプロット | K-Notes" />
-  <meta property="og:description" content="直線 以下の方法では，直線が通る１点と傾きを与えることで，無限" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第3章　軸・ラベル・枠 | K-Notes" />
+  <meta property="og:description" content="本章では断りのない限り，以下のようなグラフを作った場合を前提" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第3章　図のプロット | K-Notes</title>
+  <title>第3章　軸・ラベル・枠 | K-Notes</title>
 
   
   
@@ -741,7 +741,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec001/"
     
-  >第1章　基礎・一般
+  >第1章　画像生成とフォント設定
     </a>
               
             </li><li class="flex flex-col "><a
@@ -749,7 +749,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec002/"
     
-  >第2章　軸・ラベル・枠
+  >第2章　点，線のプロット
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -757,20 +757,26 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　図のプロット
+  >第3章　軸・ラベル・枠
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#%e7%9b%b4%e7%b7%9a"
+                href="#%e8%bb%b8%e7%9b%ae%e7%9b%9b%e3%82%8a"
                 class="hb-docs-link"
-              >直線</a>
+              >軸・目盛り</a>
             </li>
           <li>
               <a
-                href="#2%e6%ac%a1%e5%85%83%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5-pcolormesh"
+                href="#%e8%bb%b8%e3%81%ae%e7%b8%a6%e6%a8%aa%e6%af%94"
                 class="hb-docs-link"
-              >2次元カラーメッシュ pcolormesh</a>
+              >軸の縦横比</a>
+            </li>
+          <li>
+              <a
+                href="#%e6%9e%a0%e7%b7%9a%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89"
+                class="hb-docs-link"
+              >枠線・グリッド</a>
             </li>
           </ul>
   
@@ -780,7 +786,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　付加要素
+  >第4章　図のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -788,7 +794,15 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　作品例
+  >第5章　付加要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec006/"
+    
+  >第6章　作品例
     </a>
               
             </li></ul>
@@ -1076,7 +1090,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec001/"
     
-  >第1章　基礎・一般
+  >第1章　画像生成とフォント設定
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1084,7 +1098,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec002/"
     
-  >第2章　軸・ラベル・枠
+  >第2章　点，線のプロット
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -1092,7 +1106,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　図のプロット
+  >第3章　軸・ラベル・枠
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1100,7 +1114,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　付加要素
+  >第4章　図のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1108,7 +1122,15 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　作品例
+  >第5章　付加要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec006/"
+    
+  >第6章　作品例
     </a>
               
             </li></ul>
@@ -1256,13 +1278,46 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%b4%e7%b7%9a">直線</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bb%b8%e7%9b%ae%e7%9b%9b%e3%82%8a">軸・目盛り</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2%e6%ac%a1%e5%85%83%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5-pcolormesh">2次元カラーメッシュ pcolormesh</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bb%b8%e3%81%ae%e7%b8%a6%e6%a8%aa%e6%af%94">軸の縦横比</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5%e5%a2%83%e7%95%8c%e7%b7%9a">メッシュ境界線</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bb%b8%e3%81%ae%e4%bd%8d%e7%bd%ae">軸の位置</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bb%b8%e3%81%ae%e5%8f%8d%e8%bb%a2">軸の反転</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%ae%e7%9b%9b%e3%82%8a%e9%96%93%e9%9a%94">目盛り間隔</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%a3%9c%e5%8a%a9%e7%9b%ae%e7%9b%9b">補助目盛</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%ae%e7%9b%9b%e3%82%8a%e7%b7%9a%e3%81%ae%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab">目盛り線のスタイル</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%95%b7%e3%81%95%e3%81%a8%e5%a4%aa%e3%81%95">長さと太さ</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9b%9b%e6%96%b9%e3%81%ae%e7%9b%ae%e7%9b%9b%e3%82%8a%e3%81%a8%e3%82%a2%e3%83%8e%e3%83%86%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%81%ae%e6%9c%89%e7%84%a1">四方の目盛りとアノテーションの有無</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%86%85%e5%90%91%e3%81%8d%e7%9b%ae%e7%9b%9b%e3%82%8a">内向き目盛り</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bb%b8%e3%83%a9%e3%83%99%e3%83%ab%e3%81%ae%e4%bd%8d%e7%bd%ae">軸ラベルの位置</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%9e%a0%e7%b7%9a%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89">枠線・グリッド</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%9e%a0%e7%b7%9a%e3%81%ae%e5%a4%aa%e3%81%95">枠線の太さ</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%81%a8%e3%81%9d%e3%81%ae%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab">グリッドとそのスタイル</a>
       </li></ul>
 
 
@@ -1289,39 +1344,180 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/plt/">Matplotlib</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第3章　図のプロット</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第3章　軸・ラベル・枠</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第3章　図のプロット</h1>
-        <h2 id="直線">直線</h2>
-<p>以下の方法では，直線が通る１点と傾きを与えることで，無限に続く直線をプロットできる．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="o">&lt;</span><span class="n">x</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">y</span><span class="o">&gt;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">slope</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">傾き</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;&lt;style&gt;&#34;</span><span class="p">,</span>
+        <h1>第3章　軸・ラベル・枠</h1>
+        <!-- ######################################### -->
+<p>本章では断りのない限り，以下のようなグラフを作った場合を前提とする．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ncols</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">nrows</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div><!--  ========================================= -->
+<h2 id="軸目盛り">軸・目盛り</h2>
+<h2 id="軸の縦横比">軸の縦横比</h2>
+<p>グラフの両軸のサイズ比を同じにできる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>さらに以下のようにすると同一縦横比かつ正方形のグラフになる．
+ただしxlim, ylimは設定しないこと．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">,</span> <span class="s1">&#39;box&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/plt/fig/aspect.png"
+    alt="軸の縦横比をそろえた例．"><figcaption>
+      <p>軸の縦横比をそろえた例．</p>
+    </figcaption>
+</figure>
+
+<h3 id="軸の位置">軸の位置</h3>
+<p>デフォルトでは軸はグラフの端にあるが，これをグラフの中心や0の位置に変更できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">軸を図の中心に置く</span><span class="err">．</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[:]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">軸を0の位置に置く</span><span class="err">．</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[:]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.ticker</span> <span class="k">as</span> <span class="nn">ticker</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[:]</span><span class="o">.</span><span class="n">set_position</span><span class="p">(</span><span class="s1">&#39;zero&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;inout&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">locator</span> <span class="o">=</span>  <span class="n">ticker</span><span class="o">.</span><span class="n">IndexLocator</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">offset</span><span class="o">=-</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">locator</span> <span class="o">=</span>  <span class="n">ticker</span><span class="o">.</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">locator</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">locator</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">yticks</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">yticks</span> <span class="o">=</span> <span class="n">yticks</span><span class="p">[</span><span class="n">yticks</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">yticks</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;zeroaxis.pdf&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/plt/fig/zeroaxis.png"
+    alt="軸を0の位置に置いた例．"><figcaption>
+      <p>軸を0の位置に置いた例．</p>
+    </figcaption>
+</figure>
+
+<h3 id="軸の反転">軸の反転</h3>
+<p>次のようにして任意の軸の向きを反転できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">invert_xaxis</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+</span></span></code></pre></div><h3 id="目盛り間隔">目盛り間隔</h3>
+<h4 id="補助目盛">補助目盛</h4>
+<p>次のように主目盛りを等分する数を指定することで
+補助目盛を追加できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">AutoMinorLocator</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">AutoMinorLocator</span><span class="p">(</span><span class="o">&lt;</span><span class="n">分割数</span><span class="o">&gt;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">AutoMinorLocator</span><span class="p">(</span><span class="o">&lt;</span><span class="n">分割数</span><span class="o">&gt;</span><span class="p">))</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/plt/fig/minortick.png"
+    alt="主目盛りを5等分する補助目盛りを追加."><figcaption>
+      <p>主目盛りを5等分する補助目盛りを追加.</p>
+    </figcaption>
+</figure>
+
+<h3 id="目盛り線のスタイル">目盛り線のスタイル</h3>
+<h4 id="長さと太さ">長さと太さ</h4>
+<p>目盛り線の長さや太さは次のように変更する．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">width</span><span class="o">=&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">length</span><span class="o">=&lt;</span><span class="n">length</span><span class="o">&gt;</span><span class="p">)</span> <span class="c1"># 主目盛</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">width</span><span class="o">=&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">length</span><span class="o">=&lt;</span><span class="n">length</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;minor&#39;</span><span class="p">)</span> <span class="c1"># 補助目盛</span>
+</span></span></code></pre></div><p>なお，長さは負にしても内側に目盛り線を描けるわけではない．</p>
+<h3 id="四方の目盛りとアノテーションの有無">四方の目盛りとアノテーションの有無</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">top</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">labeltop</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">bottom</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">labelbottom</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">labelleft</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">right</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">labelright</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kc">True</span><span class="o">/</span><span class="kc">False</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>上記のように上下左右の縁ごとに，目盛り・アノテーションの有無を指定できる．
+ややこしいが，ここでのlabelはax.set_xlabelなどで付与するラベル（軸の名前）とは異なる．</p>
+<p>あるいは次のように上下・左右で指定することもできる：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_ticks_position</span><span class="p">(</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>なお，デフォルトの目盛りとアノテーションは左と下．</p>
+<h3 id="内向き目盛り">内向き目盛り</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span> <span class="o">=</span><span class="s2">&#34;both&#34;</span><span class="p">,</span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="軸ラベルの位置">軸ラベルの位置</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_label_position</span><span class="p">(</span><span class="s1">&#39;&lt;top/bottom&gt;&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_position</span><span class="p">(</span><span class="s1">&#39;&lt;left/right&gt;&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>これを用いることで軸ラベルをグラフの上や右に付加できる．</p>
+<h2 id="枠線グリッド">枠線・グリッド</h2>
+<h3 id="枠線の太さ">枠線の太さ</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[:]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="グリッドとそのスタイル">グリッドとそのスタイル</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;major&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;&lt;color&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;&lt;style&gt;&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="n">linewidth</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;&lt;color&gt;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p>あるいはslopeの代わりに２点目の座標を与えることで２点を通る直線をプロットできる．</p>
-<h2 id="2次元カラーメッシュ-pcolormesh">2次元カラーメッシュ pcolormesh</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="o">&lt;</span><span class="mi">2</span><span class="n">D</span> <span class="n">data</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
-</span></span></code></pre></div><h3 id="メッシュ境界線">メッシュ境界線</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">edgecolors</span> <span class="o">=</span> <span class="s1">&#39;&lt;none, etc.&gt;&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">)</span>
-</span></span></code></pre></div><p>&rsquo;none&rsquo;にするとメッシュの境界線を描画しない．</p>
-<!--  ### メッシュの塗りつぶし方式 -->
-<!--  ```python -->
-<!--  plt.pcolormesh( -->
-<!--      ..., -->
-<!--      shading = '<flat: 均一 / gouraud: グラデーション>' -->
-<!--      ...) -->
-<!--   ``` -->
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div><p>以上を活用して，次の例のようなプロットエリアを作成できる：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">AutoMinorLocator</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 補助目盛</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">AutoMinorLocator</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">AutoMinorLocator</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 上下左右の目盛り</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">top</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">labeltop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">bottom</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">labelbottom</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">labelleft</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">right</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">labelright</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 目盛り線のスタイル</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;minor&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 内向き目盛り線</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span> <span class="o">=</span><span class="s2">&#34;both&#34;</span><span class="p">,</span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;in&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 軸の向きを反転</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 軸ラベル追加</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;xlabel&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;ylabel&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 軸ラベルの位置</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_label_position</span><span class="p">(</span><span class="s1">&#39;top&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 枠線</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[:]</span><span class="o">.</span><span class="n">set_linewidth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># グリッド</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">which</span> <span class="o">=</span> <span class="s1">&#39;major&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.8</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/plt/fig/plotarea.png"
+    alt="軸・目盛り・グリッドなどの調整例．"><figcaption>
+      <p>軸・目盛り・グリッドなどの調整例．</p>
+    </figcaption>
+</figure>
+
 
       </div>
 
@@ -1347,7 +1543,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第2章　軸・ラベル・枠</span>
+            >第2章　点，線のプロット</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
             </span>
@@ -1361,7 +1557,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第4章　付加要素</span
+            >第4章　図のプロット</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               

@@ -11,10 +11,10 @@
     <loc>https://is-enaga.github.io/mynote/docs/win/sec001/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://is-enaga.github.io/mynote/docs/plt/sec001/</loc>
+    <loc>https://is-enaga.github.io/mynote/docs/pygmt/sec001/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://is-enaga.github.io/mynote/docs/pygmt/sec001/</loc>
+    <loc>https://is-enaga.github.io/mynote/docs/plt/sec001/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://is-enaga.github.io/mynote/plt/</loc>
@@ -66,6 +66,9 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://is-enaga.github.io/mynote/docs/pygmt/sec006/</loc>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://is-enaga.github.io/mynote/docs/plt/sec006/</loc>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://is-enaga.github.io/mynote/docs/ubuntu/sec006/</loc>

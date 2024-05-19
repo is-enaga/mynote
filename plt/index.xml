@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>第1章　基礎・一般</title>
+      <title>第1章　画像生成とフォント設定</title>
       <link>https://is-enaga.github.io/mynote/docs/plt/sec001/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/plt/sec001/</guid>
@@ -52,15 +52,49 @@
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
+&lt;!-- ######################################### --&gt;
 </description>
     </item>
     
     <item>
-      <title>第2章　軸・ラベル・枠</title>
+      <title>第2章　点，線のプロット</title>
       <link>https://is-enaga.github.io/mynote/docs/plt/sec002/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/plt/sec002/</guid>
-      <description>&lt;p&gt;本章では断りのない限り，以下のようなグラフを作った場合を前提とする．&lt;/p&gt;
+      <description>&lt;!-- ######################################### --&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;線のプロット&#34;&gt;線のプロット&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h3 id=&#34;線のスタイル&#34;&gt;線のスタイル&lt;/h3&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;style&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;lw&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;color&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;...&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;lsまたはlinestyle引数に文字列型でスタイルを指定する．
+線の太さはlwまたはlinewidth，色はcまたはcolorで指定する．&lt;/p&gt;
+&lt;p&gt;スタイルは図の通り．
+&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/plt/fig/line_styles.png&#34;
+    alt=&#34;線のスタイル．&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;線のスタイル．&lt;/p&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;!-- ######################################### --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>第3章　軸・ラベル・枠</title>
+      <link>https://is-enaga.github.io/mynote/docs/plt/sec003/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://is-enaga.github.io/mynote/docs/plt/sec003/</guid>
+      <description>&lt;!-- ######################################### --&gt;
+&lt;p&gt;本章では断りのない限り，以下のようなグラフを作った場合を前提とする．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplots&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;figsize&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;ncols&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -230,10 +264,10 @@
     </item>
     
     <item>
-      <title>第3章　図のプロット</title>
-      <link>https://is-enaga.github.io/mynote/docs/plt/sec003/</link>
+      <title>第4章　図のプロット</title>
+      <link>https://is-enaga.github.io/mynote/docs/plt/sec004/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://is-enaga.github.io/mynote/docs/plt/sec003/</guid>
+      <guid>https://is-enaga.github.io/mynote/docs/plt/sec004/</guid>
       <description>&lt;h2 id=&#34;直線&#34;&gt;直線&lt;/h2&gt;
 &lt;p&gt;以下の方法では，直線が通る１点と傾きを与えることで，無限に続く直線をプロットできる．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;axline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -264,10 +298,10 @@
     </item>
     
     <item>
-      <title>第4章　付加要素</title>
-      <link>https://is-enaga.github.io/mynote/docs/plt/sec004/</link>
+      <title>第5章　付加要素</title>
+      <link>https://is-enaga.github.io/mynote/docs/plt/sec005/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://is-enaga.github.io/mynote/docs/plt/sec004/</guid>
+      <guid>https://is-enaga.github.io/mynote/docs/plt/sec005/</guid>
       <description>&lt;h2 id=&#34;カラーバー&#34;&gt;カラーバー&lt;/h2&gt;
 &lt;h3 id=&#34;両端の三角&#34;&gt;両端の三角&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;colorbar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;extend&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;max/min/both&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -277,10 +311,10 @@
     </item>
     
     <item>
-      <title>第5章　作品例</title>
-      <link>https://is-enaga.github.io/mynote/docs/plt/sec005/</link>
+      <title>第6章　作品例</title>
+      <link>https://is-enaga.github.io/mynote/docs/plt/sec006/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://is-enaga.github.io/mynote/docs/plt/sec005/</guid>
+      <guid>https://is-enaga.github.io/mynote/docs/plt/sec006/</guid>
       <description>&lt;h2 id=&#34;数学風グラフ&#34;&gt;数学風グラフ&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;plt&lt;/span&gt;

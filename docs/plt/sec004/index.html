@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 16, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: May 19, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="カラーバー 両端の三角 fig.colorbar(extend = &#39;&lt;max/min/both&gt;&#39;) カラーバーの端に三角形をつけ，上限" />
+  <meta name="description" content="直線 以下の方法では，直線が通る１点と傾きを与えることで，無限" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/plt/sec004/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/plt/sec004/" />
-  <meta property="og:title" content="第4章　付加要素 | K-Notes" />
-  <meta property="og:description" content="カラーバー 両端の三角 fig.colorbar(extend = &#39;&lt;max/min/both&gt;&#39;) カラーバーの端に三角形をつけ，上限" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第4章　図のプロット | K-Notes" />
+  <meta property="og:description" content="直線 以下の方法では，直線が通る１点と傾きを与えることで，無限" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第4章　付加要素 | K-Notes</title>
+  <title>第4章　図のプロット | K-Notes</title>
 
   
   
@@ -741,7 +741,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec001/"
     
-  >第1章　基礎・一般
+  >第1章　画像生成とフォント設定
     </a>
               
             </li><li class="flex flex-col "><a
@@ -749,7 +749,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec002/"
     
-  >第2章　軸・ラベル・枠
+  >第2章　点，線のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -757,7 +757,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　図のプロット
+  >第3章　軸・ラベル・枠
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -765,14 +765,20 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　付加要素
+  >第4章　図のプロット
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc"
+                href="#%e7%9b%b4%e7%b7%9a"
                 class="hb-docs-link"
-              >カラーバー</a>
+              >直線</a>
+            </li>
+          <li>
+              <a
+                href="#2%e6%ac%a1%e5%85%83%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5-pcolormesh"
+                class="hb-docs-link"
+              >2次元カラーメッシュ pcolormesh</a>
             </li>
           </ul>
   
@@ -782,7 +788,15 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　作品例
+  >第5章　付加要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec006/"
+    
+  >第6章　作品例
     </a>
               
             </li></ul>
@@ -1070,7 +1084,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec001/"
     
-  >第1章　基礎・一般
+  >第1章　画像生成とフォント設定
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1078,7 +1092,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec002/"
     
-  >第2章　軸・ラベル・枠
+  >第2章　点，線のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1086,7 +1100,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　図のプロット
+  >第3章　軸・ラベル・枠
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -1094,7 +1108,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　付加要素
+  >第4章　図のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1102,7 +1116,15 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　作品例
+  >第5章　付加要素
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/plt/sec006/"
+    
+  >第6章　作品例
     </a>
               
             </li></ul>
@@ -1250,10 +1272,13 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc">カラーバー</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%b4%e7%b7%9a">直線</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%b8%a1%e7%ab%af%e3%81%ae%e4%b8%89%e8%a7%92">両端の三角</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#2%e6%ac%a1%e5%85%83%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5-pcolormesh">2次元カラーメッシュ pcolormesh</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5%e5%a2%83%e7%95%8c%e7%b7%9a">メッシュ境界線</a>
       </li></ul>
 
 
@@ -1280,18 +1305,39 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/plt/">Matplotlib</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第4章　付加要素</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第4章　図のプロット</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第4章　付加要素</h1>
-        <h2 id="カラーバー">カラーバー</h2>
-<h3 id="両端の三角">両端の三角</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">extend</span> <span class="o">=</span> <span class="s1">&#39;&lt;max/min/both&gt;&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p>カラーバーの端に三角形をつけ，上限や下限の外の値の存在を示す．</p>
-<!--  ============================= -->
+        <h1>第4章　図のプロット</h1>
+        <h2 id="直線">直線</h2>
+<p>以下の方法では，直線が通る１点と傾きを与えることで，無限に続く直線をプロットできる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="o">&lt;</span><span class="n">x</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">y</span><span class="o">&gt;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">slope</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">傾き</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;&lt;style&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linewidth</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;&lt;color&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>あるいはslopeの代わりに２点目の座標を与えることで２点を通る直線をプロットできる．</p>
+<h2 id="2次元カラーメッシュ-pcolormesh">2次元カラーメッシュ pcolormesh</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="o">&lt;</span><span class="mi">2</span><span class="n">D</span> <span class="n">data</span> <span class="o">/</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="メッシュ境界線">メッシュ境界線</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edgecolors</span> <span class="o">=</span> <span class="s1">&#39;&lt;none, etc.&gt;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">)</span>
+</span></span></code></pre></div><p>&rsquo;none&rsquo;にするとメッシュの境界線を描画しない．</p>
+<!--  ### メッシュの塗りつぶし方式 -->
+<!--  ```python -->
+<!--  plt.pcolormesh( -->
+<!--      ..., -->
+<!--      shading = '<flat: 均一 / gouraud: グラデーション>' -->
+<!--      ...) -->
+<!--   ``` -->
 
       </div>
 
@@ -1317,7 +1363,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第3章　図のプロット</span>
+            >第3章　軸・ラベル・枠</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
             </span>
@@ -1331,7 +1377,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第5章　作品例</span
+            >第5章　付加要素</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
