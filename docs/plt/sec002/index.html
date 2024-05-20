@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 19, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: May 20, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -766,7 +766,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　軸・ラベル・枠
+  >第3章　2次元メッシュのプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -774,7 +774,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　図のプロット
+  >第4章　付加要素
     </a>
               
             </li><li class="flex flex-col "><a
@@ -782,7 +782,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　付加要素
+  >第5章　軸・ラベル・枠
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1094,7 +1094,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec003/"
     
-  >第3章　軸・ラベル・枠
+  >第3章　2次元メッシュのプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1102,7 +1102,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec004/"
     
-  >第4章　図のプロット
+  >第4章　付加要素
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1110,7 +1110,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/plt/sec005/"
     
-  >第5章　付加要素
+  >第5章　軸・ラベル・枠
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1270,6 +1270,15 @@
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%b7%9a%e3%81%ae%e3%82%b9%e3%82%bf%e3%82%a4%e3%83%ab">線のスタイル</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%9b%b4%e7%b7%9a%e3%81%ae%e3%83%97%e3%83%ad%e3%83%83%e3%83%88">直線のプロット</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%9c%89%e9%99%90%e9%95%b7%e3%81%ae%e9%89%9b%e7%9b%b4%e6%b0%b4%e5%b9%b3%e7%b7%9a">有限長の鉛直・水平線</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%84%a1%e9%99%90%e9%95%b7%e3%81%ae%e7%9b%b4%e7%b7%9a">無限長の直線</a>
       </li></ul>
 
 
@@ -1326,7 +1335,66 @@
     </figcaption>
 </figure>
 </p>
-<!-- ######################################### -->
+<!-- ---------------------------------- -->
+<h3 id="直線のプロット">直線のプロット</h3>
+<!-- ---------------------------------- -->
+<!-- ............................. -->
+<h4 id="有限長の鉛直水平線">有限長の鉛直・水平線</h4>
+<!-- ............................. -->
+<p>鉛直・水平線を複数まとめてプロットできる．</p>
+<p>鉛直:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">x</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">x</span><span class="p">:</span> <span class="nb">float</span><span class="o">/</span><span class="n">array</span><span class="o">-</span><span class="n">like</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ymin</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ymin</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ymax</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">ymax</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">colors</span> <span class="o">=</span> <span class="s1">&#39;&lt;color/list[color]&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;&lt;style&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">lw</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>水平:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="n">y</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">y</span><span class="p">:</span> <span class="nb">float</span><span class="o">/</span><span class="n">array</span><span class="o">-</span><span class="n">like</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">xmin</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">xmin</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">xmax</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">xmax</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">colors</span> <span class="o">=</span> <span class="s1">&#39;&lt;color/list[color]&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">ls</span> <span class="o">=</span> <span class="s1">&#39;&lt;style&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">lw</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>x, yには単体でもリストでもデータを与えられる．
+xmin, xmax, ymin, ymax, colorsも同様．</p>
+<p>ymin, ymaxをnp.infにするとグラフの端までプロットできると思ったが不可．
+無限長の直線を引きたいときはaxlineなどを利用する．</p>
+<!-- ............................. -->
+<h4 id="無限長の直線">無限長の直線</h4>
+<!-- ............................. -->
+<p>以下の方法では，直線が通る１点と傾きを与えることで，無限に続く直線をプロットできる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="o">&lt;</span><span class="n">x</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">y</span><span class="o">&gt;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">slope</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">傾き</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;&lt;style&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linewidth</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;&lt;color&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>あるいはslopeの代わりに２点目の座標を与えることで２点を通る直線をプロットできる．</p>
+<p>水平線や鉛直線は以下のようにプロットできる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">y</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;&lt;style&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linewidth</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;&lt;color&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">x</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&#34;&lt;style&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">linewidth</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">width</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s2">&#34;&lt;color&gt;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><!-- ######################################### -->
 
       </div>
 
@@ -1366,7 +1434,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第3章　軸・ラベル・枠</span
+            >第3章　2次元メッシュのプロット</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
