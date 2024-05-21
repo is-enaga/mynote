@@ -518,10 +518,111 @@ inode番号が共通である．&lt;/p&gt;
     </item>
     
     <item>
-      <title>第3章　Git</title>
+      <title>第3章　SSH接続</title>
       <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec003/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec003/</guid>
+      <description>&lt;!-- ######################################### --&gt;
+&lt;p&gt;大まかな流れは以下の通りである．&lt;/p&gt;
+&lt;div class=&#34;hb-steps&#34;&gt;
+&lt;h3 id=&#34;ローカル公開鍵秘密鍵の生成&#34;&gt;ローカル：公開鍵・秘密鍵の生成&lt;/h3&gt;
+&lt;p&gt;ローカルの~/.sshにおいて鍵を生成する．&lt;/p&gt;
+&lt;h3 id=&#34;リモートローカルの公開鍵を登録&#34;&gt;リモート：ローカルの公開鍵を登録&lt;/h3&gt;
+&lt;p&gt;ローカルの公開鍵の中身をリモートの~/.ssh/authorized_keysに書き込む．&lt;/p&gt;
+&lt;h3 id=&#34;ローカルエイリアスの設定任意&#34;&gt;ローカル：エイリアスの設定（任意）&lt;/h3&gt;
+&lt;p&gt;リモートへ接続するときの名前を登録する．
+~/.ssh/configにリモートの名前やIPアドレスを指定する．&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;鍵の作成&#34;&gt;鍵の作成&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;p&gt;接続元（ローカル）の~/.sshディレクトリに移動して，公開鍵・秘密鍵を生成する．
+最近は鍵のタイプにed25519が推奨されているようなので，以下で鍵を作成する．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;keygen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ed25519&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;うまくいまない場合や何らかの理由がある場合は，
+以下のようにRSA鍵を生成することもできる．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;keygen&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rsa&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4096&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;実行するとid_rsaの保存名などを聞かれるので進める．
+このとき，複数のサーバーに接続する場合は同じ鍵を使いまわさずに別の鍵を生成するべきであるから，
+保存名は既存のものと重複しないよう適宜変更する．&lt;/p&gt;
+&lt;p&gt;終了するとid_rsaとid_rsa.pubが生成される．
+id_rsaが秘密鍵，id_rsa.pubが公開鍵である．
+次の段階では公開鍵を接続先（リモート）にコピーする．&lt;/p&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;公開鍵の登録&#34;&gt;公開鍵の登録&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h3 id=&#34;リモートへの公開鍵のコピー&#34;&gt;リモートへの公開鍵のコピー&lt;/h3&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;ローカルからリモートに公開鍵を登録する．
+登録とは，リモートの「~/.ssh/authorized_keys」というファイルに
+ローカルの公開鍵の中身を書き込むことである．&lt;/p&gt;
+&lt;p&gt;そのためには一度ローカルの公開鍵をリモートへコピーし，
+その中身をcatコマンドを用いるなどしてリモートのauthorized_keysに書き込めばよい．&lt;/p&gt;
+&lt;p&gt;コピーにはUSBメモリを経由するなどの方法もあるが，ここではscpを用いる．
+まずリモートで以下を実行して，リモートのIPアドレスを調べる．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ip&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;この出力結果の中にIPアドレスが含まれているはずである．&lt;/p&gt;
+&lt;p&gt;ついでにls -laでホームディレクトリ（~/）に「.ssh」ディレクトリがあるか確認し，
+なければ作成しておく．&lt;/p&gt;
+&lt;p&gt;また，.sshのパーミッションが700（rwx&amp;mdash;&amp;mdash;）かも確認しておく．
+そうなっていなければ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;700&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を実行して変更する．&lt;/p&gt;
+&lt;p&gt;次にローカルで以下を実行して，公開鍵をリモートにコピーする．
+接続先を指定するときに先ほど調べたIPアドレスが必要となる．
+接続時にはリモートのパスワードが求められるので入力すること．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;scp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;id_rsa&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのユーザー名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのIPアドレス&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;公開鍵の名前は適宜読み替えよ．&lt;/p&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;h3 id=&#34;リモートでの公開鍵の登録&#34;&gt;リモートでの公開鍵の登録&lt;/h3&gt;
+&lt;!-- ---------------------------------- --&gt;
+&lt;p&gt;リモートを直接操作するか，ローカルから以下を実行して接続し，
+リモートで作業する．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのユーザー名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのIPアドレス&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;リモートの「~/.ssh」へ移動して，先ほどコピーした公開鍵があることを確認する．
+この公開鍵をcatでauthorized_keysに書き込む．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;id_rsa&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pub&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;authorized_keys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで登録は完了．
+ディレクトリに残っている公開鍵は削除してよい．&lt;/p&gt;
+&lt;p&gt;最後に，作成されたauthorized_keysのパーミッションが
+600（rw&amp;mdash;&amp;mdash;-）か確認しておくこと．
+そうでなければ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;600&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;authorized_keys&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を実行してパーミッションを変更しておく．&lt;/p&gt;
+&lt;p&gt;これでローカルから&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのユーザー名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのIPアドレス&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を実行することでリモートに接続できるようになるはずである．
+鍵を登録したにも関わらずここでパスワードが求められる場合は，
+つぎの節に従い秘密鍵のパスを登録することで改善する可能性がある．&lt;/p&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;エイリアスの登録&#34;&gt;エイリアスの登録&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;p&gt;SSH接続時に毎回IPアドレスを入力する手間を省くために，
+接続時の名前（エイリアス）を登録すると良い．
+.ssh/configファイルに以下のように記述する．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;エイリアス名&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;自由&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;HostName&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのIPアドレス&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;User&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;リモートのユーザー名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;IdentityFile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;使用する秘密鍵の名前&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;以降はここで登録した名前で&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;エイリアス名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;を実行するだけでSSH接続が可能となる．&lt;/p&gt;
+&lt;!-- =================================== --&gt;
+&lt;h2 id=&#34;問題の調査&#34;&gt;問題の調査&lt;/h2&gt;
+&lt;!-- =================================== --&gt;
+&lt;p&gt;正常に接続できない場合，以下のように「-v」オプションを付すことで
+接続時の情報を表示できる．&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;ssh&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;接続先&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- ######################################### --&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>第4章　Git</title>
+      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec004/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec004/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;github&#34;&gt;GitHub&lt;/h2&gt;
@@ -565,10 +666,10 @@ commitまでで十分である．&lt;/p&gt;
     </item>
     
     <item>
-      <title>第4章　パッケージ</title>
-      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec004/</link>
+      <title>第5章　パッケージ</title>
+      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec005/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec004/</guid>
+      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec005/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;管理の基本&#34;&gt;管理の基本&lt;/h2&gt;
@@ -662,10 +763,10 @@ commitまでで十分である．&lt;/p&gt;
     </item>
     
     <item>
-      <title>第5章　プログラミング</title>
-      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec005/</link>
+      <title>第6章　プログラミング</title>
+      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec006/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec005/</guid>
+      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec006/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;fortran&#34;&gt;Fortran&lt;/h2&gt;
@@ -716,10 +817,10 @@ gfortでコンパイルできないものもifortではコンパイルできる�
     </item>
     
     <item>
-      <title>第6章　応用</title>
-      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec006/</link>
+      <title>第7章　応用</title>
+      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec007/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec006/</guid>
+      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec007/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;メール送信&#34;&gt;メール送信&lt;/h2&gt;
@@ -750,10 +851,10 @@ gfortでコンパイルできないものもifortではコンパイルできる�
     </item>
     
     <item>
-      <title>第7章　WSL2</title>
-      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec007/</link>
+      <title>第8章　WSL2</title>
+      <link>https://is-enaga.github.io/mynote/docs/ubuntu/sec008/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec007/</guid>
+      <guid>https://is-enaga.github.io/mynote/docs/ubuntu/sec008/</guid>
       <description>&lt;!-- ######################################### --&gt;
 &lt;!-- =================================== --&gt;
 &lt;h2 id=&#34;外付けストレージのマウント&#34;&gt;外付けストレージのマウント&lt;/h2&gt;

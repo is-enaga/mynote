@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 20, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: May 21, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="GitHub リポジトリの作成からプッシュまでの流れ GitHub上でリポ" />
+  <meta name="description" content="大まかな流れは以下の通りである． ローカル：公開鍵・秘密鍵の生" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/ubuntu/sec003/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/ubuntu/sec003/" />
-  <meta property="og:title" content="第3章　Git | K-Notes" />
-  <meta property="og:description" content="GitHub リポジトリの作成からプッシュまでの流れ GitHub上でリポ" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第3章　SSH接続 | K-Notes" />
+  <meta property="og:description" content="大まかな流れは以下の通りである． ローカル：公開鍵・秘密鍵の生" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第3章　Git | K-Notes</title>
+  <title>第3章　SSH接続 | K-Notes</title>
 
   
   
@@ -818,14 +818,38 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec003/"
     
-  >第3章　Git
+  >第3章　SSH接続
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#github"
+                href="#"
                 class="hb-docs-link"
-              >GitHub</a>
+              ></a>
+            </li>
+          <li>
+              <a
+                href="#%e9%8d%b5%e3%81%ae%e4%bd%9c%e6%88%90"
+                class="hb-docs-link"
+              >鍵の作成</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%85%ac%e9%96%8b%e9%8d%b5%e3%81%ae%e7%99%bb%e9%8c%b2"
+                class="hb-docs-link"
+              >公開鍵の登録</a>
+            </li>
+          <li>
+              <a
+                href="#%e3%82%a8%e3%82%a4%e3%83%aa%e3%82%a2%e3%82%b9%e3%81%ae%e7%99%bb%e9%8c%b2"
+                class="hb-docs-link"
+              >エイリアスの登録</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%95%8f%e9%a1%8c%e3%81%ae%e8%aa%bf%e6%9f%bb"
+                class="hb-docs-link"
+              >問題の調査</a>
             </li>
           </ul>
   
@@ -835,7 +859,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec004/"
     
-  >第4章　パッケージ
+  >第4章　Git
     </a>
               
             </li><li class="flex flex-col "><a
@@ -843,7 +867,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec005/"
     
-  >第5章　プログラミング
+  >第5章　パッケージ
     </a>
               
             </li><li class="flex flex-col "><a
@@ -851,7 +875,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec006/"
     
-  >第6章　応用
+  >第6章　プログラミング
     </a>
               
             </li><li class="flex flex-col "><a
@@ -859,7 +883,15 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL2
+  >第7章　応用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec008/"
+    
+  >第8章　WSL2
     </a>
               
             </li></ul>
@@ -1154,7 +1186,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec003/"
     
-  >第3章　Git
+  >第3章　SSH接続
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1162,7 +1194,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec004/"
     
-  >第4章　パッケージ
+  >第4章　Git
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1170,7 +1202,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec005/"
     
-  >第5章　プログラミング
+  >第5章　パッケージ
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1178,7 +1210,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec006/"
     
-  >第6章　応用
+  >第6章　プログラミング
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1186,7 +1218,15 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/ubuntu/sec007/"
     
-  >第7章　WSL2
+  >第7章　応用
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/mynote/docs/ubuntu/sec008/"
+    
+  >第8章　WSL2
     </a>
               
             </li></ul>
@@ -1266,13 +1306,31 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#github">GitHub</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e5%85%ac%e9%96%8b%e9%8d%b5%e7%a7%98%e5%af%86%e9%8d%b5%e3%81%ae%e7%94%9f%e6%88%90">ローカル：公開鍵・秘密鍵の生成</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%aa%e3%83%9d%e3%82%b8%e3%83%88%e3%83%aa%e3%81%ae%e4%bd%9c%e6%88%90%e3%81%8b%e3%82%89%e3%83%97%e3%83%83%e3%82%b7%e3%83%a5%e3%81%be%e3%81%a7%e3%81%ae%e6%b5%81%e3%82%8c">リポジトリの作成からプッシュまでの流れ</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%81%ae%e5%85%ac%e9%96%8b%e9%8d%b5%e3%82%92%e7%99%bb%e9%8c%b2">リモート：ローカルの公開鍵を登録</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%81%ae%e5%bc%b7%e5%88%b6%e4%b8%8a%e6%9b%b8%e3%81%8d">リモートの強制上書き</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%ad%e3%83%bc%e3%82%ab%e3%83%ab%e3%82%a8%e3%82%a4%e3%83%aa%e3%82%a2%e3%82%b9%e3%81%ae%e8%a8%ad%e5%ae%9a%e4%bb%bb%e6%84%8f">ローカル：エイリアスの設定（任意）</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%8d%b5%e3%81%ae%e4%bd%9c%e6%88%90">鍵の作成</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%85%ac%e9%96%8b%e9%8d%b5%e3%81%ae%e7%99%bb%e9%8c%b2">公開鍵の登録</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%81%b8%e3%81%ae%e5%85%ac%e9%96%8b%e9%8d%b5%e3%81%ae%e3%82%b3%e3%83%94%e3%83%bc">リモートへの公開鍵のコピー</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%aa%e3%83%a2%e3%83%bc%e3%83%88%e3%81%a7%e3%81%ae%e5%85%ac%e9%96%8b%e9%8d%b5%e3%81%ae%e7%99%bb%e9%8c%b2">リモートでの公開鍵の登録</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%a8%e3%82%a4%e3%83%aa%e3%82%a2%e3%82%b9%e3%81%ae%e7%99%bb%e9%8c%b2">エイリアスの登録</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%95%8f%e9%a1%8c%e3%81%ae%e8%aa%bf%e6%9f%bb">問題の調査</a>
       </li></ul>
 
 
@@ -1299,51 +1357,105 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/ubuntu/">Ubuntu</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第3章　Git</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第3章　SSH接続</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第3章　Git</h1>
+        <h1>第3章　SSH接続</h1>
         <!-- ######################################### -->
+<p>大まかな流れは以下の通りである．</p>
+<div class="hb-steps">
+<h3 id="ローカル公開鍵秘密鍵の生成">ローカル：公開鍵・秘密鍵の生成</h3>
+<p>ローカルの~/.sshにおいて鍵を生成する．</p>
+<h3 id="リモートローカルの公開鍵を登録">リモート：ローカルの公開鍵を登録</h3>
+<p>ローカルの公開鍵の中身をリモートの~/.ssh/authorized_keysに書き込む．</p>
+<h3 id="ローカルエイリアスの設定任意">ローカル：エイリアスの設定（任意）</h3>
+<p>リモートへ接続するときの名前を登録する．
+~/.ssh/configにリモートの名前やIPアドレスを指定する．</p>
+</div>
 <!-- =================================== -->
-<h2 id="github">GitHub</h2>
+<h2 id="鍵の作成">鍵の作成</h2>
+<!-- =================================== -->
+<p>接続元（ローカル）の~/.sshディレクトリに移動して，公開鍵・秘密鍵を生成する．
+最近は鍵のタイプにed25519が推奨されているようなので，以下で鍵を作成する．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">ed25519</span>
+</span></span></code></pre></div><p>うまくいまない場合や何らかの理由がある場合は，
+以下のようにRSA鍵を生成することもできる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">b</span> <span class="mi">4096</span>
+</span></span></code></pre></div><p>実行するとid_rsaの保存名などを聞かれるので進める．
+このとき，複数のサーバーに接続する場合は同じ鍵を使いまわさずに別の鍵を生成するべきであるから，
+保存名は既存のものと重複しないよう適宜変更する．</p>
+<p>終了するとid_rsaとid_rsa.pubが生成される．
+id_rsaが秘密鍵，id_rsa.pubが公開鍵である．
+次の段階では公開鍵を接続先（リモート）にコピーする．</p>
+<!-- =================================== -->
+<h2 id="公開鍵の登録">公開鍵の登録</h2>
 <!-- =================================== -->
 <!-- ---------------------------------- -->
-<h3 id="リポジトリの作成からプッシュまでの流れ">リポジトリの作成からプッシュまでの流れ</h3>
+<h3 id="リモートへの公開鍵のコピー">リモートへの公開鍵のコピー</h3>
 <!-- ---------------------------------- -->
-<p>GitHub上でリポジトリを作成し，
-ローカルファイルを初めてリモートにプッシュするまでの手順を示す．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">init</span>
-</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
-</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&#34;&lt;message&gt;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">M</span> <span class="n">main</span>
-</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="o">&lt;</span><span class="n">URL</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
-</span></span></code></pre></div><p>git initでリポジトリを作成する．
-git add .はすべてのファイルをステージングする．
-git commit -m &ldquo;<message>&ldquo;でコミットする．
-git branch -M mainでブランチをmainに変更する．
-git remote add origin <URL>でリモートリポジトリを追加する．
-git push -u origin masterでリモートリポジトリにプッシュする．</p>
-<p>GitHubを使わずローカルでのみ管理する場合は，
-commitまでで十分である．</p>
+<p>ローカルからリモートに公開鍵を登録する．
+登録とは，リモートの「~/.ssh/authorized_keys」というファイルに
+ローカルの公開鍵の中身を書き込むことである．</p>
+<p>そのためには一度ローカルの公開鍵をリモートへコピーし，
+その中身をcatコマンドを用いるなどしてリモートのauthorized_keysに書き込めばよい．</p>
+<p>コピーにはUSBメモリを経由するなどの方法もあるが，ここではscpを用いる．
+まずリモートで以下を実行して，リモートのIPアドレスを調べる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ip</span> <span class="n">a</span>
+</span></span></code></pre></div><p>この出力結果の中にIPアドレスが含まれているはずである．</p>
+<p>ついでにls -laでホームディレクトリ（~/）に「.ssh」ディレクトリがあるか確認し，
+なければ作成しておく．</p>
+<p>また，.sshのパーミッションが700（rwx&mdash;&mdash;）かも確認しておく．
+そうなっていなければ</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">chmod</span> <span class="mi">700</span> <span class="o">~/.</span><span class="n">ssh</span>
+</span></span></code></pre></div><p>を実行して変更する．</p>
+<p>次にローカルで以下を実行して，公開鍵をリモートにコピーする．
+接続先を指定するときに先ほど調べたIPアドレスが必要となる．
+接続時にはリモートのパスワードが求められるので入力すること．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">scp</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="o">.</span><span class="n">pub</span> <span class="o">&lt;</span><span class="n">リモートのユーザー名</span><span class="o">&gt;@&lt;</span><span class="n">リモートのIPアドレス</span><span class="o">&gt;</span><span class="p">:</span><span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span>
+</span></span></code></pre></div><p>公開鍵の名前は適宜読み替えよ．</p>
 <!-- ---------------------------------- -->
-<h3 id="リモートの強制上書き">リモートの強制上書き</h3>
+<h3 id="リモートでの公開鍵の登録">リモートでの公開鍵の登録</h3>
 <!-- ---------------------------------- -->
-<p>git push origin mainを試みるとき，
-リモートとローカルの食い違いが原因で次のようなエラーが出る場合がある：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">To</span> <span class="o">&lt;</span><span class="n">remoteのurl</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="err">!</span> <span class="p">[</span><span class="n">rejected</span><span class="p">]</span>        <span class="n">main</span> <span class="o">-&gt;</span> <span class="n">main</span> <span class="p">(</span><span class="n">fetch</span> <span class="n">first</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">error</span><span class="p">:</span> <span class="n">failed</span> <span class="n">to</span> <span class="n">push</span> <span class="n">some</span> <span class="n">refs</span> <span class="n">to</span> <span class="s1">&#39;https://github.com/is-enaga/mynote.git&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="n">Updates</span> <span class="n">were</span> <span class="n">rejected</span> <span class="n">because</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">contains</span> <span class="n">work</span> <span class="n">that</span> <span class="n">you</span> <span class="n">do</span>
-</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="ow">not</span> <span class="n">have</span> <span class="n">locally</span><span class="o">.</span> <span class="n">This</span> <span class="ow">is</span> <span class="n">usually</span> <span class="n">caused</span> <span class="n">by</span> <span class="n">another</span> <span class="n">repository</span> <span class="n">pushing</span>
-</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="n">to</span> <span class="n">the</span> <span class="n">same</span> <span class="n">ref</span><span class="o">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">want</span> <span class="n">to</span> <span class="n">first</span> <span class="n">integrate</span> <span class="n">the</span> <span class="n">remote</span> <span class="n">changes</span>
-</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span><span class="p">,</span> <span class="s1">&#39;git pull ...&#39;</span><span class="p">)</span> <span class="n">before</span> <span class="n">pushing</span> <span class="n">again</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl"><span class="n">hint</span><span class="p">:</span> <span class="n">See</span> <span class="n">the</span> <span class="s1">&#39;Note about fast-forwards&#39;</span> <span class="ow">in</span> <span class="s1">&#39;git push --help&#39;</span> <span class="k">for</span> <span class="n">details</span><span class="o">.</span>
-</span></span></code></pre></div><p>このとき以下のように-fオプションで強制的にプッシュできる．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">f</span> <span class="n">origin</span> <span class="n">main</span>
+<p>リモートを直接操作するか，ローカルから以下を実行して接続し，
+リモートで作業する．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ssh</span> <span class="o">&lt;</span><span class="n">リモートのユーザー名</span><span class="o">&gt;@&lt;</span><span class="n">リモートのIPアドレス</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p>リモートの「~/.ssh」へ移動して，先ほどコピーした公開鍵があることを確認する．
+この公開鍵をcatでauthorized_keysに書き込む．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cat</span> <span class="n">id_rsa</span><span class="o">.</span><span class="n">pub</span> <span class="o">&gt;&gt;</span> <span class="n">authorized_keys</span>
+</span></span></code></pre></div><p>これで登録は完了．
+ディレクトリに残っている公開鍵は削除してよい．</p>
+<p>最後に，作成されたauthorized_keysのパーミッションが
+600（rw&mdash;&mdash;-）か確認しておくこと．
+そうでなければ</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">chmod</span> <span class="mi">600</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys</span>
+</span></span></code></pre></div><p>を実行してパーミッションを変更しておく．</p>
+<p>これでローカルから</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ssh</span> <span class="o">&lt;</span><span class="n">リモートのユーザー名</span><span class="o">&gt;@&lt;</span><span class="n">リモートのIPアドレス</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p>を実行することでリモートに接続できるようになるはずである．
+鍵を登録したにも関わらずここでパスワードが求められる場合は，
+つぎの節に従い秘密鍵のパスを登録することで改善する可能性がある．</p>
+<!-- =================================== -->
+<h2 id="エイリアスの登録">エイリアスの登録</h2>
+<!-- =================================== -->
+<p>SSH接続時に毎回IPアドレスを入力する手間を省くために，
+接続時の名前（エイリアス）を登録すると良い．
+.ssh/configファイルに以下のように記述する．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Host</span> <span class="o">&lt;</span><span class="n">エイリアス名</span><span class="p">(</span><span class="n">自由</span><span class="p">)</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">HostName</span> <span class="o">&lt;</span><span class="n">リモートのIPアドレス</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">User</span> <span class="o">&lt;</span><span class="n">リモートのユーザー名</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">IdentityFile</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/&lt;</span><span class="n">使用する秘密鍵の名前</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p>以降はここで登録した名前で</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ssh</span> <span class="o">&lt;</span><span class="n">エイリアス名</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p>を実行するだけでSSH接続が可能となる．</p>
+<!-- =================================== -->
+<h2 id="問題の調査">問題の調査</h2>
+<!-- =================================== -->
+<p>正常に接続できない場合，以下のように「-v」オプションを付すことで
+接続時の情報を表示できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ssh</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">接続先</span><span class="o">&gt;</span>
 </span></span></code></pre></div><!-- ######################################### -->
 
       </div>
@@ -1384,7 +1496,7 @@ commitまでで十分である．</p>
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第4章　パッケージ</span
+            >第4章　Git</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               

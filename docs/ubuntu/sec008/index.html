@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="地球物理で使うツールの使い方をまとめています．Python(PyGMT, matplotlib)や東大のWINシステムなど．" />
+  <meta name="description" content="外付けストレージのマウント 成功した手順 デバイスIDの確認 まず" />
 
   
-  <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/plt/" />
+  <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/ubuntu/sec008/" />
 
   
   
@@ -194,14 +194,12 @@
 
   
   
-    <link rel="alternate" href="/mynote/plt/index.xml" type="application/rss+xml" title="K-Notes" />
-  
 
   
   <link rel="icon" type="image/png" href="/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://is-enaga.github.io/mynote/plt/" />
+  <link rel="canonical" href="https://is-enaga.github.io/mynote/docs/ubuntu/sec008/" />
 
   
   
@@ -227,11 +225,12 @@
     <meta property="twitter:creator" content="@地球物理のためのツール" />
   
   <meta property="og:site_name" content="K-Notes" />
-  <meta property="og:url" content="https://is-enaga.github.io/mynote/plt/" />
-  <meta property="og:title" content="Matplotlibの使い方メモ | K-Notes" />
-  <meta property="og:description" content="地球物理で使うツールの使い方をまとめています．Python(PyGMT, matplotlib)や東大のWINシステムなど．" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/ubuntu/sec008/" />
+  <meta property="og:title" content="第8章　WSL2 | K-Notes" />
+  <meta property="og:description" content="外付けストレージのマウント 成功した手順 デバイスIDの確認 まず" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
+    
     
   
 
@@ -239,8 +238,10 @@
 
 
 
+  
 
-  <title>Matplotlibの使い方メモ | K-Notes</title>
+
+  <title>第8章　WSL2 | K-Notes</title>
 
   
   
@@ -430,7 +431,7 @@
         
         <li class="nav-item">
           <a
-            class="nav-link active"
+            class="nav-link "
             
             href="/mynote/plt/"
           >Matplotlib</a
@@ -724,9 +725,9 @@
               
             </li></ul>
       </div>
-            </li><li class="flex flex-col open"><a
+            </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/plt/"
     
   >Matplotlib
@@ -734,21 +735,6 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a>
-  
-    <ul class="hb-sidebar-mobile-toc"><li>
-              <a
-                href="#matplotlib%e3%81%a8%e3%81%af"
-                class="hb-docs-link"
-              >Matplotlibとは</a>
-            </li>
-          <li>
-              <a
-                href="#%e5%8f%82%e8%80%83%e3%83%aa%e3%83%b3%e3%82%af"
-                class="hb-docs-link"
-              >参考リンク</a>
-            </li>
-          </ul>
-  
               <div class="ltr:pr-0 overflow-hidden">
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
@@ -800,7 +786,7 @@
               
             </li></ul>
       </div>
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/ubuntu/"
@@ -867,13 +853,28 @@
   >第7章　応用
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec008/"
     
   >第8章　WSL2
     </a>
+  
+    <ul class="hb-sidebar-mobile-toc"><li>
+              <a
+                href="#%e5%a4%96%e4%bb%98%e3%81%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%81%ae%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88"
+                class="hb-docs-link"
+              >外付けストレージのマウント</a>
+            </li>
+          <li>
+              <a
+                href="#wsl2%e3%81%ae%e8%b5%b7%e5%8b%95%e3%81%ab%e6%99%82%e9%96%93%e3%81%8c%e3%81%8b%e3%81%8b%e3%82%8b%e5%a0%b4%e5%90%88%e3%81%ae%e5%af%be%e5%87%a6"
+                class="hb-docs-link"
+              >WSL2の起動に時間がかかる場合の対処</a>
+            </li>
+          </ul>
+  
               
             </li></ul>
       </div>
@@ -1076,9 +1077,9 @@
               
             </li></ul>
       </div></li>
-        <li class="open"><a
+        <li class=""><a
     class="hb-sidebar-custom-link
-      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/plt/"
     
   >Matplotlib
@@ -1136,7 +1137,7 @@
               
             </li></ul>
       </div></li>
-        <li class=""><a
+        <li class="open"><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/ubuntu/"
@@ -1202,9 +1203,9 @@
   >第7章　応用
     </a>
               
-            </li><li class="flex flex-col "><a
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+      sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/ubuntu/sec008/"
     
   >第8章　WSL2
@@ -1287,10 +1288,28 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#matplotlib%e3%81%a8%e3%81%af">Matplotlibとは</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%a4%96%e4%bb%98%e3%81%91%e3%82%b9%e3%83%88%e3%83%ac%e3%83%bc%e3%82%b8%e3%81%ae%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88">外付けストレージのマウント</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%8f%82%e8%80%83%e3%83%aa%e3%83%b3%e3%82%af">参考リンク</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%88%90%e5%8a%9f%e3%81%97%e3%81%9f%e6%89%8b%e9%a0%86">成功した手順</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%87%e3%83%90%e3%82%a4%e3%82%b9id%e3%81%ae%e7%a2%ba%e8%aa%8d">デバイスIDの確認</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88">マウント</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%a2%e3%83%b3%e3%83%9e%e3%82%a6%e3%83%b3%e3%83%88">アンマウント</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%a4%b1%e6%95%97%e3%81%97%e3%81%9f%e6%89%8b%e9%a0%86">失敗した手順</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#wsl2%e3%81%ae%e8%b5%b7%e5%8b%95%e3%81%ab%e6%99%82%e9%96%93%e3%81%8c%e3%81%8b%e3%81%8b%e3%82%8b%e5%a0%b4%e5%90%88%e3%81%ae%e5%af%be%e5%87%a6">WSL2の起動に時間がかかる場合の対処</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8e%a5%e7%b6%9a%e3%81%a7%e3%81%8d%e3%81%aa%e3%81%84%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%81%8c%e7%99%bb%e9%8c%b2%e3%81%95%e3%82%8c%e3%81%a6%e3%81%84%e3%82%8b%e5%a0%b4%e5%90%88">接続できないネットワークが登録されている場合</a>
       </li></ul>
 
 
@@ -1314,55 +1333,91 @@
         <div class="mt-1.5 flex items-center gap-1 overflow-hidden text-sm text-gray-500 dark:text-gray-400">
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/docs/">個人的ノート集トップ</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">Matplotlib</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
+      <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
+        <a href="https://is-enaga.github.io/mynote/ubuntu/">Ubuntu</a>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第8章　WSL2</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>Matplotlibの使い方メモ</h1>
-        <p>Matplotlibの使い方についてのメモのウェブ版です．
-メニューからメモを開いてください．</p>
-<p>（なお元のPDFは現時点では未公開．量も少ないし&hellip;）</p>
-<h2 id="matplotlibとは">Matplotlibとは</h2>
-<p>Pythonでの図のプロットで使う最も一般的なライブラリ． Pythonを使うなら基礎くらいは知っておくと良いでしょう．</p>
-<!-- ## Next
-
-
-
-
-
-<div class="hb-cards mt-4 grid gap-4 not-prose" style="--hb-cols: 1;">
-  
-
-  <a
-    class="hb-card group"href="sec001" >
-  
-    <span class="hb-card-title p-4">
-        <svg style="height: 1em; width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/></svg>第一章</span></a>
-
-
-
-</div>
- -->
-<h2 id="参考リンク">参考リンク</h2>
-
-
-
-
-<div class="hb-cards mt-4 grid gap-4 not-prose" style="--hb-cols: 1;">
-  
-
-  <a
-    class="hb-card group"href="https://matplotlib.org/" target="_blank" rel="noreferrer">
-  
-    <span class="hb-card-title p-4">
-        <svg style="height: 1em; width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5a17.92 17.92 0 0 1-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>公式HP</span></a>
-
-  
-
-</div>
-
+        <h1>第8章　WSL2</h1>
+        <!-- ######################################### -->
+<!-- =================================== -->
+<h2 id="外付けストレージのマウント">外付けストレージのマウント</h2>
+<!-- =================================== -->
+<!-- ---------------------------------- -->
+<h3 id="成功した手順">成功した手順</h3>
+<!-- ---------------------------------- -->
+<!-- ............................. -->
+<h4 id="デバイスidの確認">デバイスIDの確認</h4>
+<!-- ............................. -->
+<p>まずPowerShellを管理者権限で開く．HDDのデバイスIDを確認するためにPowerShellで</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">GET</span><span class="o">-</span><span class="n">CimInstance</span> <span class="o">-</span><span class="n">query</span> <span class="s2">&#34;SELECT * from Win32_DiskDrive&#34;</span>
+</span></span></code></pre></div><p>とする．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">GET</span><span class="o">-</span><span class="n">CimInstance</span> <span class="o">-</span><span class="n">query</span> <span class="s2">&#34;SELECT * from Win32_DiskDrive&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">DeviceID</span>           <span class="n">Caption</span>                     <span class="n">Partitions</span> <span class="n">Size</span>          <span class="n">Model</span>
+</span></span><span class="line"><span class="cl"><span class="o">--------</span>           <span class="o">-------</span>                     <span class="o">----------</span> <span class="o">----</span>          <span class="o">-----</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span> <span class="mi">1</span>          <span class="mi">5000978465280</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span>
+</span></span><span class="line"><span class="cl">  <span class="o">.</span>\<span class="n">PHYSICALDRIVE0</span> <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>  <span class="mi">4</span>          <span class="mi">512105932800</span>  <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>
+</span></span></code></pre></div><p>ここにあるマウントしたいHDD等のDeviceID（一番左に書いてあるもの）を以降のコマンドで使う．
+SizeやModelをもとに目的のストレージを特定するとよい．</p>
+<!-- ............................. -->
+<h4 id="マウント">マウント</h4>
+<!-- ............................. -->
+<p>前の節で得たデバイスIDを使って，PowerShell上で次のようにする（IDは適宜書き換え）：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="o">--</span><span class="n">mount</span>   <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="o">--</span><span class="n">bare</span>
+</span></span></code></pre></div><p>続いてWSL(Ubuntu)のターミナルを開く．
+そこで<code>lsblk</code>を実行すると，それまではなかった新たにマウントされたデバイスが確認できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">lsblk</span>
+</span></span><span class="line"><span class="cl"><span class="n">NAME</span>   <span class="n">MAJ</span><span class="p">:</span><span class="n">MIN</span> <span class="n">RM</span>   <span class="n">SIZE</span> <span class="n">RO</span> <span class="n">TYPE</span> <span class="n">MOUNTPOINT</span>
+</span></span><span class="line"><span class="cl"><span class="n">sda</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">0</span>    <span class="mi">0</span> <span class="mf">365.6</span><span class="n">M</span>  <span class="mi">1</span> <span class="n">disk</span>
+</span></span><span class="line"><span class="cl"><span class="n">sdb</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">16</span>   <span class="mi">0</span>     <span class="mi">2</span><span class="n">G</span>  <span class="mi">0</span> <span class="n">disk</span> <span class="p">[</span><span class="n">SWAP</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">sdc</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">32</span>   <span class="mi">0</span>   <span class="mf">4.6</span><span class="n">T</span>  <span class="mi">0</span> <span class="n">disk</span>
+</span></span><span class="line"><span class="cl"><span class="err">├─</span><span class="n">sdc1</span>   <span class="mi">8</span><span class="p">:</span><span class="mi">33</span>   <span class="mi">0</span>   <span class="mi">128</span><span class="n">M</span>  <span class="mi">0</span> <span class="n">part</span>
+</span></span><span class="line"><span class="cl"><span class="err">└─</span><span class="n">sdc2</span>   <span class="mi">8</span><span class="p">:</span><span class="mi">34</span>   <span class="mi">0</span>   <span class="mf">4.6</span><span class="n">T</span>  <span class="mi">0</span> <span class="n">part</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">d</span>
+</span></span><span class="line"><span class="cl"><span class="n">sdd</span>      <span class="mi">8</span><span class="p">:</span><span class="mi">48</span>   <span class="mi">0</span>   <span class="mi">256</span><span class="n">G</span>  <span class="mi">0</span> <span class="n">disk</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">wslg</span><span class="o">/</span><span class="n">distro</span>
+</span></span></code></pre></div><p>この場合，容量とMOUNTPOINTが空欄（まだマウントされていない）を見て
+sdc2が目的のHDDだとわかったので，次のコマンドでマウントした：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">mount</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdc2</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">d</span>
+</span></span></code></pre></div><p>すなわち/dev/sdc2を/mnt/dにマウントするということである．
+これで/mnt/dからHDDの中で作業できるようになった．</p>
+<!-- ---------------------------------- -->
+<h4 id="アンマウント">アンマウント</h4>
+<!-- ---------------------------------- -->
+<p>マウントしている間，
+エクスプローラーからはそのストレージにアクセスできないらしい（表示されなくなる）．
+そのため再度エクスプローラーで使う際はPowerShell上でアンマウントする必要があるようだ．
+ここでもマウント時に用いたデバイスIDを使用する：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">wsl</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="n">unmount</span>   <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span>
+</span></span></code></pre></div><p>出力:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">この操作を正しく終了しました</span><span class="err">。</span>
+</span></span></code></pre></div><p>これで再びエクスプローラー上にHDDが表示される．</p>
+<!-- ---------------------------------- -->
+<h3 id="失敗した手順">失敗した手順</h3>
+<!-- ---------------------------------- -->
+<p>参照したマイクロソフトのページ
+（<a href="https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk" target="_blank" rel="noopener">https://learn.microsoft.com/ja-jp/windows/wsl/wsl2-mount-disk</a>）
+には単に</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="o">--</span><span class="n">mount</span> <span class="o">&lt;</span><span class="n">DiskPath</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p>とする方法も書かれていたが，これではディスクがbusyだ，みたいなエラーが出て失敗した．</p>
+<!-- =================================== -->
+<h2 id="wsl2の起動に時間がかかる場合の対処">WSL2の起動に時間がかかる場合の対処</h2>
+<!-- =================================== -->
+<!-- ---------------------------------- -->
+<h3 id="接続できないネットワークが登録されている場合">接続できないネットワークが登録されている場合</h3>
+<!-- ---------------------------------- -->
+<p>事象：
+WSL2の起動に数分かかる．起動してからは問題なく動作する．</p>
+<p>原因：
+エクスローラーの「PC」の画面に，既につながらないネットワークが登録されていたこと．</p>
+<p>対処：
+つながらないネットワークを右クリックし，メニューから切断を選択して削除した．</p>
+<p>結果：
+wslの起動が4秒台に短縮された．</p>
+<!--  \input{../hugo/hugo.tex} -->
 
       </div>
 
@@ -1370,6 +1425,38 @@
       
       
   
+    
+    
+    
+      
+      
+    
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      
+        <a class="group flex no-underline" href="/mynote/docs/ubuntu/sec007/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >第7章　応用</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+            </span>
+          </span>
+        </a>
+      
+    </div>
+    <div class="">
+      
+    </div>
+  </div>
+</div>
+
 
 
       
