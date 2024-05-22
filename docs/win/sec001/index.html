@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 21, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: May 22, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1418,8 +1418,8 @@
 <p>一連の流れを簡潔にまとめると以下のようになる．</p>
 <div class="hb-steps">
 <h3 id="事前準備">事前準備</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> 
-</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tk</span> <span class="n">libmosquitto</span><span class="o">-</span><span class="n">dev</span> <span class="n">libx11</span><span class="o">-</span><span class="n">dev</span> <span class="n">gawk</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tk</span> <span class="n">libmosquitto</span><span class="o">-</span><span class="n">dev</span> <span class="n">gawk</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">libx11</span><span class="o">-</span><span class="n">dev</span> <span class="n">libtool</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">gfortran</span> 
 </span></span></code></pre></div><h3 id="winのダウンロードとインストール">WINのダウンロードとインストール</h3>
 <p>ダウンロード</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
@@ -1427,10 +1427,11 @@
 </span></span><span class="line"><span class="cl"><span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">WIN_pkg</span><span class="o">-</span><span class="mf">3.0.11</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </span></span></code></pre></div><p>コンパイル</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cd</span> <span class="n">WIN_pkg</span><span class="o">-</span><span class="mf">3.0.11</span>
-</span></span><span class="line"><span class="cl"><span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">win</span>
-</span></span><span class="line"><span class="cl"><span class="n">make</span>
-</span></span><span class="line"><span class="cl"><span class="n">make</span> <span class="n">install</span>
-</span></span></code></pre></div><h3 id="パスを通す">パスを通す</h3>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">win</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">make</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</span></span></code></pre></div><p>うまくいかない場合は先にGUI環境の準備を行ってからやり直してみる．</p>
+<h3 id="パスを通す">パスを通す</h3>
 <p>「.bashrc」に以下の行を書き加える．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&#34;$PATH&#34;</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">win</span><span class="o">/</span><span class="nb">bin</span>
 </span></span></code></pre></div><p>ターミナルに戻り以下を実行．</p>
@@ -1444,8 +1445,8 @@
 <h2 id="事前準備-1">事前準備</h2>
 <!-- ---------------------------------- -->
 <p>あらかじめ必要なパッケージをインストールしておく．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> 
-</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tk</span> <span class="n">libmosquitto</span><span class="o">-</span><span class="n">dev</span> <span class="n">gawk</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">libx11</span><span class="o">-</span><span class="n">dev</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span> 
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tk</span> <span class="n">libmosquitto</span><span class="o">-</span><span class="n">dev</span> <span class="n">gawk</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">libx11</span><span class="o">-</span><span class="n">dev</span> <span class="n">libtool</span> <span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">gfortran</span> 
 </span></span></code></pre></div><p>他にも必要なパッケージがあるかもしれない．
 要確認．</p>
 <!-- ---------------------------------- -->
@@ -1459,8 +1460,9 @@
 <a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/pub/win/" target="_blank" rel="noopener">https://wwweic.eri.u-tokyo.ac.jp/WIN/pub/win/</a></span>
 </div>
 <p>上記のサイトの中からダウンロードするバージョンを選ぶことができる．</p>
-<p>Ubuntuでは以下のようにしてインストールできる．
-インストール作業を行う場所は/usr/localとすることが多い．</p>
+<p>Ubuntuでは以下のようにしてダウンロードできる．
+ダウンロードを行う場所は/usr/localとすることが多いようだが，
+他の場所でも良い．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cd</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span>
 </span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">wwweic</span><span class="o">.</span><span class="n">eri</span><span class="o">.</span><span class="n">u</span><span class="o">-</span><span class="n">tokyo</span><span class="o">.</span><span class="n">ac</span><span class="o">.</span><span class="n">jp</span><span class="o">/</span><span class="n">WIN</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">win</span><span class="o">/</span><span class="n">WIN_pkg</span><span class="o">-</span><span class="mf">3.0.11</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
 </span></span><span class="line"><span class="cl"><span class="n">tar</span> <span class="o">-</span><span class="n">xzvf</span> <span class="n">WIN_pkg</span><span class="o">-</span><span class="mf">3.0.11</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
@@ -1470,9 +1472,9 @@
 <p>展開したディレクトリの中にあるREADMEの手順に従って，
 WINシステムを構成するプログラムのコンパイルを行う．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cd</span> <span class="n">WIN_pkg</span><span class="o">-</span><span class="mf">3.0.11</span>
-</span></span><span class="line"><span class="cl"><span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">win</span>
-</span></span><span class="line"><span class="cl"><span class="n">make</span>
-</span></span><span class="line"><span class="cl"><span class="n">make</span> <span class="n">install</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">win</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">make</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
 </span></span></code></pre></div><p>あとはパスを通せばどこからでもwinのコマンドを使える．</p>
 <!-- ---------------------------------- -->
 <h2 id="パスの通し方">パスの通し方</h2>
