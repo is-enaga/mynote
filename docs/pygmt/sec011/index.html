@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="ここでは２次元平面状の情報をプロットする方法をまとめる． GM" />
+  <meta name="description" content="地理的条件による点データの抽出 参照) https://www.pygmt.org/dev/api/generated/pygmt.select.html 内陸，海域，湖など，地" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/pygmt/sec011/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/pygmt/sec011/" />
-  <meta property="og:title" content="第11章　二次元プロット | K-Notes" />
-  <meta property="og:description" content="ここでは２次元平面状の情報をプロットする方法をまとめる． GM" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第11章　データの処理 | K-Notes" />
+  <meta property="og:description" content="地理的条件による点データの抽出 参照) https://www.pygmt.org/dev/api/generated/pygmt.select.html 内陸，海域，湖など，地" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第11章　二次元プロット | K-Notes</title>
+  <title>第11章　データの処理 | K-Notes</title>
 
   
   
@@ -648,7 +648,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec006/"
     
-  >第6章　グラフ内のテキスト
+  >第6章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -656,7 +656,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec007/"
     
-  >第7章　地図のプロット
+  >第7章　グラフ内のテキスト
     </a>
               
             </li><li class="flex flex-col "><a
@@ -664,7 +664,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec008/"
     
-  >第8章　軸・枠回り
+  >第8章　地図のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -672,7 +672,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec009/"
     
-  >第9章　周辺要素
+  >第9章　軸・枠回り
     </a>
               
             </li><li class="flex flex-col "><a
@@ -680,7 +680,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec010/"
     
-  >第10章　データの処理
+  >第10章　周辺要素
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -688,38 +688,14 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　二次元プロット
+  >第11章　データの処理
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#%e6%8f%8f%e7%94%bb%e7%94%a8%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%ba%96%e5%82%99"
+                href="#%e5%9c%b0%e7%90%86%e7%9a%84%e6%9d%a1%e4%bb%b6%e3%81%ab%e3%82%88%e3%82%8b%e7%82%b9%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%8a%bd%e5%87%ba"
                 class="hb-docs-link"
-              >描画用グリッドデータの準備</a>
-            </li>
-          <li>
-              <a
-                href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%9e%8b%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6"
-                class="hb-docs-link"
-              >グリッドデータの型について</a>
-            </li>
-          <li>
-              <a
-                href="#grd%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e4%bb%a3%e3%82%8f%e3%82%8a%e3%81%abxarraydataarray%e3%82%92%e5%88%a9%e7%94%a8"
-                class="hb-docs-link"
-              >grdファイルの代わりにxarray.DataArrayを利用</a>
-            </li>
-          <li>
-              <a
-                href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%b8%e3%81%ae%e5%a4%89%e6%8f%9b"
-                class="hb-docs-link"
-              >グリッドデータへの変換</a>
-            </li>
-          <li>
-              <a
-                href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%83%97%e3%83%ad%e3%83%83%e3%83%88"
-                class="hb-docs-link"
-              >グリッドデータのプロット</a>
+              >地理的条件による点データの抽出</a>
             </li>
           </ul>
   
@@ -746,14 +722,6 @@
     href="/mynote/docs/pygmt/sec014/"
     
   >第14章　その他
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/mynote/docs/pygmt/sec015/"
-    
-  >第15章　その他
     </a>
               
             </li></ul>
@@ -1018,7 +986,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec006/"
     
-  >第6章　グラフ内のテキスト
+  >第6章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1026,7 +994,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec007/"
     
-  >第7章　地図のプロット
+  >第7章　グラフ内のテキスト
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1034,7 +1002,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec008/"
     
-  >第8章　軸・枠回り
+  >第8章　地図のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1042,7 +1010,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec009/"
     
-  >第9章　周辺要素
+  >第9章　軸・枠回り
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1050,7 +1018,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec010/"
     
-  >第10章　データの処理
+  >第10章　周辺要素
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -1058,7 +1026,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　二次元プロット
+  >第11章　データの処理
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1083,14 +1051,6 @@
     href="/mynote/docs/pygmt/sec014/"
     
   >第14章　その他
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/mynote/docs/pygmt/sec015/"
-    
-  >第15章　その他
     </a>
               
             </li></ul>
@@ -1306,37 +1266,13 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8f%8f%e7%94%bb%e7%94%a8%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%ba%96%e5%82%99">描画用グリッドデータの準備</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9c%b0%e7%90%86%e7%9a%84%e6%9d%a1%e4%bb%b6%e3%81%ab%e3%82%88%e3%82%8b%e7%82%b9%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%8a%bd%e5%87%ba">地理的条件による点データの抽出</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%9e%8b%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">グリッドデータの型について</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%82%b9%e3%81%8b%e3%82%89%e3%81%ae%e8%b7%9d%e9%9b%a2%e3%81%ab%e3%82%88%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e5%88%86%e9%a1%9e">点からの距離によるデータ分類</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a8%99%e9%ab%98%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%81%ae%e3%83%80%e3%82%a6%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%89">標高グリッドのダウンロード</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#grd%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%ae%e4%bb%a3%e3%82%8f%e3%82%8a%e3%81%abxarraydataarray%e3%82%92%e5%88%a9%e7%94%a8">grdファイルの代わりにxarray.DataArrayを利用</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#xyz%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%81%8b%e3%82%89%e3%81%ae%e4%bd%9c%e6%88%90">xyzファイルからの作成</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%b8%e3%81%ae%e5%a4%89%e6%8f%9b">グリッドデータへの変換</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#nan%e3%81%ae%e9%83%a8%e5%88%86%e3%81%ae%e5%87%a6%e7%90%86">nanの部分の処理</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-8 rtl:pr-8 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#xyz2grd%e3%81%ae%e3%83%91%e3%83%a9%e3%83%a1%e3%83%bc%e3%82%bf%e3%81%ab%e3%81%8a%e3%81%91%e3%82%8b%e6%b3%a8%e6%84%8f">xyz2grdのパラメータにおける注意</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%b0%e3%83%aa%e3%83%83%e3%83%89%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e3%83%97%e3%83%ad%e3%83%83%e3%83%88">グリッドデータのプロット</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%ad%89%e5%80%a4%e7%b7%9a%e5%9b%b3">等値線図</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5%e5%9b%b3">カラーメッシュ図</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%b0%b4%e9%99%b8%e3%81%a7%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e5%88%86%e9%a1%9e">水・陸でのデータ分類</a>
       </li></ul>
 
 
@@ -1363,308 +1299,189 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/pygmt/">PyGMT</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第11章　二次元プロット</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第11章　データの処理</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第11章　二次元プロット</h1>
+        <h1>第11章　データの処理</h1>
         <!-- ######################################### -->
-<p>ここでは２次元平面状の情報をプロットする方法をまとめる．</p>
-<p>GMTにおいて2次元のカラーメッシュ図や等高線図のプロットは，
-グリッドデータを扱うことで実現する．
-ここでいうグリッドデータとは，緯度経度単位で区切られたグリッドの各々に，標高などのデータが入ったデータのことである．
-グリッドの間隔は緯度方向と経度方向それぞれで等間隔でなければならないようだ．</p>
-<p>PyGMTにおいてグリッドデータは，
-netCFDフォーマットのグリッドファイルを読み込むか，
-プログラム中でxarray.DataArray型の変数を作成することで使用できる．</p>
-<p>以下ではまずグリッドデータの準備について記し，その後でグリッドデータの二次元カラーメッシュまたは等値線によるプロット方法を記す．</p>
 <!-- =================================== -->
-<h2 id="描画用グリッドデータの準備">描画用グリッドデータの準備</h2>
+<h2 id="地理的条件による点データの抽出">地理的条件による点データの抽出</h2>
 <!-- =================================== -->
-<!-- ---------------------------------- -->
-<h2 id="グリッドデータの型について">グリッドデータの型について</h2>
-<!-- ---------------------------------- -->
-<p>PyGMT上でのグリッドデータは緯度，経度を軸に持つ2次元のxarray.DataArrayである．
-したがって自分でxarrayを使ってグリッドデータを作成することが可能．</p>
-<h3 id="標高グリッドのダウンロード">標高グリッドのダウンロード</h3>
-<p>次のようにしてデフォルトのデータセットを入手できる：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grid_data</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_earth_relief</span><span class="p">(</span> 
-</span></span><span class="line"><span class="cl">                    <span class="n">resolution</span> <span class="o">=</span> <span class="s1">&#39;01m&#39;</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">                    <span class="n">region</span> <span class="o">=</span> <span class="n">insrgn</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">)</span>
-</span></span></code></pre></div><p>オンラインでなければならない．</p>
-<h2 id="grdファイルの代わりにxarraydataarrayを利用">grdファイルの代わりにxarray.DataArrayを利用</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
-</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">data</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">Datarray</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="o">&lt;</span><span class="mi">2</span><span class="n">D</span> <span class="n">ndarray</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="n">dims</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&lt;index name 1&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;index name 2&gt;&#39;</span><span class="p">,</span> <span class="err">……</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl"><span class="n">cords</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s1">&#39;&lt;index name 1&gt;&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">ndarray</span> <span class="mi">1</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="s1">&#39;&lt;index name 2&gt;&#39;</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">ndarray</span> <span class="mi">2</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="err">……</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span></code></pre></div><p>２次元以上のグリッド状のデータがndarray形式であっても上記のように座標（index）の情報を追加してxarrayに変換すればプロットすることができる．デフォルトではxarrayがインストールされていない可能性があるので，その場合はxarrayのインストールが必要．</p>
-<p>ここで作成したxarray形式の変数をgrdimage()のgridに与えればプロットできる．</p>
-<!-- ---------------------------------- -->
-<h3 id="xyzファイルからの作成">xyzファイルからの作成</h3>
-<!-- ---------------------------------- -->
-<p>ここでいうxyzデータとは，名前の通りx,y,z座標が並べられたテキストデータである．各グリッド（点）は改行で区切られている．</p>
-<h2 id="グリッドデータへの変換">グリッドデータへの変換</h2>
-<p>xyzデータで標高データなどを与えられた場合，それをgrdデータに変換することで，前章と同様に等値線などでプロットできる．次のコマンドで変換できる：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grid_data</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">xyz2grd</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">     <span class="n">data</span> <span class="o">=</span><span class="err">’</span><span class="o">&lt;~.</span><span class="n">xyz</span><span class="o">&gt;</span><span class="s1">&#39;, [x=&lt;lat&gt;,y=&lt;lon&gt;, z=&lt;value&gt;でも可]</span>
-</span></span><span class="line"><span class="cl">     <span class="n">region</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">region</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">     <span class="n">spacing</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="s1">&#39;15s&#39;</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p>このコマンドでgrdデータとして扱うことができるようになる．このgrid_dataをgrdcontour()に与えればよい．</p>
-<h4 id="nanの部分の処理">nanの部分の処理</h4>
-<p>地理院からダウンロードした5 mメッシュの標高地図などで，値がない(nan)メッシュが含まれることがある．
-その部分の値をnodata=&lsquo;0&rsquo;のように任意に指定することができる．
-指定しなければnanのままである．</p>
-<p>なおnanのままにすればgrdimageにおいてnanの部分を透過させることができる．</p>
-<h4 id="xyz2grdのパラメータにおける注意">xyz2grdのパラメータにおける注意</h4>
-<p>spacingとregionの指定は必須だが，両者の値の組み合わせに条件があることに注意．
-regionはspacingで指定した長さで割り切れる必要がある．
-なので適当に指定するとまずエラーが出る．
-region=[xs,xe,ys,ye]であるが，spacingをregionの幅xe-xs, ye-ysを整数で割った値にすると確実．</p>
-<p>次の例では，あらかじめspacing用にdx, dyを計算して用いている．
-下記の例で示すdx, dyよりも細かいspacingを指定すると，きれいに充填されたグリッドにならず隙間だらけに値が入ったグリッドになる．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">xs</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">xe</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">ys</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">ye</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">dx</span> <span class="o">=</span> <span class="p">(</span><span class="n">xe</span><span class="o">-</span><span class="n">xs</span><span class="p">)</span><span class="o">/</span><span class="n">nx</span>
-</span></span><span class="line"><span class="cl"><span class="n">dy</span> <span class="o">=</span> <span class="p">(</span><span class="n">ye</span><span class="o">-</span><span class="n">ys</span><span class="p">)</span><span class="o">/</span><span class="n">ny</span>
-</span></span><span class="line"><span class="cl"><span class="n">dx</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">dx</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">dy</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">dy</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">（</span><span class="n">略</span><span class="err">）</span>
-</span></span><span class="line"><span class="cl"><span class="n">grd</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">xyz2grd</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">z</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="n">xs</span><span class="p">,</span><span class="n">xe</span><span class="p">,</span><span class="n">ys</span><span class="p">,</span><span class="n">ye</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">spacing</span> <span class="o">=</span> <span class="n">dx</span><span class="o">+</span><span class="s1">&#39;/&#39;</span><span class="o">+</span><span class="n">dy</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">nodata</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300">参照)<br>
+<a href="https://www.pygmt.org/dev/api/generated/pygmt.select.html" target="_blank" rel="noopener">https://www.pygmt.org/dev/api/generated/pygmt.select.html</a></span>
+</div>
+<p>内陸，海域，湖など，地理的条件によって点データを抽出するselect関数が存在する．</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><p>参照: GMTの例，PyGMT公式マニュアル</p>
+<p><a href="https://docs.generic-mapping-tools.org/latest/gallery/ex24.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/latest/gallery/ex24.html</a>
+<a href="https://www.pygmt.org/latest/api/generated/pygmt.select.html" target="_blank" rel="noopener">https://www.pygmt.org/latest/api/generated/pygmt.select.html</a></p>
+</span>
+</div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">out</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">オプション</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/xyz2grd.png"
-    alt="xyz2grdを用いて変換したデータをプロットした例．適切な設定を行わなければこのように正常にプロットできない．(標高データ: 国土地理院基盤地図情報数値標高モデル)"><figcaption>
-      <p>xyz2grdを用いて変換したデータをプロットした例．適切な設定を行わなければこのように正常にプロットできない．(標高データ: 国土地理院基盤地図情報数値標高モデル)</p>
-    </figcaption>
-</figure>
-
-<!-- =================================== -->
-<h2 id="グリッドデータのプロット">グリッドデータのプロット</h2>
-<!-- =================================== -->
+</span></span></code></pre></div><p>条件により与えたデータから地理的条件によってデータを抽出できる．
+海岸線基準，点または線からの距離基準，多角形・緯度経度範基準など．
+詳しくは公式マニュアルを参照．基準は次の６つ：</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><ul>
+<li>inside a rectangular region (region [and projection])</li>
+<li>within dist km of any point in pointfile</li>
+<li>within dist km of any line in linefile</li>
+<li>inside one of the polygons in the polygonfile</li>
+<li>inside geographical features (based on coastlines)</li>
+<li>has z-values within a given range, or</li>
+<li>inside bins of a grid mask whose nodes are non-zero</li>
+</ul>
+</span>
+</div>
+<!-- %---------------------------------- -->
+<h3 id="点からの距離によるデータ分類">点からの距離によるデータ分類</h3>
 <!-- ---------------------------------- -->
-<h3 id="等値線図">等値線図</h3>
-<!-- ---------------------------------- -->
-<p>(v0.12.0)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">grdcontour</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">grid</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">グリッドファイル名</span><span class="o">/</span><span class="n">グリッドデータ変数</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">annotation</span> <span class="o">=</span> <span class="s1">&#39;&lt;アノテーション (計曲線) 間隔&gt;+f&lt;フォント設定&gt;&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">label_placement</span> <span class="o">=</span> <span class="s1">&#39;&lt;アノテーションの配置設定&gt;&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">levels</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">等値線</span> <span class="p">(</span><span class="n">主曲線</span><span class="p">)</span> <span class="n">間隔</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">limit</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">下限</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;</span><span class="n">上限</span><span class="o">&gt;</span><span class="p">]</span>    <span class="c1"># 等値線描画間隔</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pen</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="s1">&#39;a&lt;0.5p,black&gt;&#39;</span><span class="p">,</span>    <span class="c1"># 計曲線の線種</span>
-</span></span><span class="line"><span class="cl">        <span class="s1">&#39;c0.1p,grey80&#39;</span><span class="p">,</span>    <span class="c1"># 主曲線の線種</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
+<p>ある点からの一定距離(degree)内にある点を抽出する．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">data</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dist2pt</span> <span class="o">=</span> <span class="s1">&#39;&lt;lon&gt;/&lt;lat&gt;+d&lt;distance&gt;&lt;unit&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">coltypes</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="n">reverse</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="c1"># 円の外側の点を抽出する場合．</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p>引数gridにグリッドデータをファイル名または変数で与える．</p>
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
-  <span class="dark:text-neutral-300"><p>annotationのオプション（抜粋:<br>
-アノテーションの文字の向きなどの設定を行う．<br>
-(参考:GMT公式マニュアル <a href="https://docs.generic-mapping-tools.org/dev/grdcontour.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/dev/grdcontour.html</a>)</p>
-<ul>
-<li>+f:
-アノテーションのフォント設定を行う．<br>
-「f10p」のようにして文字サイズを調整するなど．</li>
-<li>+a:
-等値線にたいするアノテーションの角度 (angle) を指定する．<br>
-「+an」は等値線に直交，「+ap」で等値線と平行とする．
-「+ap」の場合はさらに「u」または「d」を後ろに加えると，それぞれ勾配の上側，下側にアノテーションの上下を向けることができる．</li>
-<li>+w:
-アノテーションの角度を決める際に等値線を構成する点を何点使用するかを定める．<br>
-適切に設定することでアノテーションの角度が自然になる．
-少なすぎると等値線の局所的な角度に従ってしまい，感覚に合わない角度になりうる．</li>
-<li>+r:
-アノテーションをプロットする最小の曲率を指定する．<br>
-急すぎるカーブにアノテーションを配置しないようにできる．</li>
-<li>+u:
-アノテーションの数値の直後に加える単位を指定する．</li>
-<li>+v:
-単に「+v」と加えると，アノテーションの文字を等値線に沿わせることができる．<br>
-しかしよほどなめらかな等値線でないとうまくいかないように感じる．</li>
-<li>+i:
-ラインを非表示 (invisible) にし，アノテーションだけを描画する．</li>
-</ul></span>
-</div>
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
-  <span class="dark:text-neutral-300"><p>label_placementのオプション (抜粋):<br>
-等値線に対するアノテーションラベルの位置や数を指定する．<br>
-（参考: GMT公式マニュアル
-<a href="https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html</a>）</p>
-<ul>
-<li>d:
-「d&lt;間隔&gt;」で等値線に沿った間隔を指定することでアノテーションの位置を調整する．<br>
-間隔にはc,i,p（センチメートル，インチ，ポイント）で単位を与えることができる．（例: d5c）</li>
-<li>D:
-dオプションとほぼ同じだが，単位に紙面上の単位ではなく地図内の単位を使用できる．<br>
-単位はd,m,s,e,f,k,M,n（度，分，秒，メートル，フィート，キロメートル，法定マイル，海里）.</li>
-<li>f:
-「f&lt;ファイル名&gt;」の形で与えたファイルに従ってアノテーションを配置する．<br>
-ファイルはテキストファイルで，１列目と2列目にアノテーションを配置する座標を与える．
-実際の等値線がこのファイル名の座標を通る場合にのみアノテーションが配置される．
-厳密に等値線が通る座標を指定することは困難な場合が多いであろうから，「f&lt;ファイル名&gt;/<slop>」とスラッシュで区切ってslopに許容誤差を与えることができる．単位はc,i,pから選択可．</li>
-<li>l:
-「l&lt;始点x&gt;/&lt;始点y&gt;/&lt;終点x&gt;/&lt;終点y&gt;」と記すことで，始点と終点を結ぶ紙面上の線分と等値線が交わる位置にアノテーションを配置する．<br>
-文字列内で「,」で区切ることで複数の線分を与えることもできる．</li>
-<li>L:
-lオプションとほぼ同じだが，線分を大円経路で考える．</li>
-<li>n:
-「n&lt;アノテーション数&gt;」各等値線上のアノテーションの数を指定する．<br>
-「n1」とすれば，各等値線 (計曲線) に1つずつアノテーションが追加される．
-「n&lt;アノテーション数&gt;/&lt;最少間隔&gt;」とすればアノテーションが詰まりすぎないように最少間隔もc,i,pのいずれかの単位で指定できる．</li>
-<li>N:
-nオプションとほぼ同じだが，アノテーションが等分された等値線の各区間の終点に配置される．</li>
-</ul></span>
-</div>
-<p>levelsやlimitをプロットするデータの値域やregionの領域に合わせないと，</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grdcontour</span> <span class="p">[</span><span class="n">WARNING</span><span class="p">]:</span> <span class="n">No</span> <span class="n">contours</span> <span class="n">within</span> <span class="n">specified</span> <span class="o">-</span><span class="n">L</span>
-</span></span></code></pre></div><p>というエラーが出てプロットできないので注意．</p>
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
-  <span class="dark:text-neutral-300"><pre><code>（参照）  
-[https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py](https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py)
-</code></pre>
-</span>
-</div>
-<!--  #### 等値線アノテーションのサイズ -->
-<!--  ```python -->
-<!--      annotation = '<アノテーションを入れる等値線間隔>+f<fontsize>' -->
-<!--   ``` -->
-<!--  デフォルトだとアノテーションの文字サイズが気に入らないことがある．annotation=<間隔>とするのではなく， -->
-<!--  クォーテーションで囲んで「annotation='<間隔>+f<size>'」とすれば良い． -->
-<p>例）等深線プロット．アノテーションラベルのフォントサイズや向きなどを指定している．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
-</span></span><span class="line"><span class="cl"><span class="n">prj</span> <span class="o">=</span> <span class="s1">&#39;M5c&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">rgn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">140</span><span class="p">,</span><span class="mi">146</span><span class="p">,</span><span class="mi">39</span><span class="p">,</span><span class="mi">43</span><span class="p">]</span>
+</span></span></code></pre></div><p>dist2ptに基準点の座標と距離を与える．</p>
+<!--  \sout{ -->
+<!--  公式マニュアルには距離の単位はkmと書かれているが，正しくは度であるようだ． -->
+<!--  というより，geographicalに処理されず，平面直交座標上の距離で計算されている． -->
+<!--  どうすれば地理的距離を使用できるのだろうか？ -->
+<!--  } -->
+<p>coltypes = &lsquo;g&rsquo;としないと地理的距離を使用できず，
+距離の単位も指定できない（指定しても無視される）ので注意．</p>
+<p>以下の例ではcoltypes=&lsquo;g&rsquo;を使用していないため，
+地理的距離が適用されていない．
+例）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</span></span><span class="line"><span class="cl"><span class="n">dat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="mi">40</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># グリッドデータダウンロード</span>
-</span></span><span class="line"><span class="cl"><span class="n">grid_data</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_earth_relief</span><span class="p">(</span> 
-</span></span><span class="line"><span class="cl">                    <span class="n">resolution</span> <span class="o">=</span> <span class="s1">&#39;15s&#39;</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">                    <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dat2</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dist2pt</span> <span class="o">=</span> <span class="s2">&#34;40/40+d2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># reverse=&#39;c&#39;,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">.</span><span class="n">values</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 海岸線のプロットと陸の塗りつぶし</span>
 </span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">shorelines</span> <span class="o">=</span> <span class="s1">&#39;0.1p&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;grey70&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="n">prj</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;grey80&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M4c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;agf&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 等深線のプロット</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">grdcontour</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">grid</span> <span class="o">=</span> <span class="n">grid_data</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">levels</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">annotation</span> <span class="o">=</span> <span class="s1">&#39;2000+f6p+ap+w200+e&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">pen</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a0.4p,black&#39;</span><span class="p">,</span><span class="s1">&#39;c0.2p,grey30,-&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">limit</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">7000</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;neWS&#39;</span><span class="p">,</span><span class="s1">&#39;agf&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">label_placement</span> <span class="o">=</span> <span class="s1">&#39;l140/40/146/40&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c2p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">dat2</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">dat2</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c1p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># pen = &#39;red&#39;,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fill</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/grdcontour.png"
-    alt="水深データの等深線プロット．アノテーションの向きや位置，等値線の線のスタイルなどを設定している．"><figcaption>
-      <p>水深データの等深線プロット．アノテーションの向きや位置，等値線の線のスタイルなどを設定している．</p>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/dist2pt.png"
+    alt="南西端の点から距離「2」以内の点に色を付けた図．coltype=&amp;lsquo;g&amp;rsquo;を与えていないため地理的距離で処理されていない．"><figcaption>
+      <p>南西端の点から距離「2」以内の点に色を付けた図．coltype=&lsquo;g&rsquo;を与えていないため地理的距離で処理されていない．</p>
     </figcaption>
 </figure>
 
 <!-- ---------------------------------- -->
-<h3 id="カラーメッシュ図">カラーメッシュ図</h3>
+<h3 id="水陸でのデータ分類">水・陸でのデータ分類</h3>
 <!-- ---------------------------------- -->
-<p>pygmt.grdgradientで傾斜を計算できる．これを用いると後で陰影をつけられる：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">gradient_data</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">grdgradient</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">grid</span> <span class="o">=</span> <span class="n">grid_data</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">azimuth</span> <span class="o">=</span> <span class="p">[</span><span class="mi">45</span><span class="p">,</span><span class="mi">135</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">normalize</span> <span class="o">=</span> <span class="s1">&#39;e0.8&#39;</span><span class="p">)</span>
-</span></span></code></pre></div><p>makecptでカラーパレットを作り，grdimageでプロット．Figure.colorbarでカラーバー：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pygmt</span><span class="o">.</span><span class="n">makecpt</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;gebco&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">grdimage</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="n">prj</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">grid</span> <span class="o">=</span> <span class="n">grid_data</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">shading</span> <span class="o">=</span> <span class="n">gradient_data</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;y+lm&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">position</span><span class="o">=</span><span class="s1">&#39;JMR+o1c/0c&#39;</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">#J: 枠の外，MR:middle right, o1c/0c:右に1cm，上に0cmに描画</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span></code></pre></div><p>カラーパレットはGMTのページで確認できる．</p>
-<p>grdimageではnan_transparent=Trueとすると，グリッドのnanになっているところを透過させられる．</p>
-<p>例) カラーメッシュ図のプロット</p>
+<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><p>海と陸でデータを分別する場合：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;wet/dry&#39;</span>
+</span></span></code></pre></div><p>または</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;ocean/land/lake/island/pond&#39;</span>
+</span></span></code></pre></div><p>それぞれを含むなら「k」(kept)，
+除外するなら「s」（skipped）を指定する．
+文字列またはリストで指定．</p>
+</span>
+</div>
+<p>例）ランダムな点のうち，内陸を青，海域を赤でプロットする：</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
-</span></span><span class="line"><span class="cl"><span class="n">prj</span> <span class="o">=</span> <span class="s1">&#39;M5c&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">rgn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">139</span><span class="p">,</span><span class="mi">146</span><span class="p">,</span><span class="mi">41</span><span class="p">,</span><span class="mi">46</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 標高グリッドデータダウンロード</span>
-</span></span><span class="line"><span class="cl"><span class="n">grid_data</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">load_earth_relief</span><span class="p">(</span> 
-</span></span><span class="line"><span class="cl">                    <span class="n">resolution</span> <span class="o">=</span> <span class="s1">&#39;30s&#39;</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">                    <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;描画範囲，図法&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">rgn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">134</span><span class="p">,</span><span class="mi">138</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">36</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">prj</span> <span class="o">=</span> <span class="s1">&#39;M6c&#39;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">FONT</span> <span class="o">=</span> <span class="s1">&#39;8p&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># 標高プロット</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">grdimage</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="n">grid</span> <span class="o">=</span> <span class="s1">&#39;earth_relief.nc&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">cmap</span> <span class="o">=</span> <span class="s1">&#39;geo&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="n">prj</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">            <span class="s1">&#39;neWS&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s1">&#39;agf&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;random data作成&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">xlen</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">rgn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">ylen</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="n">rgn</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">dat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span> <span class="n">xlen</span> <span class="o">+</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span> <span class="n">ylen</span> <span class="o">+</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;陸海でデータ分離&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">land</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;s/k/k/k/k&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 画像高さ取得</span>
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">clib</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">helpers</span><span class="o">.</span><span class="n">GMTTempFile</span><span class="p">()</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">session</span><span class="o">.</span><span class="n">call_module</span><span class="p">(</span><span class="s2">&#34;mapproject&#34;</span><span class="p">,</span><span class="sa">f</span><span class="s2">&#34;-Wh -&gt;</span><span class="si">{</span><span class="n">tmp</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">h</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ocean</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;k/s/s/s/s&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 画像の高さと同じ長さのカラーバーを追加</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;x+lElevation [m]&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">position</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;JMR+w</span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1">c&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="s1">&#39;../fig/grdimage.png&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;プロット&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span><span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 海岸線</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">shorelines</span> <span class="o">=</span> <span class="s1">&#39;0.5p,black&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">water</span> <span class="o">=</span> <span class="s1">&#39;blue@90&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;green@90&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="n">prj</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 内陸</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">land</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c2p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#33CCFF@50&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 海域</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">ocean</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c2p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red@50&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#枠</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;agf&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/grdimage.png"
-    alt="標高グリッドのgrdimageによるプロット．"><figcaption>
-      <p>標高グリッドのgrdimageによるプロット．</p>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/select.png"
+    alt="select関数による海陸での点の分別結果．"><figcaption>
+      <p>select関数による海陸での点の分別結果．</p>
     </figcaption>
 </figure>
 
+<!--  ################################################################## -->
 <!-- ######################################### -->
 
       </div>
@@ -1691,7 +1508,7 @@ nオプションとほぼ同じだが，アノテーションが等分された�
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第10章　データの処理</span>
+            >第10章　周辺要素</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
             </span>

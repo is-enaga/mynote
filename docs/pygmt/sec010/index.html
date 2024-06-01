@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="地理的条件による点データの抽出 参照) https://www.pygmt.org/dev/api/generated/pygmt.select.html 内陸，海域，湖など，地" />
+  <meta name="description" content="グラフの周囲に付加する要素． タイトル fig.basemap( frame = &#39;&#43;t&lt;title&gt;&#39; ) basemap" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/pygmt/sec010/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/pygmt/sec010/" />
-  <meta property="og:title" content="第10章　データの処理 | K-Notes" />
-  <meta property="og:description" content="地理的条件による点データの抽出 参照) https://www.pygmt.org/dev/api/generated/pygmt.select.html 内陸，海域，湖など，地" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第10章　周辺要素 | K-Notes" />
+  <meta property="og:description" content="グラフの周囲に付加する要素． タイトル fig.basemap( frame = &#39;&#43;t&lt;title&gt;&#39; ) basemap" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第10章　データの処理 | K-Notes</title>
+  <title>第10章　周辺要素 | K-Notes</title>
 
   
   
@@ -648,7 +648,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec006/"
     
-  >第6章　グラフ内のテキスト
+  >第6章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -656,7 +656,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec007/"
     
-  >第7章　地図のプロット
+  >第7章　グラフ内のテキスト
     </a>
               
             </li><li class="flex flex-col "><a
@@ -664,7 +664,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec008/"
     
-  >第8章　軸・枠回り
+  >第8章　地図のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -672,7 +672,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec009/"
     
-  >第9章　周辺要素
+  >第9章　軸・枠回り
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -680,14 +680,38 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/pygmt/sec010/"
     
-  >第10章　データの処理
+  >第10章　周辺要素
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#%e5%9c%b0%e7%90%86%e7%9a%84%e6%9d%a1%e4%bb%b6%e3%81%ab%e3%82%88%e3%82%8b%e7%82%b9%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%8a%bd%e5%87%ba"
+                href="#%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab"
                 class="hb-docs-link"
-              >地理的条件による点データの抽出</a>
+              >タイトル</a>
+            </li>
+          <li>
+              <a
+                href="#%e8%b7%9d%e9%9b%a2%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc"
+                class="hb-docs-link"
+              >距離スケールバー</a>
+            </li>
+          <li>
+              <a
+                href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc"
+                class="hb-docs-link"
+              >カラーバー</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%87%a1%e4%be%8b"
+                class="hb-docs-link"
+              >凡例</a>
+            </li>
+          <li>
+              <a
+                href="#%e5%b7%ae%e3%81%97%e8%be%bc%e3%81%bf%e5%9c%b0%e5%9b%b3"
+                class="hb-docs-link"
+              >差し込み地図</a>
             </li>
           </ul>
   
@@ -697,7 +721,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　二次元プロット
+  >第11章　データの処理
     </a>
               
             </li><li class="flex flex-col "><a
@@ -722,14 +746,6 @@
     href="/mynote/docs/pygmt/sec014/"
     
   >第14章　その他
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/mynote/docs/pygmt/sec015/"
-    
-  >第15章　その他
     </a>
               
             </li></ul>
@@ -994,7 +1010,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec006/"
     
-  >第6章　グラフ内のテキスト
+  >第6章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1002,7 +1018,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec007/"
     
-  >第7章　地図のプロット
+  >第7章　グラフ内のテキスト
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1010,7 +1026,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec008/"
     
-  >第8章　軸・枠回り
+  >第8章　地図のプロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1018,7 +1034,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec009/"
     
-  >第9章　周辺要素
+  >第9章　軸・枠回り
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -1026,7 +1042,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/pygmt/sec010/"
     
-  >第10章　データの処理
+  >第10章　周辺要素
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1034,7 +1050,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　二次元プロット
+  >第11章　データの処理
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1059,14 +1075,6 @@
     href="/mynote/docs/pygmt/sec014/"
     
   >第14章　その他
-    </a>
-              
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/mynote/docs/pygmt/sec015/"
-    
-  >第15章　その他
     </a>
               
             </li></ul>
@@ -1282,13 +1290,34 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9c%b0%e7%90%86%e7%9a%84%e6%9d%a1%e4%bb%b6%e3%81%ab%e3%82%88%e3%82%8b%e7%82%b9%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e6%8a%bd%e5%87%ba">地理的条件による点データの抽出</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%bf%e3%82%a4%e3%83%88%e3%83%ab">タイトル</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e7%82%b9%e3%81%8b%e3%82%89%e3%81%ae%e8%b7%9d%e9%9b%a2%e3%81%ab%e3%82%88%e3%82%8b%e3%83%87%e3%83%bc%e3%82%bf%e5%88%86%e9%a1%9e">点からの距離によるデータ分類</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%b7%9d%e9%9b%a2%e3%82%b9%e3%82%b1%e3%83%bc%e3%83%ab%e3%83%90%e3%83%bc">距離スケールバー</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%b0%b4%e9%99%b8%e3%81%a7%e3%81%ae%e3%83%87%e3%83%bc%e3%82%bf%e5%88%86%e9%a1%9e">水・陸でのデータ分類</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bf%bd%e5%8a%a0%e3%81%a8%e8%aa%bf%e6%95%b4">追加と調整</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%a4%aa%e3%81%95">太さ</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc">カラーバー</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bf%bd%e5%8a%a0">追加</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%87%a1%e4%be%8b">凡例</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%87%aa%e5%8b%95%e3%81%a7%e5%87%a1%e4%be%8b%e3%82%92%e4%bd%9c%e6%88%90%e3%81%99%e3%82%8b">自動で凡例を作成する</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#size%e3%81%8c%e5%a4%89%e6%95%b0%e3%81%ae%e7%82%b9%e3%81%ae%e5%87%a1%e4%be%8b%e8%87%aa%e5%8b%95">sizeが変数の点の凡例（自動）</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%b7%ae%e3%81%97%e8%be%bc%e3%81%bf%e5%9c%b0%e5%9b%b3">差し込み地図</a>
       </li></ul>
 
 
@@ -1315,189 +1344,202 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/pygmt/">PyGMT</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第10章　データの処理</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第10章　周辺要素</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第10章　データの処理</h1>
-        <!-- ######################################### -->
-<!-- =================================== -->
-<h2 id="地理的条件による点データの抽出">地理的条件による点データの抽出</h2>
-<!-- =================================== -->
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
-  <span class="dark:text-neutral-300">参照)<br>
-<a href="https://www.pygmt.org/dev/api/generated/pygmt.select.html" target="_blank" rel="noopener">https://www.pygmt.org/dev/api/generated/pygmt.select.html</a></span>
-</div>
-<p>内陸，海域，湖など，地理的条件によって点データを抽出するselect関数が存在する．</p>
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
-  <span class="dark:text-neutral-300"><p>参照: GMTの例，PyGMT公式マニュアル</p>
-<p><a href="https://docs.generic-mapping-tools.org/latest/gallery/ex24.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/latest/gallery/ex24.html</a>
-<a href="https://www.pygmt.org/latest/api/generated/pygmt.select.html" target="_blank" rel="noopener">https://www.pygmt.org/latest/api/generated/pygmt.select.html</a></p>
-</span>
-</div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">out</span><span class="o">&gt;</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">オプション</span><span class="o">&gt;</span>
+        <h1>第10章　周辺要素</h1>
+        <p>グラフの周囲に付加する要素．</p>
+<h2 id="タイトル">タイトル</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;+t&lt;title&gt;&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span></code></pre></div><p>条件により与えたデータから地理的条件によってデータを抽出できる．
-海岸線基準，点または線からの距離基準，多角形・緯度経度範基準など．
-詳しくは公式マニュアルを参照．基準は次の６つ：</p>
+</span></span></code></pre></div><p>basemapなどのframeにて+tオプションで図にタイトルをつけることができる．
+空白を含む文字列を与える際はダブルクオーテーション&quot;&ldquo;で挟む必要があるが，
+文字列の変数ならば&quot;&ldquo;で挟む必要はない．</p>
+<!--  ================================================================= -->
+<h2 id="距離スケールバー">距離スケールバー</h2>
+<h3 id="追加と調整">追加と調整</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># basemap or coast</span>
+</span></span><span class="line"><span class="cl">    <span class="n">map_scale</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">オプション</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">box</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">背景色や枠線</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span></code></pre></div><p>basemapまたはcoastの中で指定することができる．</p>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300"><ul>
-<li>inside a rectangular region (region [and projection])</li>
-<li>within dist km of any point in pointfile</li>
-<li>within dist km of any line in linefile</li>
-<li>inside one of the polygons in the polygonfile</li>
-<li>inside geographical features (based on coastlines)</li>
-<li>has z-values within a given range, or</li>
-<li>inside bins of a grid mask whose nodes are non-zero</li>
+  <span class="dark:text-neutral-300"><p>オプション：</p>
+<ul>
+<li>+j: justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)</li>
+<li>+w: width. スケールで示す距離．(ex. +w100k)</li>
+<li>+f: fancy. 縞々スケールにする．</li>
+<li>+l: label.スケール上部にラベルを付ける．(ex. +llabel)</li>
+<li>+u: unit. +wの単位に基づき，スケールの数字に単位をつける．</li>
+<li>+c: どの緯度 (経度) におけるスケールを示すかを指定する．</li>
+</ul></span>
+</div>
+<p>図*※相互参照無効*も参照．</p>
+<h3 id="太さ">太さ</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_SCALE_HEIGHT</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">太さ</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span>
+</span></span></code></pre></div><p>この設定項目によって，with構文内のメソッドで追加するスケールの高さ（分厚さ）を指定できる．</p>
+<p>例）出力：図*※相互参照無効*</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">MAP_SCALE_HEIGHT</span> <span class="o">=</span> <span class="s1">&#39;5p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">FONT</span> <span class="o">=</span> <span class="s1">&#39;8p&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">):</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M4c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;agf&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">map_scale</span> <span class="o">=</span> <span class="s1">&#39;jMC+w500k+f+c5N+o0/-1.5c+u+l&#34;scale at 5@.N&#34;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/mapscale.png"
+    alt="地図のスケールバー．"><figcaption>
+      <p>地図のスケールバー．</p>
+    </figcaption>
+</figure>
+
+<!--  ================================================================= -->
+<h2 id="カラーバー">カラーバー</h2>
+<h3 id="追加">追加</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div><p>frame=でラベルやアノテーションを設定．
+position=で場所や方向を指定する．
+デフォルトではx軸が縦向きになることに注意．</p>
+<p>+wでカラーバーの長さを指定できるが，この値を負にするとグラフの軸と同様カラーバーの向きを反転させられる．</p>
+<p>+hを付加するとカラーバーの向きを横向きにできる．
+例）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xa5&#39;</span><span class="p">,</span><span class="s1">&#39;x+ldepth[km]&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">position</span><span class="o">=</span><span class="s1">&#39;JML+o5c/-0.1c+w-7.8c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div><div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300"><pre><code>frame引数でのオプション：
+</code></pre>
+<ul>
+<li>
+<p>+l: label.</p>
+<p>他もbasemapなどで使うframeと共通でagf等が使える．</p>
+<p>position引数でのオプション：</p>
+</li>
+<li>
+<p>+j: justify. 左右位置からKRM, 上下位置からTBCのいずれかを選び，グラフ内での位置を指定する．(ex. +jMT)</p>
+</li>
+<li>
+<p>+w: width. 「+w&lt;長さ&gt;/&lt;太さ&gt;」の形で使用．カラーバーの長さと太さ．</p>
+</li>
+<li>
+<p>+e: これを付けると，カラーバーの両端に三角が付く．さらに数字を加えると三角の大きさを指定できる．</p>
+<p>frameとpositionの引数で各項目を調整する．
++wで長さのみならず太さも指定できる．また+eでカラーバーの両端に三角を付けられる．
+このように調整方法が距離スケールバーとはやや異なるので注意．</p>
+</li>
 </ul>
 </span>
 </div>
-<!-- %---------------------------------- -->
-<h3 id="点からの距離によるデータ分類">点からの距離によるデータ分類</h3>
-<!-- ---------------------------------- -->
-<p>ある点からの一定距離(degree)内にある点を抽出する．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">data</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">dist2pt</span> <span class="o">=</span> <span class="s1">&#39;&lt;lon&gt;/&lt;lat&gt;+d&lt;distance&gt;&lt;unit&gt;&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">coltypes</span> <span class="o">=</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="n">reverse</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span> <span class="c1"># 円の外側の点を抽出する場合．</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p>dist2ptに基準点の座標と距離を与える．</p>
-<!--  \sout{ -->
-<!--  公式マニュアルには距離の単位はkmと書かれているが，正しくは度であるようだ． -->
-<!--  というより，geographicalに処理されず，平面直交座標上の距離で計算されている． -->
-<!--  どうすれば地理的距離を使用できるのだろうか？ -->
-<!--  } -->
-<p>coltypes = &lsquo;g&rsquo;としないと地理的距離を使用できず，
-距離の単位も指定できない（指定しても無視される）ので注意．</p>
-<p>以下の例ではcoltypes=&lsquo;g&rsquo;を使用していないため，
-地理的距離が適用されていない．
-例）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="n">dat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="mi">40</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">dat2</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">dist2pt</span> <span class="o">=</span> <span class="s2">&#34;40/40+d2&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># reverse=&#39;c&#39;,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">.</span><span class="n">values</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;grey80&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;M4c&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;agf&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c2p&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">x</span> <span class="o">=</span> <span class="n">dat2</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">y</span> <span class="o">=</span> <span class="n">dat2</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c1p&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># pen = &#39;red&#39;,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fill</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/dist2pt.png"
-    alt="南西端の点から距離「2」以内の点に色を付けた図．coltype=&amp;lsquo;g&amp;rsquo;を与えていないため地理的距離で処理されていない．"><figcaption>
-      <p>南西端の点から距離「2」以内の点に色を付けた図．coltype=&lsquo;g&rsquo;を与えていないため地理的距離で処理されていない．</p>
-    </figcaption>
-</figure>
-
-<!-- ---------------------------------- -->
-<h3 id="水陸でのデータ分類">水・陸でのデータ分類</h3>
-<!-- ---------------------------------- -->
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
-  <span class="dark:text-neutral-300"><p>海と陸でデータを分別する場合：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;wet/dry&#39;</span>
-</span></span></code></pre></div><p>または</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;ocean/land/lake/island/pond&#39;</span>
-</span></span></code></pre></div><p>それぞれを含むなら「k」(kept)，
-除外するなら「s」（skipped）を指定する．
-文字列またはリストで指定．</p>
-</span>
-</div>
-<p>例）ランダムな点のうち，内陸を青，海域を赤でプロットする：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;描画範囲，図法&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">rgn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">134</span><span class="p">,</span><span class="mi">138</span><span class="p">,</span><span class="mi">33</span><span class="p">,</span><span class="mi">36</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">prj</span> <span class="o">=</span> <span class="s1">&#39;M6c&#39;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;random data作成&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">xlen</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">rgn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">ylen</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">-</span><span class="n">rgn</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">dat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">5000</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span> <span class="n">xlen</span> <span class="o">+</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">dat</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span> <span class="n">ylen</span> <span class="o">+</span> <span class="n">rgn</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;陸海でデータ分離&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">land</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;s/k/k/k/k&#39;</span><span class="p">,</span>
+<!--  ============================================================================ -->
+<h2 id="凡例">凡例</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xa5&#39;</span><span class="p">,</span><span class="s1">&#39;x+ldepth[km]&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="n">position</span><span class="o">=</span><span class="s1">&#39;JML+o5c/-0.1c+w-7.8c&#39;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ocean</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">select</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">dat</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">mask</span> <span class="o">=</span> <span class="s1">&#39;k/s/s/s/s&#39;</span><span class="p">,</span>
+</span></span></code></pre></div><h3 id="自動で凡例を作成する">自動で凡例を作成する</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">	<span class="err">……</span>
+</span></span><span class="line"><span class="cl">    <span class="n">label</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">凡例の名前</span><span class="o">&gt;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;プロット&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span><span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 海岸線</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">shorelines</span> <span class="o">=</span> <span class="s1">&#39;0.5p,black&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">water</span> <span class="o">=</span> <span class="s1">&#39;blue@90&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;green@90&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="n">prj</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;&lt;position&gt;+l&lt;凡例の行間&gt;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;&lt;線の太さなど&gt;&#39;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 内陸</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">land</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c2p&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;#33CCFF@50&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># 海域</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">data</span> <span class="o">=</span> <span class="n">ocean</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c2p&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red@50&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#枠</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="s1">&#39;agf&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/select.png"
-    alt="select関数による海陸での点の分別結果．"><figcaption>
-      <p>select関数による海陸での点の分別結果．</p>
-    </figcaption>
-</figure>
-
-<!--  ################################################################## -->
+</span></span></code></pre></div><p>それまでにプロットした点などに「label=」で凡例名を記した後，legend()を用いる．boxは凡例を囲む線の特徴や背景色を指定できる．</p>
+<p>「position=」の「+l」オプションで凡例の行間隔を指定できる．行間が狭くて文字や記号が重なってしまう場合や，その逆の場合に用いると良い．例えばマグニチュードの凡例を円の大きさで与えている場合，デフォルトだと大きなマグニチュードの凡例が他の凡例と重なってしまう．そこで+lで行間を広くとることで重複を回避できる．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">……</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;..\..\Data\Locations\obs2019.gmt&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;i&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">msize</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pen</span> <span class="o">=</span> <span class="s1">&#39;1,black&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;orange@20&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;2019. 3.21-2019. 5.10&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># projection = prj,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># region = rgn</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">……</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;JTL+o0.2c/-2c+l1.5&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;+p3&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span></code></pre></div><h3 id="sizeが変数の点の凡例自動">sizeが変数の点の凡例（自動）</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">label</span><span class="o">=</span><span class="s1">&#39;&lt;name&gt;+S&lt;size&gt;&#39;</span>
+</span></span></code></pre></div><p>plot()のlabel=を用いて自動的に凡例を作る場合，
+plot()の中でsize=が変数で与えられていると単純にlabel=<name>とするだけでは凡例は作成できない．
++S<size>でサイズを指定することで凡例が作成できるようになる：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">imag</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">minmag</span><span class="p">,</span><span class="n">maxmag</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># print(imag)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sz</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="o">+</span> <span class="mf">0.01</span> <span class="o">*</span> <span class="mi">2</span><span class="o">**</span><span class="n">imag</span>
+</span></span><span class="line"><span class="cl">        <span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">361</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">181</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">            <span class="n">size</span> <span class="o">=</span> <span class="p">[</span><span class="n">sz</span><span class="p">],</span> 
+</span></span><span class="line"><span class="cl">            <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pen</span> <span class="o">=</span> <span class="s1">&#39;0.5p,blue&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue@90&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;M&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">imag</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;+S&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sz</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="n">verbose</span> <span class="o">=</span> <span class="s1">&#39;e&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;JML+o1c+l2&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;i0.5p+p0.5p&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span></code></pre></div><h2 id="差し込み地図">差し込み地図</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="o">.</span><span class="n">inset</span><span class="p">()</span>
+</span></span></code></pre></div><p>inset()の中でinsetの場所や背景色などを指定する．公式マニュアルではこの中でprojectionをできているが，実際にやるとうまくいかなかったのでwith中のcoastなどで指定したら動いた．</p>
+<p>withの中で新しくfigを置く必要はない．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">fig</span><span class="o">.</span><span class="n">inset</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">position</span> <span class="o">=</span> <span class="s1">&#39;jBR+w&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">isize</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;c+o-&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">isize</span><span class="o">*</span><span class="mf">0.85</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;c/0c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># box = &#39;+pblack+gwhite&#39;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># margin = 0,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># region = insrgn,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># projection = &#39;B135/35/33/44/6c&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># dcw=&#34;JP+glightbrown+p0.2p&#34;,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># area_thresh=10000,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="n">insrgn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="n">insprj</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">shorelines</span> <span class="o">=</span> <span class="s1">&#39;0.25&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">water</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">borders</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># resolution = &#39;f&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">rectangle</span> <span class="o">=</span> <span class="p">[[</span><span class="n">rgn</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">rgn</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">rgn</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">rgn</span><span class="p">[</span><span class="mi">3</span><span class="p">]]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="n">rectangle</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;r+s&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pen</span> <span class="o">=</span> <span class="s1">&#39;3,red&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red@100&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="n">insrgn</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="n">insprj</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span></code></pre></div><p>例のようにrectangleを定義してplotのdataに与えれば，全体図中に拡大図の範囲を四角形で示すようなこともできる．</p>
+<!--  ############################################################################ -->
 <!-- ######################################### -->
 
       </div>
@@ -1524,7 +1566,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第9章　周辺要素</span>
+            >第9章　軸・枠回り</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
             </span>
@@ -1538,7 +1580,7 @@
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第11章　二次元プロット</span
+            >第11章　データの処理</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
