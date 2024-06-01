@@ -2181,7 +2181,7 @@ netCFDフォーマットのグリッドファイルを読み込むか，
 &lt;h2 id=&#34;描画用グリッドデータの準備&#34;&gt;描画用グリッドデータの準備&lt;/h2&gt;
 &lt;!-- =================================== --&gt;
 &lt;!-- ---------------------------------- --&gt;
-&lt;h2 id=&#34;グリッドデータの型について&#34;&gt;グリッドデータの型について&lt;/h2&gt;
+&lt;h3 id=&#34;グリッドデータの型について&#34;&gt;グリッドデータの型について&lt;/h3&gt;
 &lt;!-- ---------------------------------- --&gt;
 &lt;p&gt;PyGMT上でのグリッドデータは緯度，経度を軸に持つ2次元のxarray.DataArrayである．
 したがって自分でxarrayを使ってグリッドデータを作成することが可能．&lt;/p&gt;
@@ -2192,7 +2192,7 @@ netCFDフォーマットのグリッドファイルを読み込むか，
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;n&#34;&gt;region&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;insrgn&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;オンラインでなければならない．&lt;/p&gt;
-&lt;h2 id=&#34;grdファイルの代わりにxarraydataarrayを利用&#34;&gt;grdファイルの代わりにxarray.DataArrayを利用&lt;/h2&gt;
+&lt;h3 id=&#34;grdファイルの代わりにxarraydataarrayを利用&#34;&gt;grdファイルの代わりにxarray.DataArrayを利用&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;xarray&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;xr&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Datarray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;D&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ndarray&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -2205,11 +2205,10 @@ netCFDフォーマットのグリッドファイルを読み込むか，
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;２次元以上のグリッド状のデータがndarray形式であっても上記のように座標（index）の情報を追加してxarrayに変換すればプロットすることができる．デフォルトではxarrayがインストールされていない可能性があるので，その場合はxarrayのインストールが必要．&lt;/p&gt;
 &lt;p&gt;ここで作成したxarray形式の変数をgrdimage()のgridに与えればプロットできる．&lt;/p&gt;
 &lt;!-- ---------------------------------- --&gt;
-&lt;h3 id=&#34;xyzファイルからの作成&#34;&gt;xyzファイルからの作成&lt;/h3&gt;
+&lt;h3 id=&#34;xyzファイルからグリッドデータへの変換&#34;&gt;xyzファイルからグリッドデータへの変換&lt;/h3&gt;
 &lt;!-- ---------------------------------- --&gt;
-&lt;p&gt;ここでいうxyzデータとは，名前の通りx,y,z座標が並べられたテキストデータである．各グリッド（点）は改行で区切られている．&lt;/p&gt;
-&lt;h2 id=&#34;グリッドデータへの変換&#34;&gt;グリッドデータへの変換&lt;/h2&gt;
-&lt;p&gt;xyzデータで標高データなどを与えられた場合，それをgrdデータに変換することで，前章と同様に等値線などでプロットできる．次のコマンドで変換できる：&lt;/p&gt;
+&lt;p&gt;ここでいうxyzデータとは，名前の通りx,y,z座標が並べられたテキストデータである．各グリッド（点）は改行で区切られている．
+xyzデータで標高データなどを与えられた場合，それをgrdデータに変換することで，前章と同様に等値線などでプロットできる．次のコマンドで変換できる：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;grid_data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz2grd&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;data&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;’&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;~.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xyz&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;, [x=&amp;lt;lat&amp;gt;,y=&amp;lt;lon&amp;gt;, z=&amp;lt;value&amp;gt;でも可]&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;n&#34;&gt;region&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;region&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
@@ -2257,7 +2256,7 @@ region=[xs,xe,ys,ye]であるが，spacingをregionの幅xe-xs, ye-ysを整数�
 &lt;!-- ---------------------------------- --&gt;
 &lt;h3 id=&#34;等値線図&#34;&gt;等値線図&lt;/h3&gt;
 &lt;!-- ---------------------------------- --&gt;
-&lt;p&gt;(v0.12.0)&lt;/p&gt;
+&lt;p&gt;(追記v0.12.0)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;grdcontour&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;grid&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;グリッドファイル名&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;グリッドデータ変数&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;annotation&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;アノテーション (計曲線) 間隔&amp;gt;+f&amp;lt;フォント設定&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
