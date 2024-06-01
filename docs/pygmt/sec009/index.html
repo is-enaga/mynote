@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 22, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -689,12 +689,6 @@
             </li>
           <li>
               <a
-                href="#%e5%a4%aa%e3%81%95"
-                class="hb-docs-link"
-              >太さ</a>
-            </li>
-          <li>
-              <a
                 href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc"
                 class="hb-docs-link"
               >カラーバー</a>
@@ -727,7 +721,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　グリッドデータの利用
+  >第11章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -735,7 +729,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec012/"
     
-  >第12章　xyzデータの利用
+  >第12章　グラフ紙面上の処理
     </a>
               
             </li><li class="flex flex-col "><a
@@ -743,7 +737,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec013/"
     
-  >第13章　発展・応用
+  >第13章　地理院・国交省データの利用
     </a>
               
             </li><li class="flex flex-col "><a
@@ -751,7 +745,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec014/"
     
-  >第14章　地理院・国交省データの利用
+  >第14章　その他
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1064,7 +1058,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　グリッドデータの利用
+  >第11章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1072,7 +1066,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec012/"
     
-  >第12章　xyzデータの利用
+  >第12章　グラフ紙面上の処理
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1080,7 +1074,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec013/"
     
-  >第13章　発展・応用
+  >第13章　地理院・国交省データの利用
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1088,7 +1082,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec014/"
     
-  >第14章　地理院・国交省データの利用
+  >第14章　その他
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1321,7 +1315,7 @@
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e8%bf%bd%e5%8a%a0%e3%81%a8%e8%aa%bf%e6%95%b4">追加と調整</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%a4%aa%e3%81%95">太さ</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%a4%aa%e3%81%95">太さ</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%82%ab%e3%83%a9%e3%83%bc%e3%83%90%e3%83%bc">カラーバー</a>
@@ -1404,7 +1398,7 @@
 </ul></span>
 </div>
 <p>図*※相互参照無効*も参照．</p>
-<h2 id="太さ">太さ</h2>
+<h3 id="太さ">太さ</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="n">MAP_SCALE_HEIGHT</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">太さ</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">):</span>

@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: May 22, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="描画位置の原点の移動 fig.shift_origin( xshift = &lt;xshift&gt;, yshift = &lt;yshift&gt;, ) それぞれ右，上が正． 例え" />
+  <meta name="description" content="標高メッシュデータ データの下準備 地理院からデータをダウンロー" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/pygmt/sec013/" />
@@ -226,8 +226,8 @@
   
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/pygmt/sec013/" />
-  <meta property="og:title" content="第13章　発展・応用 | K-Notes" />
-  <meta property="og:description" content="描画位置の原点の移動 fig.shift_origin( xshift = &lt;xshift&gt;, yshift = &lt;yshift&gt;, ) それぞれ右，上が正． 例え" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="第13章　地理院・国交省データの利用 | K-Notes" />
+  <meta property="og:description" content="標高メッシュデータ データの下準備 地理院からデータをダウンロー" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -241,7 +241,7 @@
   
 
 
-  <title>第13章　発展・応用 | K-Notes</title>
+  <title>第13章　地理院・国交省データの利用 | K-Notes</title>
 
   
   
@@ -688,7 +688,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　グリッドデータの利用
+  >第11章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -696,7 +696,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec012/"
     
-  >第12章　xyzデータの利用
+  >第12章　グラフ紙面上の処理
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -704,20 +704,20 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/pygmt/sec013/"
     
-  >第13章　発展・応用
+  >第13章　地理院・国交省データの利用
     </a>
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#%e6%8f%8f%e7%94%bb%e4%bd%8d%e7%bd%ae%e3%81%ae%e5%8e%9f%e7%82%b9%e3%81%ae%e7%a7%bb%e5%8b%95"
+                href="#%e6%a8%99%e9%ab%98%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5%e3%83%87%e3%83%bc%e3%82%bf"
                 class="hb-docs-link"
-              >描画位置の原点の移動</a>
+              >標高メッシュデータ</a>
             </li>
           <li>
               <a
-                href="#%e5%9c%b0%e5%9b%b3%e3%81%ae%e7%b4%99%e9%9d%a2%e4%b8%8a%e3%82%b5%e3%82%a4%e3%82%ba%e3%81%ae%e5%8f%96%e5%be%97"
+                href="#%e5%9b%bd%e4%ba%a4%e7%9c%81%e3%81%ab%e3%82%88%e3%82%8b%e9%81%93%e8%b7%af%e7%ad%89%e3%81%ae%e7%b7%9a%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%88%a9%e7%94%a8"
                 class="hb-docs-link"
-              >地図の紙面上サイズの取得</a>
+              >国交省による道路等の線データの利用</a>
             </li>
           </ul>
   
@@ -727,7 +727,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec014/"
     
-  >第14章　地理院・国交省データの利用
+  >第14章　その他
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1040,7 +1040,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec011/"
     
-  >第11章　グリッドデータの利用
+  >第11章　二次元プロット
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1048,7 +1048,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec012/"
     
-  >第12章　xyzデータの利用
+  >第12章　グラフ紙面上の処理
     </a>
               
             </li><li class="flex flex-col open"><a
@@ -1056,7 +1056,7 @@
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/mynote/docs/pygmt/sec013/"
     
-  >第13章　発展・応用
+  >第13章　地理院・国交省データの利用
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1064,7 +1064,7 @@
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/mynote/docs/pygmt/sec014/"
     
-  >第14章　地理院・国交省データの利用
+  >第14章　その他
     </a>
               
             </li><li class="flex flex-col "><a
@@ -1288,10 +1288,22 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%8f%8f%e7%94%bb%e4%bd%8d%e7%bd%ae%e3%81%ae%e5%8e%9f%e7%82%b9%e3%81%ae%e7%a7%bb%e5%8b%95">描画位置の原点の移動</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e6%a8%99%e9%ab%98%e3%83%a1%e3%83%83%e3%82%b7%e3%83%a5%e3%83%87%e3%83%bc%e3%82%bf">標高メッシュデータ</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9c%b0%e5%9b%b3%e3%81%ae%e7%b4%99%e9%9d%a2%e4%b8%8a%e3%82%b5%e3%82%a4%e3%82%ba%e3%81%ae%e5%8f%96%e5%be%97">地図の紙面上サイズの取得</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e4%b8%8b%e6%ba%96%e5%82%99">データの下準備</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e8%aa%ad%e3%81%bf%e8%be%bc%e3%81%bf">データの読み込み</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e5%9b%bd%e4%ba%a4%e7%9c%81%e3%81%ab%e3%82%88%e3%82%8b%e9%81%93%e8%b7%af%e7%ad%89%e3%81%ae%e7%b7%9a%e3%83%87%e3%83%bc%e3%82%bf%e3%81%ae%e5%88%a9%e7%94%a8">国交省による道路等の線データの利用</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#json%e3%83%a9%e3%82%a4%e3%83%96%e3%83%a9%e3%83%aa%e3%81%ae%e5%88%a9%e7%94%a8">jsonライブラリの利用</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#geopandas%e3%81%ae%e5%88%a9%e7%94%a8">geopandasの利用</a>
       </li></ul>
 
 
@@ -1318,119 +1330,77 @@
       </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg>
       <div class="whitespace-nowrap transition-colors min-w-[24px] overflow-hidden text-ellipsis hover:text-gray-900 dark:hover:text-gray-100">
         <a href="https://is-enaga.github.io/mynote/pygmt/">PyGMT</a>
-      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第13章　発展・応用</div>
+      </div><svg class="w-3.5 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8.25 4.5l7.5 7.5l-7.5 7.5"/></svg><div class="whitespace-nowrap font-medium text-gray-700 dark:text-gray-100">第13章　地理院・国交省データの利用</div>
 </div>
 
       </div>
 
       <div class="content text-base">
-        <h1>第13章　発展・応用</h1>
-        <!-- ######################################### -->
-<!-- =================================== -->
-<h2 id="描画位置の原点の移動">描画位置の原点の移動</h2>
-<!-- =================================== -->
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">xshift</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">xshift</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">yshift</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">yshift</span><span class="o">&gt;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span></code></pre></div><p>それぞれ右，上が正．
-例えば&quot;3c&quot;とすれば3cmプロット時の原点を移動する．</p>
-<!-- =================================== -->
-<h2 id="地図の紙面上サイズの取得">地図の紙面上サイズの取得</h2>
-<!-- =================================== -->
-<p>例えばprojection=&ldquo;M6c&quot;のようにしたとき，
-地図のサイズは横方向で指定され，縦方向は自動的に決定される．</p>
-<p>このようなときに地図のサイズが取得できると，
-メインの地図の横や上下に断面図などを追加する際に，
-位置やサイズの調整のために便利である．</p>
-<p>GMTのmapprojectメソッドで地図のサイズを取得できるが，
-PyGMTではmapprojectがまだ未実装なようである．</p>
-<p>したがって手順は増えるが下記のようにして地図サイズを取得する．</p>
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
-  <span class="dark:text-neutral-300">参考: <a href="https://docs.generic-mapping-tools.org/dev/mapproject.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/dev/mapproject.html</a></span>
-</div>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">(</span><span class="n">figを先に作成しておく</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">clib</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">helpers</span><span class="o">.</span><span class="n">GMTTempFile</span><span class="p">()</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">session</span><span class="o">.</span><span class="n">call_module</span><span class="p">(</span><span class="s2">&#34;mapproject&#34;</span><span class="p">,</span><span class="sa">f</span><span class="s2">&#34;-W&lt;オプション&gt; -&gt;</span><span class="si">{</span><span class="n">tmp</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">size</span> <span class="o">=</span> <span class="n">tmp</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-</span></span></code></pre></div><p>このコードで得られる「size」はcm単位の文字列．
--Wに続くオプションによって，縦横いずれのサイズを出力するかを指定する：</p>
-<ul>
-<li>h: 高さのみ出力</li>
-<li>w: 横幅のみ出力</li>
-<li>なし: 高さ，横幅の両方を出力</li>
-</ul>
-<p>これで得られた画像サイズを
-shift_origin(-&gt;第*※相互参照無効*節)と組み合わせれば，
-適切な位置とサイズで図を追加できる．</p>
-<p>例）深さ断面図の追加</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
+        <h1>第13章　地理院・国交省データの利用</h1>
+        <h2 id="標高メッシュデータ">標高メッシュデータ</h2>
+<h3 id="データの下準備">データの下準備</h3>
+<p>地理院からデータをダウンロードするとzipで圧縮されている．中にはXML形式のファイルが入っている．
+これを扱いやすくするために緯度，経度，標高のxyz形式にするため，
+同じく地理院からダウンロードできる基盤地図情報ビューアをインストールする．
+これを起動して開く画面に，標高メッシュのzipファイルをドラッグすると地形が描画される．</p>
+<p>「エクスポート&gt;標高メッシュをシェープファイルへ出力」を選んで開く画面で，(1)直角座標系に出力するチェックを外し，(2)出力ファイル名の拡張子を「.xyz」に変える．拡張子がデフォルトのままだと，後で開いても文字化けして読み取れなかった．ただし(1)はナントカ座標系とやらのxyz座標で出力したいのならチェックが必要(図*※相互参照無効*)．
+<figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/chiriin2xyz.png"
+    alt="基盤地図情報ビューアによるxyz形式への変換時の画面．(標高データ: 国土地理院基盤地図情報数値標高モデル)"><figcaption>
+      <p>基盤地図情報ビューアによるxyz形式への変換時の画面．(標高データ: 国土地理院基盤地図情報数値標高モデル)</p>
+    </figcaption>
+</figure>
+</p>
+<h3 id="データの読み込み">データの読み込み</h3>
+<p>作成したxyzファイルは，numpyを使ってcsvと同じ方法で読み込める．
+すなわちdelimiterを「，」にしてnp.loadtxt()である．
+ただそのままだと最初の列に行番号が入っているので，
+必要なxyzの列だけを取り出すためにusecols=[1,2,3]としてcolumnを指定すると良い．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">dat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;out.xyz&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">delimiter</span><span class="o">=</span><span class="s2">&#34;,&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                 <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+</span></span></code></pre></div><h2 id="国交省による道路等の線データの利用">国交省による道路等の線データの利用</h2>
+<p>道路や鉄道路線などのデータをダウンロードすると，シェープファイルやgeojsonファイルなどが入っている．これをライブラリを使って取り込んでプロットする．</p>
+<h3 id="jsonライブラリの利用">jsonライブラリの利用</h3>
+<p>(1)import json. (2)open(&lt;.geojson&gt;, &lsquo;r&rsquo;, encoding=&lt;utf_8_sig&gt;) (3)json.load(openfile) (4)条件で絞込．(5)リストに格納してプロット．</p>
+<p>ダウンロードしたファイルのutf-8フォルダー中にある方の.geojsonデータを使う．直上のフォルダにも.geojsonがあるがencodingを何にすれば良いのかわからず使えなかった．&lsquo;cp932&rsquo;にしてみたがエラーが出た．</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl"><span class="n">train_path_gj</span> <span class="o">=</span> <span class="s2">&#34;鉄道/utf8/N02-21_RailroadSection.geojson&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">jopen</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">train_path_gj</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="s1">&#39;r&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">             <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf_8_sig&#39;</span>
+</span></span><span class="line"><span class="cl">             <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">dat_j</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">jopen</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">rgn</span> <span class="o">=</span> <span class="p">[</span><span class="mi">129</span><span class="p">,</span><span class="mi">135</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">35</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl"><span class="n">prj</span> <span class="o">=</span> <span class="s1">&#39;M6c&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span> <span class="o">=</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># =======================</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># MAIN</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># =======================</span>
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">coast</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">projection</span> <span class="o">=</span> <span class="n">prj</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">region</span> <span class="o">=</span> <span class="n">rgn</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;agf&#39;</span><span class="p">,</span><span class="s1">&#39;NWes&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="n">shorelines</span> <span class="o">=</span> <span class="s1">&#39;0.1p&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">resolution</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="n">land</span> <span class="o">=</span> <span class="s1">&#39;grey60&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># =======================</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># getting size</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># =======================</span>
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">clib</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">helpers</span><span class="o">.</span><span class="n">GMTTempFile</span><span class="p">()</span> <span class="k">as</span> <span class="n">tmpfile</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">session</span><span class="o">.</span><span class="n">call_module</span><span class="p">(</span><span class="s2">&#34;mapproject&#34;</span><span class="p">,</span><span class="sa">f</span><span class="s2">&#34;-W -&gt;</span><span class="si">{</span><span class="n">tmpfile</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">size</span> <span class="o">=</span> <span class="n">tmpfile</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">        <span class="n">size</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">size</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">w</span> <span class="o">=</span> <span class="n">size</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="n">h</span> <span class="o">=</span> <span class="n">size</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># =======================</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># cross section</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># =======================</span>
-</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="n">FONT_LABEL</span> <span class="o">=</span> <span class="s1">&#39;8p&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="c1"># lat vs z -----------</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="n">xshift</span> <span class="o">=</span> <span class="n">w</span><span class="o">*</span><span class="mf">1.1</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xagf+lDepth[km]&#39;</span><span class="p">,</span><span class="s1">&#39;yagf+u@.&#39;</span><span class="p">,</span><span class="s1">&#39;NEws&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;X</span><span class="si">{</span><span class="n">w</span><span class="o">*</span><span class="mf">0.5</span><span class="si">}</span><span class="s1">c/</span><span class="si">{</span><span class="n">h</span><span class="si">}</span><span class="s1">c&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="n">fig</span><span class="o">.</span><span class="n">region</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">fig</span><span class="o">.</span><span class="n">region</span><span class="p">[</span><span class="mi">3</span><span class="p">]],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1"># lon vs z -----------</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">shift_origin</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="n">xshift</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">*</span><span class="n">w</span><span class="o">*</span><span class="mf">1.1</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">yshift</span> <span class="o">=</span> <span class="o">-</span><span class="n">w</span><span class="o">*</span><span class="p">(</span><span class="mf">0.5</span><span class="o">+</span><span class="mf">0.1</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">basemap</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">        <span class="n">frame</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;xagf+u@.&#39;</span><span class="p">,</span><span class="s1">&#39;yagf+lDepth[km]&#39;</span><span class="p">,</span><span class="s1">&#39;SWne&#39;</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="n">projection</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;X</span><span class="si">{</span><span class="n">w</span><span class="si">}</span><span class="s1">c/</span><span class="si">{</span><span class="o">-</span><span class="n">w</span><span class="o">*</span><span class="mf">0.5</span><span class="si">}</span><span class="s1">c&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="n">region</span> <span class="o">=</span> <span class="p">[</span><span class="n">fig</span><span class="o">.</span><span class="n">region</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">fig</span><span class="o">.</span><span class="n">region</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">,</span><span class="mi">60</span><span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/getsize.png"
-    alt="メイン地図のサイズを取得することでプロットした二方向の深さ方向断面図．ただし図の大きさや位置は揃うものの，グリッドがCartesian座標であるため，緯度はメインの地図からわずかにずれが生じてしまう．"><figcaption>
-      <p>メイン地図のサイズを取得することでプロットした二方向の深さ方向断面図．ただし図の大きさや位置は揃うものの，グリッドがCartesian座標であるため，緯度はメインの地図からわずかにずれが生じてしまう．</p>
+</span></span><span class="line"><span class="cl"><span class="n">kobe</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ftr = []</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">dat_j</span><span class="p">[</span><span class="s2">&#34;features&#34;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="s2">&#34;神戸電鉄&#34;</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;properties&#34;</span><span class="p">][</span><span class="s2">&#34;N02_004&#34;</span><span class="p">]:</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># ftr.append(data[&#34;properties&#34;][&#34;N02_004&#34;])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tmp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;geometry&#34;</span><span class="p">][</span><span class="s2">&#34;coordinates&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">kobe</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">（</span><span class="n">略</span><span class="err">）</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">kobe</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="n">kobe</span><span class="p">[</span><span class="n">i</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">        <span class="n">style</span> <span class="o">=</span> <span class="s1">&#39;f0.2c/0.1c&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pen</span> <span class="o">=</span> <span class="s1">&#39;0.5p&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/trainjson.png"
+    alt="国交省からダウンロードした鉄道データをjsonライブラリを用いて読み込みプロットした結果．（標高データ: 国土地理院基盤地図情報数値標高モデル; 鉄道路線データ: 国土交通省国土数値情報）"><figcaption>
+      <p>国交省からダウンロードした鉄道データをjsonライブラリを用いて読み込みプロットした結果．（標高データ: 国土地理院基盤地図情報数値標高モデル; 鉄道路線データ: 国土交通省国土数値情報）</p>
     </figcaption>
 </figure>
 
+<h3 id="geopandasの利用">geopandasの利用</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="o">&lt;</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span><span class="n">のgeojsonデータ</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf_8_sig&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>condaでインストールできるライブラリgeopandasを使う方法．(1)shpファイルを使う場合：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">train_path</span> <span class="o">=</span> <span class="s2">&#34;鉄道/N02-21_RailroadSection.shp&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">train_path_gj</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;cp932&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><p>(2)geojsonファイルを使う場合：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+</span></span><span class="line"><span class="cl"><span class="n">train_path_gj</span> <span class="o">=</span> <span class="s2">&#34;鉄道/N02-21_RailroadSection.geojson&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">train_path_gj</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf_8_sig&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><!--  ############################################################################# -->
 
       </div>
 
@@ -1456,7 +1426,7 @@ shift_origin(-&gt;第*※相互参照無効*節)と組み合わせれば，
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第12章　xyzデータの利用</span>
+            >第12章　グラフ紙面上の処理</span>
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
             </span>
@@ -1470,7 +1440,7 @@ shift_origin(-&gt;第*※相互参照無効*節)と組み合わせれば，
           <span class="flex flex-col">
             <span
               class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >第14章　地理院・国交省データの利用</span
+            >第14章　その他</span
             >
             <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
               
