@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1697,8 +1697,7 @@ qで終了する．</p>
 </span></span></code></pre></div><p>ここから作業.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">pvcreate</span> <span class="o">&lt;</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">vgcreate</span> <span class="o">&lt;</span><span class="n">hdddGroup</span><span class="o">&gt;</span> <span class="o">&lt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span> <span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">sdb</span> <span class="o">...&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">lvcreate</span> <span class="o">-</span><span class="n">l</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">FREE</span> <span class="o">-</span><span class="n">n</span> <span class="n">lv0</span> <span class="o">&lt;</span><span class="n">hddGroup</span><span class="o">&gt;</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">lvcreate</span> <span class="o">-</span><span class="n">l</span> <span class="mi">100</span><span class="o">%</span><span class="n">FREE</span> <span class="o">-</span><span class="n">n</span> <span class="n">lv0</span> <span class="o">&lt;</span><span class="n">hddGroup</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">mkfs</span> <span class="o">-</span><span class="n">t</span> <span class="n">xfs</span> <span class="o">&lt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">hddGroup</span><span class="o">/</span><span class="n">lv0</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">xfs</span> <span class="o">&lt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">hddGroup</span><span class="o">/</span><span class="n">lv0</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">mount先</span><span class="o">&gt;</span>
@@ -1728,11 +1727,10 @@ qで終了する．</p>
 </span></span></code></pre></div><p>ストライプ化した論理ボリュームを作成する．
 -iはストライプ数で，まとめたいディスクの数にすればよい．
 -Iはストライプサイズ．適切な値はよくわからない．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">lvcreate</span> <span class="o">-</span><span class="n">l</span> <span class="mi">100</span>
-</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">VG</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">ディスク数</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">I</span> <span class="mi">64</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">lv</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">vg</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">--&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">lvcreate</span> <span class="o">-</span><span class="n">l</span> <span class="mi">100</span><span class="o">%</span><span class="n">VG</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">ディスク数</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">I</span> <span class="mi">64</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">lv</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">vg</span> <span class="n">name</span><span class="o">&gt;</span>
 </span></span></code></pre></div><p>最後に論理ボリュームにファイルシステムを作成する．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sudo</span> <span class="n">mkfs</span><span class="o">.</span><span class="n">xfs</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">dev</span><span class="o">/&lt;</span><span class="n">lv</span> <span class="n">name</span><span class="o">&gt;/&lt;</span><span class="n">vg</span> <span class="n">name</span><span class="o">&gt;</span>
-</span></span></code></pre></div><p>これで/dev/<lv name>/<vg name>を通常のディスクのようにマウントできるようになる．</p>
+</span></span></code></pre></div><p>これで/dev/&lt;lv name&gt;/&lt;vg name&gt;を通常のディスクのようにマウントできるようになる．</p>
 <!-- ---------------------------------- -->
 <h3 id="lvmの認識">LVMの認識</h3>
 <!-- ---------------------------------- -->
@@ -1768,7 +1766,7 @@ Windowsでいうタスクマネージャーのような感じ．</p>
 <!-- ............................. -->
 <h4 id="出力の確認">出力の確認</h4>
 <!-- ............................. -->
-<p>出力は<code>/proc/&lt;process ID&gt;/fd/1</code>に格納されている．
+<p>出力は<code>/proc/\&lt;process ID&gt;/fd/1</code>に格納されている．
 したがって</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cat</span> <span class="o">/</span><span class="n">proc</span><span class="o">/&lt;</span><span class="n">process</span> <span class="n">ID</span><span class="o">&gt;/</span><span class="n">fd</span><span class="o">/</span><span class="mi">1</span>
 </span></span></code></pre></div><p>で確認可能．プロセスIDはpsなどで調べておく．

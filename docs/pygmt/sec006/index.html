@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1439,10 +1439,9 @@ region=[xs,xe,ys,ye]であるが，spacingをregionの幅xe-xs, ye-ysを整数�
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300"><pre><code>annotationのオプション（抜粋:  
-アノテーションの文字の向きなどの設定を行う．  
-(参考:GMT公式マニュアル [https://docs.generic-mapping-tools.org/dev/grdcontour.html](https://docs.generic-mapping-tools.org/dev/grdcontour.html))
-</code></pre>
+  <span class="dark:text-neutral-300"><p>annotationのオプション（抜粋）:<br>
+アノテーションの文字の向きなどの設定を行う．<br>
+(参考:GMT公式マニュアル <a href="https://docs.generic-mapping-tools.org/dev/grdcontour.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/dev/grdcontour.html</a>)</p>
 <ul>
 <li>+f:
 アノテーションのフォント設定を行う．<br>
@@ -1465,18 +1464,16 @@ region=[xs,xe,ys,ye]であるが，spacingをregionの幅xe-xs, ye-ysを整数�
 しかしよほどなめらかな等値線でないとうまくいかないように感じる．</li>
 <li>+i:
 ラインを非表示 (invisible) にし，アノテーションだけを描画する．</li>
-</ul>
-</span>
+</ul></span>
 </div>
 <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300"><pre><code>label\_placementのオプション (抜粋):  
-等値線に対するアノテーションラベルの位置や数を指定する．  
+  <span class="dark:text-neutral-300"><p>label_placementのオプション (抜粋):<br>
+等値線に対するアノテーションラベルの位置や数を指定する．<br>
 （参考: GMT公式マニュアル
-[https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html](https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html)）
-</code></pre>
+<a href="https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html</a>）</p>
 <ul>
 <li>d:
 「d&lt;間隔&gt;」で等値線に沿った間隔を指定することでアノテーションの位置を調整する．<br>
@@ -1488,7 +1485,7 @@ dオプションとほぼ同じだが，単位に紙面上の単位ではなく�
 「f&lt;ファイル名&gt;」の形で与えたファイルに従ってアノテーションを配置する．<br>
 ファイルはテキストファイルで，１列目と2列目にアノテーションを配置する座標を与える．
 実際の等値線がこのファイル名の座標を通る場合にのみアノテーションが配置される．
-厳密に等値線が通る座標を指定することは困難な場合が多いであろうから，「f&lt;ファイル名&gt;/<slop>」とスラッシュで区切ってslopに許容誤差を与えることができる．単位はc,i,pから選択可．</li>
+厳密に等値線が通る座標を指定することは困難な場合が多いであろうから，「f&lt;ファイル名&gt;/&lt;slop&gt;」とスラッシュで区切ってslopに許容誤差を与えることができる．単位はc,i,pから選択可．</li>
 <li>l:
 「l&lt;始点x&gt;/&lt;始点y&gt;/&lt;終点x&gt;/&lt;終点y&gt;」と記すことで，始点と終点を結ぶ紙面上の線分と等値線が交わる位置にアノテーションを配置する．<br>
 文字列内で「,」で区切ることで複数の線分を与えることもできる．</li>
@@ -1500,8 +1497,7 @@ lオプションとほぼ同じだが，線分を大円経路で考える．</li
 「n&lt;アノテーション数&gt;/&lt;最少間隔&gt;」とすればアノテーションが詰まりすぎないように最少間隔もc,i,pのいずれかの単位で指定できる．</li>
 <li>N:
 nオプションとほぼ同じだが，アノテーションが等分された等値線の各区間の終点に配置される．</li>
-</ul>
-</span>
+</ul></span>
 </div>
 <p>levelsやlimitをプロットするデータの値域やregionの領域に合わせないと，</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">grdcontour</span> <span class="p">[</span><span class="n">WARNING</span><span class="p">]:</span> <span class="n">No</span> <span class="n">contours</span> <span class="n">within</span> <span class="n">specified</span> <span class="o">-</span><span class="n">L</span>
@@ -1510,17 +1506,15 @@ nオプションとほぼ同じだが，アノテーションが等分された�
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300"><pre><code>（参照）  
-[https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py](https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py)
-</code></pre>
-</span>
+  <span class="dark:text-neutral-300">（参照）<br>
+<a href="https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py" target="_blank" rel="noopener">https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py</a></span>
 </div>
 <!--  #### 等値線アノテーションのサイズ -->
 <!--  ```python -->
 <!--      annotation = '<アノテーションを入れる等値線間隔>+f<fontsize>' -->
 <!--   ``` -->
-<!--  デフォルトだとアノテーションの文字サイズが気に入らないことがある．annotation=<間隔>とするのではなく， -->
-<!--  クォーテーションで囲んで「annotation='<間隔>+f<size>'」とすれば良い． -->
+<!--  デフォルトだとアノテーションの文字サイズが気に入らないことがある．annotation=\<間隔>とするのではなく， -->
+<!--  クォーテーションで囲んで「annotation='\<間隔>+f\<size>'」とすれば良い． -->
 <p>例）等深線プロット．アノテーションラベルのフォントサイズや向きなどを指定している．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
 </span></span><span class="line"><span class="cl"><span class="n">prj</span> <span class="o">=</span> <span class="s1">&#39;M5c&#39;</span>

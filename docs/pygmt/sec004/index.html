@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1434,13 +1434,13 @@ styleにE（必ず大文字）を指定し，その後に長軸の方位角，�
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300"><pre><code>参照: [https://docs.generic-mapping-tools.org/6.1/psxy.html](https://docs.generic-mapping-tools.org/6.1/psxy.html)
-<p>-Se<br>
-ellipse. Direction (in degrees counter-clockwise from horizontal), major_axis, and minor_axis must be found in columns 3, 4, and 5. This yields a Cartesian ellipse whose shape is unaffected by the map projection.</p>
-<p>-SE<br>
+  <span class="dark:text-neutral-300"><p>参照: <a href="https://docs.generic-mapping-tools.org/6.1/psxy.html" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/6.1/psxy.html</a></p>
+<pre><code>-Se  
+ellipse. Direction (in degrees counter-clockwise from horizontal), major\_axis, and minor\_axis must be found in columns 3, 4, and 5. This yields a Cartesian ellipse whose shape is unaffected by the map projection.
+\\  
+-SE  
 Same as -Se, except azimuth (in degrees east of north) should be given instead of direction. The azimuth will be mapped into an angle based on the chosen map projection (-Se leaves the directions unchanged.) Furthermore, the axes lengths must be given in geographical instead of plot-distance units. An exception occurs for a linear projection in which we assume the ellipse axes are given in the same units as -R. For degenerate ellipses (circles) with just the diameter given, use -SE-. The diameter is excepted to be given in column 3. Alternatively, append the desired diameter to -SE- and this fixed diameter is used instead. For allowable geographical units, see Units [Default is k for km]. The shape of the ellipse will be affected by the properties of the map projection.
-</code></pre>
-</span></p>
+</code></pre></span>
 </div>
 <!--  ############################################################################### -->
 

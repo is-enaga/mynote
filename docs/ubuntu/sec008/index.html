@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1344,15 +1344,15 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">DeviceID</span>           <span class="n">Caption</span>                     <span class="n">Partitions</span> <span class="n">Size</span>          <span class="n">Model</span>
 </span></span><span class="line"><span class="cl"><span class="o">--------</span>           <span class="o">-------</span>                     <span class="o">----------</span> <span class="o">----</span>          <span class="o">-----</span>
-</span></span><span class="line"><span class="cl">  <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span> <span class="mi">1</span>          <span class="mi">5000978465280</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span>
-</span></span><span class="line"><span class="cl">  <span class="o">.</span>\<span class="n">PHYSICALDRIVE0</span> <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>  <span class="mi">4</span>          <span class="mi">512105932800</span>  <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>
+</span></span><span class="line"><span class="cl">\\<span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span> <span class="mi">1</span>          <span class="mi">5000978465280</span> <span class="n">I</span><span class="o">-</span><span class="n">O</span> <span class="n">DATA</span> <span class="n">HDPH</span><span class="o">-</span><span class="n">UT</span> <span class="n">USB</span> <span class="n">Device</span>
+</span></span><span class="line"><span class="cl">\\<span class="o">.</span>\<span class="n">PHYSICALDRIVE0</span> <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>  <span class="mi">4</span>          <span class="mi">512105932800</span>  <span class="n">SAMSUNG</span> <span class="n">MZVL2512HCJQ</span><span class="o">-</span><span class="mi">00</span><span class="n">B07</span>
 </span></span></code></pre></div><p>ここにあるマウントしたいHDD等のDeviceID（一番左に書いてあるもの）を以降のコマンドで使う．
 SizeやModelをもとに目的のストレージを特定するとよい．</p>
 <!-- ............................. -->
 <h4 id="マウント">マウント</h4>
 <!-- ............................. -->
 <p>前の節で得たデバイスIDを使って，PowerShell上で次のようにする（IDは適宜書き換え）：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="o">--</span><span class="n">mount</span>   <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="o">--</span><span class="n">bare</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">wsl</span> <span class="o">--</span><span class="n">mount</span> \\<span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span> <span class="o">--</span><span class="n">bare</span>
 </span></span></code></pre></div><p>続いてWSL(Ubuntu)のターミナルを開く．
 そこで<code>lsblk</code>を実行すると，それまではなかった新たにマウントされたデバイスが確認できる．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">$</span> <span class="n">lsblk</span>
@@ -1375,7 +1375,7 @@ sdc2が目的のHDDだとわかったので，次のコマンドでマウント�
 エクスプローラーからはそのストレージにアクセスできないらしい（表示されなくなる）．
 そのため再度エクスプローラーで使う際はPowerShell上でアンマウントする必要があるようだ．
 ここでもマウント時に用いたデバイスIDを使用する：</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">wsl</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="n">unmount</span>   <span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;</span> <span class="n">wsl</span><span class="o">.</span><span class="n">exe</span> <span class="o">--</span><span class="n">unmount</span> \\<span class="o">.</span>\<span class="n">PHYSICALDRIVE1</span>
 </span></span></code></pre></div><p>出力:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">この操作を正しく終了しました</span><span class="err">。</span>
 </span></span></code></pre></div><p>これで再びエクスプローラー上にHDDが表示される．</p>

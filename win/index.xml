@@ -302,45 +302,6 @@ P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])�
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;震源決定時の仕様:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;S波速度Vsは, Vp/Vs=1.73として扱われる．&lt;/li&gt;
-&lt;li&gt;標高0kmより高い部分のVpは，0kmにおけるVpとする．&lt;/li&gt;
-&lt;li&gt;各層の上端のVpを与え，それらを線形で結んだ速度構造として扱う．&lt;/li&gt;
-&lt;li&gt;「層の数」の上限は20(層の厚さは21個まで, Vpの数は22個まで)．&lt;/li&gt;
-&lt;li&gt;初期震源の時刻の不確かさは入力が必要だが，使われない．&lt;/li&gt;
-&lt;li&gt;直接hypomhを使わずにwinで震源決定するときは，初期震源の緯度と経度は使われない（深さは使われるようだ）．&lt;/li&gt;
-&lt;/ul&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;ファイルの構成は以下の通り：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1行目: 初期震源の位置&lt;br&gt;
-緯度，経度，深さ[km]を各10文字区切りで．&lt;/li&gt;
-&lt;li&gt;2行目: 層の数と名前&lt;br&gt;
-層の数は5文字の整数．2文字のスペースをあけて，3文字の構造名を記す．&lt;/li&gt;
-&lt;li&gt;3行目: 層上端のVp&lt;br&gt;
-各10文字区切り．7つごとに改行する．&lt;/li&gt;
-&lt;li&gt;4行目: 各層の厚さ[km]&lt;br&gt;
-各10文字区切り．7つごとに改行する．&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/stan.png&#34;
-    alt=&#34;stanファイルの書式．&#34;&gt;&lt;figcaption&gt;
-      &lt;p&gt;stanファイルの書式．&lt;/p&gt;
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-ソースコードでは2行目の名前の後に続けて，
-書式「F10.3」の値を二つ読み取っているが，
-マニュアルに未記載で何なのかわからない．
-サンプルファイルには１つ目に「1」とあるが，2つ目は空白．
-要確認．&lt;/p&gt;
-&lt;!-- =================================== --&gt;
-&lt;h2 id=&#34;震源結果finalファイル&#34;&gt;震源結果(final)ファイル&lt;/h2&gt;
-&lt;!-- =================================== --&gt;
-&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html&lt;/a&gt;&lt;/li&gt;
@@ -392,13 +353,14 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 &lt;!--    \caption{WINフォーマット1秒ブロックの構成} --&gt;
 &lt;!--    \centering --&gt;
 &lt;!--      \begin{tabular}{lllllll} --&gt;
-&lt;!--      \toprule             % --- booktabs: 上の罫線 --- --&gt;
+&lt;!--      \toprule
+&lt;!--  --- booktabs: 上の罫線 --- --&gt; --&gt;
 &lt;!--      BBBB&amp; --&gt;
 &lt;!--      bbbbbbbb&amp; --&gt;
 &lt;!--      BB&amp; --&gt;
 &lt;!--      b&amp;bB&amp; --&gt;
 &lt;!--      BBBB&amp; --&gt;
-&lt;!--      ...   --&gt;
+&lt;!--      ...\\ --&gt;
 &lt;!--      \midrule --&gt;
 &lt;!--      ファイルサイズ&amp; --&gt;
 &lt;!--      yymmddHHMMDD&amp; --&gt;
@@ -406,33 +368,36 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 &lt;!--      サンプルサイズ&amp; --&gt;
 &lt;!--      サンプリングレート&amp; --&gt;
 &lt;!--      1サンプル目&amp; --&gt;
-&lt;!--      ...   --&gt;
-&lt;!--      \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--      ...\\ --&gt;
+&lt;!--      \bottomrule
+&lt;!--  --- booktabs: 底の罫線 --- --&gt; --&gt;
 &lt;!--      \end{tabular} --&gt;
 &lt;!--  \end{table} --&gt;
 &lt;!--  \begin{table}[H] --&gt;
 &lt;!--    \caption{WINフォーマット1秒ブロックの構成} --&gt;
 &lt;!--    \centering --&gt;
 &lt;!--      \begin{tabular}{lcrrrrrrrc} --&gt;
-&lt;!--      \toprule             % --- booktabs: 上の罫線 --- --&gt;
+&lt;!--      \toprule
+&lt;!--  --- booktabs: 上の罫線 --- --&gt; --&gt;
 &lt;!--      ヘッダー &amp;  --&gt;
 &lt;!--      秒ヘッダー &amp;  --&gt;
 &lt;!--      \multicolumn{4}{l}{1チャネル}&amp; --&gt;
 &lt;!--      2チャネル&amp; --&gt;
-&lt;!--      ...   --&gt;
+&lt;!--      ...\\ --&gt;
 &lt;!--      \cmidrule(lr){3-6} --&gt;
 &lt;!--      &amp; --&gt;
 &lt;!--      &amp; --&gt;
 &lt;!--      チャネル番号 &amp; サンプルサイズ &amp; サンプリングレート (Hz) &amp; 振幅データ &amp; --&gt;
 &lt;!--      &amp; --&gt;
-&lt;!--      ...   --&gt;
+&lt;!--      ...\\ --&gt;
 &lt;!--      \midrule --&gt;
 &lt;!--      4&amp; --&gt;
 &lt;!--      4&amp; --&gt;
 &lt;!--      2 &amp; 0.5 &amp; 1.5 &amp; 可変&amp; --&gt;
 &lt;!--      &amp; --&gt;
-&lt;!--      ...   --&gt;
-&lt;!--      \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--      ...\\ --&gt;
+&lt;!--      \bottomrule
+&lt;!--  --- booktabs: 底の罫線 --- --&gt; --&gt;
 &lt;!--      \end{tabular} --&gt;
 &lt;!--  \end{table} --&gt;
 &lt;!--  \begin{table}[H] --&gt;
@@ -440,24 +405,23 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 &lt;!--    --&gt;
 &lt;!--   \centering --&gt;
 &lt;!--    \begin{tabular}{lcrrrrrrrc} --&gt;
-&lt;!--     \toprule             % --- booktabs: 上の罫線 --- --&gt;
-&lt;!--     物理量 &amp; 単位 &amp; \multicolumn{7}{l}{SI単位系の基本単位} &amp; 他の単位    --&gt;
-&lt;!--     \cmidrule(lr){3-9}   % --- booktabs: 3 から 9 列の罫線 --- --&gt;
-&lt;!--         &amp; 記号 &amp; m &amp; kg &amp; s &amp; A &amp; K &amp; mol &amp; cd    --&gt;
-&lt;!--     \midrule             % --- booktabs: 中間の罫線 --- --&gt;
-&lt;!--     力 &amp; N &amp; 1 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp;    --&gt;
-&lt;!--     エネルギー &amp; J &amp; 2 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp; N $\cdot$ 
-m    --&gt;
-&lt;!--     仕事率 &amp; W &amp; 2 &amp; 1 &amp; -3 &amp; &amp; &amp; &amp; &amp; J $\cdot$ 
-s $^{-1}$ 
-    --&gt;
-&lt;!--     \addlinespace[5mm]   % --- booktabs: 行間スペース --- --&gt;
-&lt;!--     電圧 &amp; V &amp; 2 &amp; 1 &amp; -3 &amp; -1 &amp; &amp; &amp; &amp; W $\cdot$ 
-A $^{-1}$ 
-    --&gt;
-&lt;!--     磁束 &amp; Wb &amp; 2 &amp; 1 &amp; -2 &amp; -1 &amp; &amp; &amp; &amp; V $\cdot$ 
-s    --&gt;
-&lt;!--     \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--     \toprule
+&lt;!--  --- booktabs: 上の罫線 --- --&gt; --&gt;
+&lt;!--     物理量 &amp; 単位 &amp; \multicolumn{7}{l}{SI単位系の基本単位} &amp; 他の単位 \\ --&gt;
+&lt;!--     \cmidrule(lr){3-9}
+&lt;!--  --- booktabs: 3 から 9 列の罫線 --- --&gt; --&gt;
+&lt;!--         &amp; 記号 &amp; m &amp; kg &amp; s &amp; A &amp; K &amp; mol &amp; cd \\ --&gt;
+&lt;!--     \midrule
+&lt;!--  --- booktabs: 中間の罫線 --- --&gt; --&gt;
+&lt;!--     力 &amp; N &amp; 1 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp; \\ --&gt;
+&lt;!--     エネルギー &amp; J &amp; 2 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp; N{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}m \\ --&gt;
+&lt;!--     仕事率 &amp; W &amp; 2 &amp; 1 &amp; -3 &amp; &amp; &amp; &amp; &amp; J{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}s{{\&lt; math &gt;}} $^{-1}$ {{\&lt; /math &gt;}} \\ --&gt;
+&lt;!--     \addlinespace[5mm]
+&lt;!--  --- booktabs: 行間スペース --- --&gt; --&gt;
+&lt;!--     電圧 &amp; V &amp; 2 &amp; 1 &amp; -3 &amp; -1 &amp; &amp; &amp; &amp; W{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}A{{\&lt; math &gt;}} $^{-1}$ {{\&lt; /math &gt;}} \\ --&gt;
+&lt;!--     磁束 &amp; Wb &amp; 2 &amp; 1 &amp; -2 &amp; -1 &amp; &amp; &amp; &amp; V{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}s \\ --&gt;
+&lt;!--     \bottomrule
+&lt;!--  --- booktabs: 底の罫線 --- --&gt; --&gt;
 &lt;!--    \end{tabular} --&gt;
 &lt;!--  \end{table} --&gt;
 </description>

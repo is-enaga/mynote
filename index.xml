@@ -297,8 +297,7 @@ qで終了する．&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ここから作業.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pvcreate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;vgcreate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hdddGroup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sda&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sdb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;...&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lvcreate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FREE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lv0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hddGroup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lvcreate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;FREE&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lv0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hddGroup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mkfs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xfs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hddGroup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lv0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mount&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;t&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;xfs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;hddGroup&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lv0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mount先&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -328,11 +327,10 @@ qで終了する．&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ストライプ化した論理ボリュームを作成する．
 -iはストライプ数で，まとめたいディスクの数にすればよい．
 -Iはストライプサイズ．適切な値はよくわからない．&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lvcreate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;VG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ディスク数&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lv&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lvcreate&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;l&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;VG&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ディスク数&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;64&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lv&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;最後に論理ボリュームにファイルシステムを作成する．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mkfs&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;xfs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;f&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;dev&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;lv&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;/&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;vg&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで/dev/&lt;lv name&gt;/&lt;vg name&gt;を通常のディスクのようにマウントできるようになる．&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで/dev/&amp;lt;lv name&amp;gt;/&amp;lt;vg name&amp;gt;を通常のディスクのようにマウントできるようになる．&lt;/p&gt;
 &lt;!-- ---------------------------------- --&gt;
 &lt;h3 id=&#34;lvmの認識&#34;&gt;LVMの認識&lt;/h3&gt;
 &lt;!-- ---------------------------------- --&gt;
@@ -368,7 +366,7 @@ Windowsでいうタスクマネージャーのような感じ．&lt;/p&gt;
 &lt;!-- ............................. --&gt;
 &lt;h4 id=&#34;出力の確認&#34;&gt;出力の確認&lt;/h4&gt;
 &lt;!-- ............................. --&gt;
-&lt;p&gt;出力は&lt;code&gt;/proc/&amp;lt;process ID&amp;gt;/fd/1&lt;/code&gt;に格納されている．
+&lt;p&gt;出力は&lt;code&gt;/proc/\&amp;lt;process ID&amp;gt;/fd/1&lt;/code&gt;に格納されている．
 したがって&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cat&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;proc&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;process&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ID&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;fd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;で確認可能．プロセスIDはpsなどで調べておく．
@@ -768,45 +766,6 @@ P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])�
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;震源決定時の仕様:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;S波速度Vsは, Vp/Vs=1.73として扱われる．&lt;/li&gt;
-&lt;li&gt;標高0kmより高い部分のVpは，0kmにおけるVpとする．&lt;/li&gt;
-&lt;li&gt;各層の上端のVpを与え，それらを線形で結んだ速度構造として扱う．&lt;/li&gt;
-&lt;li&gt;「層の数」の上限は20(層の厚さは21個まで, Vpの数は22個まで)．&lt;/li&gt;
-&lt;li&gt;初期震源の時刻の不確かさは入力が必要だが，使われない．&lt;/li&gt;
-&lt;li&gt;直接hypomhを使わずにwinで震源決定するときは，初期震源の緯度と経度は使われない（深さは使われるようだ）．&lt;/li&gt;
-&lt;/ul&gt;&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;ファイルの構成は以下の通り：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1行目: 初期震源の位置&lt;br&gt;
-緯度，経度，深さ[km]を各10文字区切りで．&lt;/li&gt;
-&lt;li&gt;2行目: 層の数と名前&lt;br&gt;
-層の数は5文字の整数．2文字のスペースをあけて，3文字の構造名を記す．&lt;/li&gt;
-&lt;li&gt;3行目: 層上端のVp&lt;br&gt;
-各10文字区切り．7つごとに改行する．&lt;/li&gt;
-&lt;li&gt;4行目: 各層の厚さ[km]&lt;br&gt;
-各10文字区切り．7つごとに改行する．&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/stan.png&#34;
-    alt=&#34;stanファイルの書式．&#34;&gt;&lt;figcaption&gt;
-      &lt;p&gt;stanファイルの書式．&lt;/p&gt;
-    &lt;/figcaption&gt;
-&lt;/figure&gt;
-
-ソースコードでは2行目の名前の後に続けて，
-書式「F10.3」の値を二つ読み取っているが，
-マニュアルに未記載で何なのかわからない．
-サンプルファイルには１つ目に「1」とあるが，2つ目は空白．
-要確認．&lt;/p&gt;
-&lt;!-- =================================== --&gt;
-&lt;h2 id=&#34;震源結果finalファイル&#34;&gt;震源結果(final)ファイル&lt;/h2&gt;
-&lt;!-- =================================== --&gt;
-&lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
   &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;参考：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html&lt;/a&gt;&lt;/li&gt;
@@ -858,13 +817,14 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 &lt;!--    \caption{WINフォーマット1秒ブロックの構成} --&gt;
 &lt;!--    \centering --&gt;
 &lt;!--      \begin{tabular}{lllllll} --&gt;
-&lt;!--      \toprule             % --- booktabs: 上の罫線 --- --&gt;
+&lt;!--      \toprule
+&lt;!--  --- booktabs: 上の罫線 --- --&gt; --&gt;
 &lt;!--      BBBB&amp; --&gt;
 &lt;!--      bbbbbbbb&amp; --&gt;
 &lt;!--      BB&amp; --&gt;
 &lt;!--      b&amp;bB&amp; --&gt;
 &lt;!--      BBBB&amp; --&gt;
-&lt;!--      ...   --&gt;
+&lt;!--      ...\\ --&gt;
 &lt;!--      \midrule --&gt;
 &lt;!--      ファイルサイズ&amp; --&gt;
 &lt;!--      yymmddHHMMDD&amp; --&gt;
@@ -872,33 +832,36 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 &lt;!--      サンプルサイズ&amp; --&gt;
 &lt;!--      サンプリングレート&amp; --&gt;
 &lt;!--      1サンプル目&amp; --&gt;
-&lt;!--      ...   --&gt;
-&lt;!--      \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--      ...\\ --&gt;
+&lt;!--      \bottomrule
+&lt;!--  --- booktabs: 底の罫線 --- --&gt; --&gt;
 &lt;!--      \end{tabular} --&gt;
 &lt;!--  \end{table} --&gt;
 &lt;!--  \begin{table}[H] --&gt;
 &lt;!--    \caption{WINフォーマット1秒ブロックの構成} --&gt;
 &lt;!--    \centering --&gt;
 &lt;!--      \begin{tabular}{lcrrrrrrrc} --&gt;
-&lt;!--      \toprule             % --- booktabs: 上の罫線 --- --&gt;
+&lt;!--      \toprule
+&lt;!--  --- booktabs: 上の罫線 --- --&gt; --&gt;
 &lt;!--      ヘッダー &amp;  --&gt;
 &lt;!--      秒ヘッダー &amp;  --&gt;
 &lt;!--      \multicolumn{4}{l}{1チャネル}&amp; --&gt;
 &lt;!--      2チャネル&amp; --&gt;
-&lt;!--      ...   --&gt;
+&lt;!--      ...\\ --&gt;
 &lt;!--      \cmidrule(lr){3-6} --&gt;
 &lt;!--      &amp; --&gt;
 &lt;!--      &amp; --&gt;
 &lt;!--      チャネル番号 &amp; サンプルサイズ &amp; サンプリングレート (Hz) &amp; 振幅データ &amp; --&gt;
 &lt;!--      &amp; --&gt;
-&lt;!--      ...   --&gt;
+&lt;!--      ...\\ --&gt;
 &lt;!--      \midrule --&gt;
 &lt;!--      4&amp; --&gt;
 &lt;!--      4&amp; --&gt;
 &lt;!--      2 &amp; 0.5 &amp; 1.5 &amp; 可変&amp; --&gt;
 &lt;!--      &amp; --&gt;
-&lt;!--      ...   --&gt;
-&lt;!--      \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--      ...\\ --&gt;
+&lt;!--      \bottomrule
+&lt;!--  --- booktabs: 底の罫線 --- --&gt; --&gt;
 &lt;!--      \end{tabular} --&gt;
 &lt;!--  \end{table} --&gt;
 &lt;!--  \begin{table}[H] --&gt;
@@ -906,24 +869,23 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 &lt;!--    --&gt;
 &lt;!--   \centering --&gt;
 &lt;!--    \begin{tabular}{lcrrrrrrrc} --&gt;
-&lt;!--     \toprule             % --- booktabs: 上の罫線 --- --&gt;
-&lt;!--     物理量 &amp; 単位 &amp; \multicolumn{7}{l}{SI単位系の基本単位} &amp; 他の単位    --&gt;
-&lt;!--     \cmidrule(lr){3-9}   % --- booktabs: 3 から 9 列の罫線 --- --&gt;
-&lt;!--         &amp; 記号 &amp; m &amp; kg &amp; s &amp; A &amp; K &amp; mol &amp; cd    --&gt;
-&lt;!--     \midrule             % --- booktabs: 中間の罫線 --- --&gt;
-&lt;!--     力 &amp; N &amp; 1 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp;    --&gt;
-&lt;!--     エネルギー &amp; J &amp; 2 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp; N $\cdot$ 
-m    --&gt;
-&lt;!--     仕事率 &amp; W &amp; 2 &amp; 1 &amp; -3 &amp; &amp; &amp; &amp; &amp; J $\cdot$ 
-s $^{-1}$ 
-    --&gt;
-&lt;!--     \addlinespace[5mm]   % --- booktabs: 行間スペース --- --&gt;
-&lt;!--     電圧 &amp; V &amp; 2 &amp; 1 &amp; -3 &amp; -1 &amp; &amp; &amp; &amp; W $\cdot$ 
-A $^{-1}$ 
-    --&gt;
-&lt;!--     磁束 &amp; Wb &amp; 2 &amp; 1 &amp; -2 &amp; -1 &amp; &amp; &amp; &amp; V $\cdot$ 
-s    --&gt;
-&lt;!--     \bottomrule          % --- booktabs: 底の罫線 --- --&gt;
+&lt;!--     \toprule
+&lt;!--  --- booktabs: 上の罫線 --- --&gt; --&gt;
+&lt;!--     物理量 &amp; 単位 &amp; \multicolumn{7}{l}{SI単位系の基本単位} &amp; 他の単位 \\ --&gt;
+&lt;!--     \cmidrule(lr){3-9}
+&lt;!--  --- booktabs: 3 から 9 列の罫線 --- --&gt; --&gt;
+&lt;!--         &amp; 記号 &amp; m &amp; kg &amp; s &amp; A &amp; K &amp; mol &amp; cd \\ --&gt;
+&lt;!--     \midrule
+&lt;!--  --- booktabs: 中間の罫線 --- --&gt; --&gt;
+&lt;!--     力 &amp; N &amp; 1 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp; \\ --&gt;
+&lt;!--     エネルギー &amp; J &amp; 2 &amp; 1 &amp; -2 &amp; &amp; &amp; &amp; &amp; N{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}m \\ --&gt;
+&lt;!--     仕事率 &amp; W &amp; 2 &amp; 1 &amp; -3 &amp; &amp; &amp; &amp; &amp; J{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}s{{\&lt; math &gt;}} $^{-1}$ {{\&lt; /math &gt;}} \\ --&gt;
+&lt;!--     \addlinespace[5mm]
+&lt;!--  --- booktabs: 行間スペース --- --&gt; --&gt;
+&lt;!--     電圧 &amp; V &amp; 2 &amp; 1 &amp; -3 &amp; -1 &amp; &amp; &amp; &amp; W{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}A{{\&lt; math &gt;}} $^{-1}$ {{\&lt; /math &gt;}} \\ --&gt;
+&lt;!--     磁束 &amp; Wb &amp; 2 &amp; 1 &amp; -2 &amp; -1 &amp; &amp; &amp; &amp; V{{\&lt; math &gt;}} $\cdot$ {{\&lt; /math &gt;}}s \\ --&gt;
+&lt;!--     \bottomrule
+&lt;!--  --- booktabs: 底の罫線 --- --&gt; --&gt;
 &lt;!--    \end{tabular} --&gt;
 &lt;!--  \end{table} --&gt;
 </description>
@@ -1048,7 +1010,7 @@ inode番号が共通である．&lt;/p&gt;
 曜日は0-7 (日，月，&amp;hellip;, 日) の数値か，sun - satの3文字の小文字で指定する．
 毎週金曜日の17時に実行したい場合は次のようになる．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;17&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;command&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;この&lt;command&gt;の部分にバックアップ用のシェルを与えれば，
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;この&amp;lt;command&amp;gt;の部分にバックアップ用のシェルを与えれば，
 定期的にバックアップを行うことができる．&lt;/p&gt;
 &lt;!-- ######################################### --&gt;
 </description>
@@ -1076,13 +1038,11 @@ inode番号が共通である．&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;のようにサイズに負の値を指定すると，その方向の軸を反転させられる．&lt;/p&gt;
 &lt;h3 id=&#34;メルカトル図法&#34;&gt;メルカトル図法&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;M&amp;lt;size&amp;gt;&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;regionの緯度は $\pm 90^\circ$ 
-を含んではいけない．&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;regionの緯度は{{&amp;lt; math &amp;gt;}} $\pm 90^\circ$ {{&amp;lt; /math &amp;gt;}}を含んではいけない．&lt;/p&gt;
 &lt;h3 id=&#34;アルベルス正積円錐図法&#34;&gt;アルベルス正積円錐図法&lt;/h3&gt;
 &lt;p&gt;中緯度で東西に広がる地域に適する．米国，欧州，オーストラリア等．米国地質調査所がよく使用するらしい．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;B&amp;lt;lon0&amp;gt;/&amp;lt;lat0&amp;gt;/&amp;lt;lat1&amp;gt;/&amp;lt;lat2&amp;gt;/&amp;lt;size&amp;gt;&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;国土地理院の「全国都道府県市区町村別面積調」に用いられているらしい．中央経線&amp;quot;E&amp;quot; 135°，原点緯度&amp;quot;N&amp;quot; 35°，標準緯線&amp;quot;N&amp;quot; 33°,&amp;ldquo;N&amp;rdquo; 44°としている（[https://ja.wikipedia.org/wiki/&lt;/p&gt;
-&lt;!-- E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95)）． --&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;国土地理院の「全国都道府県市区町村別面積調」に用いられているらしい．中央経線&amp;quot;E&amp;quot; 135°，原点緯度&amp;quot;N&amp;quot; 35°，標準緯線&amp;quot;N&amp;quot; 33°,&amp;ldquo;N&amp;rdquo; 44°としている（&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95&lt;/a&gt;）．&lt;/p&gt;
 &lt;h3 id=&#34;任意の図法で矩形地図&#34;&gt;任意の図法で矩形地図&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://docs.generic-mapping-tools.org/latest/cookbook/map-projections.html#rectangular-map&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.generic-mapping-tools.org/latest/cookbook/map-projections.html#rectangular-map&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;矩形でない図法でも矩形地図にできる．
@@ -1467,11 +1427,10 @@ latex is not installed or not in your executable path - cannot process LaTeX to 
 &lt;!--  要調査． --&gt;
 &lt;h3 id=&#34;ギリシャ文字&#34;&gt;ギリシャ文字&lt;/h3&gt;
 &lt;p&gt;数式に使われるギリシャ文字は，フォントの種類を指定することで利用できる．&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;@&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@%%&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;@%&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;12&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@%%&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;または&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;@~&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;@~&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;文字番号12がギリシャ文字のフォントであるため，これを用いるとギリシャ文字を入力できる．ギリシャ文字は対応するアルファベットで指定する．例えば「$\tau」$なら「t」と入力する．&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;文字番号12がギリシャ文字のフォントであるため，これを用いるとギリシャ文字を入力できる．ギリシャ文字は対応するアルファベットで指定する．例えば「{{&amp;lt; math &amp;gt;}} $\tau」$ {{&amp;lt; /math &amp;gt;}}なら「t」と入力する．&lt;/p&gt;
 &lt;h3 id=&#34;度&#34;&gt;「度（°）」&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;@.&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;普通に「°」と入力しようとしても文字化けしてうまくいかない．しかし「@.」と入力すると「°」を入力することができる．ラベルでも軸でもどこでも使える．&lt;/p&gt;
@@ -1480,9 +1439,8 @@ latex is not installed or not in your executable path - cannot process LaTeX to 
 &lt;!--  詳しくは参考サイトの20章． --&gt;
 &lt;p&gt;数学記号の入力もこれでとりあえずは可能．文字によってはもっと楽な方法もあるだろうが．&lt;/p&gt;
 &lt;!--  出典）[https://docs.generic-mapping-tools.org/6.4/cookbook/octal-codes.html](https://docs.generic-mapping-tools.org/6.4/cookbook/octal-codes.html) --&gt;
-&lt;p&gt;Symbolは@~で挟む．ZapfDingbatsは@\&lt;/p&gt;
-&lt;!-- 34\%&lt;code&gt;@\%\%で入力．ただし，pythonではバックスラッシュが特殊文字扱いなので，連続で入力してバックスラッシュを認識させるか，文字列の最初に「r」を付け加えて特殊文字を無効にする必要がある： --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;@~  &amp;lt;code&amp;gt;@~&amp;#34;&lt;/span&gt;
+&lt;p&gt;Symbolは@~で挟む．ZapfDingbatsは@%34%&amp;lt;code&amp;gt;@%%で入力．ただし，pythonではバックスラッシュが特殊文字扱いなので，連続で入力してバックスラッシュを認識させるか，文字列の最初に「r」を付け加えて特殊文字を無効にする必要がある：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;@~&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\\&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;lt;code&amp;gt;@~&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;または&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;sa&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;@~\&amp;lt;code&amp;gt;@~&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/octalcode.png&#34;
@@ -1494,7 +1452,7 @@ latex is not installed or not in your executable path - cannot process LaTeX to 
 &lt;!--  ============================================================================ --&gt;
 &lt;h2 id=&#34;色の指定&#34;&gt;色の指定&lt;/h2&gt;
 &lt;p&gt;典型的な色は&amp;rsquo;red&amp;rsquo;のように文字列で指定できる．
-また，&amp;rsquo;#&lt;rrggbb&gt;&amp;lsquo;の形でRGBの16進数表記で自由に色を指定可能．&lt;/p&gt;
+また，&amp;rsquo;#&amp;lt;rrggbb&amp;gt;&amp;lsquo;の形でRGBの16進数表記で自由に色を指定可能．&lt;/p&gt;
 &lt;h3 id=&#34;透明度&#34;&gt;透明度&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# plot等の引数penやfillでのカラー指定において&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;color&amp;gt;@&amp;lt;透明度0-100&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 0:透明，100:不透明&lt;/span&gt;
@@ -1549,9 +1507,9 @@ transparencyはcmapを使う場合や，描画対象全体を透過させる場�
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;push&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;origin&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;master&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;git initでリポジトリを作成する．
 git add .はすべてのファイルをステージングする．
-git commit -m &amp;ldquo;&lt;message&gt;&amp;ldquo;でコミットする．
+git commit -m &amp;ldquo;&amp;lt;message&amp;gt;&amp;ldquo;でコミットする．
 git branch -M mainでブランチをmainに変更する．
-git remote add origin &lt;URL&gt;でリモートリポジトリを追加する．
+git remote add origin &amp;lt;URL&amp;gt;でリモートリポジトリを追加する．
 git push -u origin masterでリモートリポジトリにプッシュする．&lt;/p&gt;
 &lt;p&gt;GitHubを使わずローカルでのみ管理する場合は，
 commitまでで十分である．&lt;/p&gt;
@@ -1699,13 +1657,13 @@ styleにE（必ず大文字）を指定し，その後に長軸の方位角，�
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;pre&gt;&lt;code&gt;参照: [https://docs.generic-mapping-tools.org/6.1/psxy.html](https://docs.generic-mapping-tools.org/6.1/psxy.html)
-&lt;p&gt;-Se&lt;br&gt;
-ellipse. Direction (in degrees counter-clockwise from horizontal), major_axis, and minor_axis must be found in columns 3, 4, and 5. This yields a Cartesian ellipse whose shape is unaffected by the map projection.&lt;/p&gt;
-&lt;p&gt;-SE&lt;br&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;参照: &lt;a href=&#34;https://docs.generic-mapping-tools.org/6.1/psxy.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.generic-mapping-tools.org/6.1/psxy.html&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;-Se  
+ellipse. Direction (in degrees counter-clockwise from horizontal), major\_axis, and minor\_axis must be found in columns 3, 4, and 5. This yields a Cartesian ellipse whose shape is unaffected by the map projection.
+\\  
+-SE  
 Same as -Se, except azimuth (in degrees east of north) should be given instead of direction. The azimuth will be mapped into an angle based on the chosen map projection (-Se leaves the directions unchanged.) Furthermore, the axes lengths must be given in geographical instead of plot-distance units. An exception occurs for a linear projection in which we assume the ellipse axes are given in the same units as -R. For degenerate ellipses (circles) with just the diameter given, use -SE-. The diameter is excepted to be given in column 3. Alternatively, append the desired diameter to -SE- and this fixed diameter is used instead. For allowable geographical units, see Units [Default is k for km]. The shape of the ellipse will be affected by the properties of the map projection.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/span&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;!--  ############################################################################### --&gt;
 </description>
@@ -1903,7 +1861,7 @@ Same as -Se, except azimuth (in degrees east of north) should be given instead o
 &lt;/div&gt;
 &lt;p&gt;私鉄の線路のような「キ」の字スタイルについては，図形を示す記号はいらない．他の場合はcなど図形の種類を+で指定する．&lt;/p&gt;
 &lt;p&gt;「f」は&amp;quot;line \underbar{f}ronts&amp;quot;の意味だと思われる．&lt;/p&gt;
-&lt;p&gt;要するに最低「f&amp;lt;間隔&amp;gt;/&lt;size&gt;+l+t」とすれば寒冷前線や沈み込み帯が描ける．
+&lt;p&gt;要するに最低「f&amp;lt;間隔&amp;gt;/&amp;lt;size&amp;gt;+l+t」とすれば寒冷前線や沈み込み帯が描ける．
 +tがtriangleを表す．&lt;/p&gt;
 &lt;p&gt;図形の位置が気に入らない場合（曲線の角に図形が入ってしまう場合など）は，+oで図形の位置を曲線に沿ってずらすことができる．
 &lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/linefronts.png&#34;
@@ -2136,12 +2094,10 @@ gfortでコンパイルできないものもifortではコンパイルできる�
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;参照:&lt;br&gt;
-[https://qiita.com/implicit_none/items/35bc4be8f2022903747a#apt&lt;/p&gt;
-&lt;!-- E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB](https://qiita.com/implicit_none/items/35bc4be8f2022903747a#apt%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)   --&gt;
-&lt;p&gt;公式:&lt;br&gt;
-&lt;a href=&#34;https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=linux&amp;amp;distributions=aptpackagemanager&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=linux&amp;amp;distributions=aptpackagemanager&lt;/a&gt;&lt;/p&gt;
-&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;参照:&lt;br&gt;
+&lt;a href=&#34;https://qiita.com/implicit_none/items/35bc4be8f2022903747a#apt%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://qiita.com/implicit_none/items/35bc4be8f2022903747a#apt%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&lt;/a&gt;&lt;br&gt;
+公式:&lt;br&gt;
+&lt;a href=&#34;https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=linux&amp;amp;distributions=aptpackagemanager&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.intel.com/content/www/us/en/developer/tools/oneapi/base-toolkit-download.html?operatingsystem=linux&amp;amp;distributions=aptpackagemanager&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;p&gt;Intelのリポジトリの公開鍵を取得する．
 さらにその鍵で署名されているアーカイブが信頼されるよう，鍵をAPTのキーリングに追加．&lt;/p&gt;
@@ -2273,10 +2229,9 @@ region=[xs,xe,ys,ye]であるが，spacingをregionの幅xe-xs, ye-ysを整数�
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;pre&gt;&lt;code&gt;annotationのオプション（抜粋:  
-アノテーションの文字の向きなどの設定を行う．  
-(参考:GMT公式マニュアル [https://docs.generic-mapping-tools.org/dev/grdcontour.html](https://docs.generic-mapping-tools.org/dev/grdcontour.html))
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;annotationのオプション（抜粋）:&lt;br&gt;
+アノテーションの文字の向きなどの設定を行う．&lt;br&gt;
+(参考:GMT公式マニュアル &lt;a href=&#34;https://docs.generic-mapping-tools.org/dev/grdcontour.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.generic-mapping-tools.org/dev/grdcontour.html&lt;/a&gt;)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;+f:
 アノテーションのフォント設定を行う．&lt;br&gt;
@@ -2299,18 +2254,16 @@ region=[xs,xe,ys,ye]であるが，spacingをregionの幅xe-xs, ye-ysを整数�
 しかしよほどなめらかな等値線でないとうまくいかないように感じる．&lt;/li&gt;
 &lt;li&gt;+i:
 ラインを非表示 (invisible) にし，アノテーションだけを描画する．&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/span&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;div class=&#34;flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;pre&gt;&lt;code&gt;label\_placementのオプション (抜粋):  
-等値線に対するアノテーションラベルの位置や数を指定する．  
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;label_placementのオプション (抜粋):&lt;br&gt;
+等値線に対するアノテーションラベルの位置や数を指定する．&lt;br&gt;
 （参考: GMT公式マニュアル
-[https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html](https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html)）
-&lt;/code&gt;&lt;/pre&gt;
+&lt;a href=&#34;https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.generic-mapping-tools.org/6.0/cookbook/contour_annotations.html&lt;/a&gt;）&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;d:
 「d&amp;lt;間隔&amp;gt;」で等値線に沿った間隔を指定することでアノテーションの位置を調整する．&lt;br&gt;
@@ -2322,7 +2275,7 @@ dオプションとほぼ同じだが，単位に紙面上の単位ではなく�
 「f&amp;lt;ファイル名&amp;gt;」の形で与えたファイルに従ってアノテーションを配置する．&lt;br&gt;
 ファイルはテキストファイルで，１列目と2列目にアノテーションを配置する座標を与える．
 実際の等値線がこのファイル名の座標を通る場合にのみアノテーションが配置される．
-厳密に等値線が通る座標を指定することは困難な場合が多いであろうから，「f&amp;lt;ファイル名&amp;gt;/&lt;slop&gt;」とスラッシュで区切ってslopに許容誤差を与えることができる．単位はc,i,pから選択可．&lt;/li&gt;
+厳密に等値線が通る座標を指定することは困難な場合が多いであろうから，「f&amp;lt;ファイル名&amp;gt;/&amp;lt;slop&amp;gt;」とスラッシュで区切ってslopに許容誤差を与えることができる．単位はc,i,pから選択可．&lt;/li&gt;
 &lt;li&gt;l:
 「l&amp;lt;始点x&amp;gt;/&amp;lt;始点y&amp;gt;/&amp;lt;終点x&amp;gt;/&amp;lt;終点y&amp;gt;」と記すことで，始点と終点を結ぶ紙面上の線分と等値線が交わる位置にアノテーションを配置する．&lt;br&gt;
 文字列内で「,」で区切ることで複数の線分を与えることもできる．&lt;/li&gt;
@@ -2334,8 +2287,7 @@ lオプションとほぼ同じだが，線分を大円経路で考える．&lt;
 「n&amp;lt;アノテーション数&amp;gt;/&amp;lt;最少間隔&amp;gt;」とすればアノテーションが詰まりすぎないように最少間隔もc,i,pのいずれかの単位で指定できる．&lt;/li&gt;
 &lt;li&gt;N:
 nオプションとほぼ同じだが，アノテーションが等分された等値線の各区間の終点に配置される．&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/span&gt;
+&lt;/ul&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;p&gt;levelsやlimitをプロットするデータの値域やregionの領域に合わせないと，&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;grdcontour&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WARNING&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;No&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;contours&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;within&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;specified&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;L&lt;/span&gt;
@@ -2344,17 +2296,15 @@ nオプションとほぼ同じだが，アノテーションが等分された�
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;pre&gt;&lt;code&gt;（参照）  
-[https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py](https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;（参照）&lt;br&gt;
+&lt;a href=&#34;https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.pygmt.org/latest/tutorials/advanced/contour_map.html#sphx-glr-tutorials-advanced-contour-map-py&lt;/a&gt;&lt;/span&gt;
 &lt;/div&gt;
 &lt;!--  #### 等値線アノテーションのサイズ --&gt;
 &lt;!--  ```python --&gt;
 &lt;!--      annotation = &#39;&lt;アノテーションを入れる等値線間隔&gt;+f&lt;fontsize&gt;&#39; --&gt;
 &lt;!--   ``` --&gt;
-&lt;!--  デフォルトだとアノテーションの文字サイズが気に入らないことがある．annotation=&lt;間隔&gt;とするのではなく， --&gt;
-&lt;!--  クォーテーションで囲んで「annotation=&#39;&lt;間隔&gt;+f&lt;size&gt;&#39;」とすれば良い． --&gt;
+&lt;!--  デフォルトだとアノテーションの文字サイズが気に入らないことがある．annotation=\&lt;間隔&gt;とするのではなく， --&gt;
+&lt;!--  クォーテーションで囲んで「annotation=&#39;\&lt;間隔&gt;+f\&lt;size&gt;&#39;」とすれば良い． --&gt;
 &lt;p&gt;例）等深線プロット．アノテーションラベルのフォントサイズや向きなどを指定している．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pygmt&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;prj&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;M5c&amp;#39;&lt;/span&gt;
@@ -2783,15 +2733,15 @@ qは&amp;quot;\underline{q}uoted line&amp;quot;の頭文字のようだ．
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;DeviceID&lt;/span&gt;           &lt;span class=&#34;n&#34;&gt;Caption&lt;/span&gt;                     &lt;span class=&#34;n&#34;&gt;Partitions&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Size&lt;/span&gt;          &lt;span class=&#34;n&#34;&gt;Model&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;--------&lt;/span&gt;           &lt;span class=&#34;o&#34;&gt;-------&lt;/span&gt;                     &lt;span class=&#34;o&#34;&gt;----------&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;----&lt;/span&gt;          &lt;span class=&#34;o&#34;&gt;-----&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HDPH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;USB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Device&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;          &lt;span class=&#34;mi&#34;&gt;5000978465280&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HDPH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;USB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Device&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SAMSUNG&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MZVL2512HCJQ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B07&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;          &lt;span class=&#34;mi&#34;&gt;512105932800&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;SAMSUNG&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MZVL2512HCJQ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B07&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;\\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HDPH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;USB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Device&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;          &lt;span class=&#34;mi&#34;&gt;5000978465280&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;O&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;DATA&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;HDPH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UT&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;USB&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Device&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;\\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE0&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;SAMSUNG&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MZVL2512HCJQ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B07&lt;/span&gt;  &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;          &lt;span class=&#34;mi&#34;&gt;512105932800&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;SAMSUNG&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MZVL2512HCJQ&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;00&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B07&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ここにあるマウントしたいHDD等のDeviceID（一番左に書いてあるもの）を以降のコマンドで使う．
 SizeやModelをもとに目的のストレージを特定するとよい．&lt;/p&gt;
 &lt;!-- ............................. --&gt;
 &lt;h4 id=&#34;マウント&#34;&gt;マウント&lt;/h4&gt;
 &lt;!-- ............................. --&gt;
 &lt;p&gt;前の節で得たデバイスIDを使って，PowerShell上で次のようにする（IDは適宜書き換え）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mount&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bare&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mount&lt;/span&gt; \\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;bare&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;続いてWSL(Ubuntu)のターミナルを開く．
 そこで&lt;code&gt;lsblk&lt;/code&gt;を実行すると，それまではなかった新たにマウントされたデバイスが確認できる．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;lsblk&lt;/span&gt;
@@ -2814,7 +2764,7 @@ sdc2が目的のHDDだとわかったので，次のコマンドでマウント�
 エクスプローラーからはそのストレージにアクセスできないらしい（表示されなくなる）．
 そのため再度エクスプローラーで使う際はPowerShell上でアンマウントする必要があるようだ．
 ここでもマウント時に用いたデバイスIDを使用する：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unmount&lt;/span&gt;   &lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;wsl&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exe&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;unmount&lt;/span&gt; \\&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;\&lt;span class=&#34;n&#34;&gt;PHYSICALDRIVE1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;出力:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;この操作を正しく終了しました&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;。&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;これで再びエクスプローラー上にHDDが表示される．&lt;/p&gt;
@@ -2878,7 +2828,7 @@ wslの起動が4秒台に短縮された．&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;　dataに（x,y,z）の値を入れたnumpyのndarrayを与えると失敗した
 他のプロセスがパッケージを使ってるというエラーが出たり，カーネルが再起動したり．明確な原因はわからなかった．
-そこでdataにはndarrayをnp.savetxt(&lt;outfilename&gt;, &lt;ndarary&gt;, delimiter=’/t’)でtxtに出力したファイルを与えるとうまく動いた．
+そこでdataにはndarrayをnp.savetxt(&amp;lt;outfilename&amp;gt;, &amp;lt;ndarary&amp;gt;, delimiter=’/t’)でtxtに出力したファイルを与えるとうまく動いた．
 しかしデータが大きいとsaveやprojectでいちいち結構な時間がかかる．
 outfileを指定しなければ変数にpandasのdataframeを格納できる．
 outfileを指定するとファイルが出力される代わりに何も返ってこない．&lt;/p&gt;
@@ -2891,7 +2841,7 @@ outfileを指定するとファイルが出力される代わりに何も返っ�
       <link>https://is-enaga.github.io/mynote/docs/pygmt/sec009/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://is-enaga.github.io/mynote/docs/pygmt/sec009/</guid>
-      <description>&lt;p&gt;&lt;code&gt;pygmt.Figure.basemap(frame=&amp;lt;&amp;gt;)&lt;/code&gt;などで枠や軸を作ることができる．
+      <description>&lt;p&gt;&lt;code&gt;pygmt.Figure.basemap(frame=\&amp;lt;&amp;gt;)&lt;/code&gt;などで枠や軸を作ることができる．
 frameはfig.plot()で指定しても良い．&lt;/p&gt;
 &lt;h2 id=&#34;軸目盛りグリッドの追加&#34;&gt;軸目盛り，グリッドの追加&lt;/h2&gt;
 &lt;h3 id=&#34;基本&#34;&gt;基本&lt;/h3&gt;
@@ -2939,7 +2889,8 @@ frameはfig.plot()で指定しても良い．&lt;/p&gt;
 &lt;p&gt;なので主目盛りのみにアノテーションを付す場合は，
 警告メッセージが大量に出るがあえて逆に指定する方が図*※相互参照無効*のように目盛り線の長さは自然になる．&lt;/p&gt;
 &lt;p&gt;あるいは目盛り線の長さを明示的に指定して調整することもできる (cf. 第*※相互参照無効*節)．&lt;/p&gt;
-&lt;!--  % =================================================================== --&gt;
+&lt;!--
+&lt;!--  =================================================================== --&gt; --&gt;
 &lt;h2 id=&#34;アノテーションの調整&#34;&gt;アノテーションの調整&lt;/h2&gt;
 &lt;h3 id=&#34;緯度経度の書式&#34;&gt;緯度経度の書式&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pygmt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;config&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
@@ -3087,9 +3038,9 @@ frameはfig.plot()で指定しても良い．&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;projection&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;X&amp;lt;x-size&amp;gt;l/&amp;lt;y-size&amp;gt;l&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;projectionで直交座標を指定したうえで，自然対数にしたい軸のサイズの後に「l」をつければよい．&lt;/p&gt;
 &lt;p&gt;アノテーションやグリッドの幅はデフォルトだと自動で決まるが，指定する方法がやや独特であまり理解できていない．
-frameでアノテーションなどの間隔を指定するときに，数字の後に「p」をつけると指数表記（$10^n$）になる．
-そして幅の値を負にするとその指数の間隔（-nとすると$10^n$倍間隔）にできるっぽい．
-正の値は1だと10倍間隔，2だとよくわからない，3だと10.1, 10.2,…のように10等分間隔に指定できる$\cdots\cdots$のか？&lt;/p&gt;
+frameでアノテーションなどの間隔を指定するときに，数字の後に「p」をつけると指数表記（{{&amp;lt; math &amp;gt;}} $10^n$ {{&amp;lt; /math &amp;gt;}}）になる．
+そして幅の値を負にするとその指数の間隔（-nとすると{{&amp;lt; math &amp;gt;}} $10^n$ {{&amp;lt; /math &amp;gt;}}倍間隔）にできるっぽい．
+正の値は1だと10倍間隔，2だとよくわからない，3だと10.1, 10.2,…のように10等分間隔に指定できる{{&amp;lt; math &amp;gt;}} $\cdots\cdots$ {{&amp;lt; /math &amp;gt;}}のか？&lt;/p&gt;
 &lt;p&gt;例）出力：図*※相互参照無効*&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;numpy&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;as&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;np&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;pygmt&lt;/span&gt;
@@ -3113,8 +3064,8 @@ frameでアノテーションなどの間隔を指定するときに，数字の
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;&lt;img src=&#34;https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/log.png&#34;
-    alt=&#34;$\sqrt{x}$の両対数軸プロット．&#34;&gt;&lt;figcaption&gt;
-      &lt;p&gt;$\sqrt{x}$の両対数軸プロット．&lt;/p&gt;
+    alt=&#34;{{&amp;amp;lt; math &amp;amp;gt;}} $\sqrt{x}$ {{&amp;amp;lt; /math &amp;amp;gt;}}の両対数軸プロット．&#34;&gt;&lt;figcaption&gt;
+      &lt;p&gt;{{&amp;lt; math &amp;gt;}} $\sqrt{x}$ {{&amp;lt; /math &amp;gt;}}の両対数軸プロット．&lt;/p&gt;
     &lt;/figcaption&gt;
 &lt;/figure&gt;
 
@@ -3366,8 +3317,7 @@ position=で場所や方向を指定する．
 &lt;span class=&#34;pr-3 pt-1 text-primary-400&#34;&gt;
   &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
 &lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;pre&gt;&lt;code&gt;frame引数でのオプション：
-&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&lt;p&gt;frame引数でのオプション：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;+l: label.&lt;/p&gt;
@@ -3424,8 +3374,8 @@ position=で場所や方向を指定する．
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;sizeが変数の点の凡例自動&#34;&gt;sizeが変数の点の凡例（自動）&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;label&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;&amp;lt;name&amp;gt;+S&amp;lt;size&amp;gt;&amp;#39;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;plot()のlabel=を用いて自動的に凡例を作る場合，
-plot()の中でsize=が変数で与えられていると単純にlabel=&lt;name&gt;とするだけでは凡例は作成できない．
-+S&lt;size&gt;でサイズを指定することで凡例が作成できるようになる：&lt;/p&gt;
+plot()の中でsize=が変数で与えられていると単純にlabel=&amp;lt;name&amp;gt;とするだけでは凡例は作成できない．
++S&amp;lt;size&amp;gt;でサイズを指定することで凡例が作成できるようになる：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;imag&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;minmag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;maxmag&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;c1&#34;&gt;# print(imag)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;sz&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.05&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.01&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imag&lt;/span&gt;
@@ -3528,7 +3478,8 @@ plot()の中でsize=が変数で与えられていると単純にlabel=&lt;name&
 &lt;/ul&gt;
 &lt;/span&gt;
 &lt;/div&gt;
-&lt;!-- %---------------------------------- --&gt;
+&lt;!--
+&lt;!-- ---------------------------------- --&gt; --&gt;
 &lt;h3 id=&#34;点からの距離によるデータ分類&#34;&gt;点からの距離によるデータ分類&lt;/h3&gt;
 &lt;!-- ---------------------------------- --&gt;
 &lt;p&gt;ある点からの一定距離(degree)内にある点を抽出する．&lt;/p&gt;

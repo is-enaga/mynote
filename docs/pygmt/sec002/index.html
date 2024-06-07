@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -320,140 +320,6 @@
 
 
 
-
-  
-  
-  <link type="text/css" rel="stylesheet" href="/mynote/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
-  
-  
-  <script defer src="/mynote/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
-  
-  
-  
-  
-  <script defer src="/mynote/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
 
 
@@ -1502,13 +1368,11 @@
 </span></span></code></pre></div><p>のようにサイズに負の値を指定すると，その方向の軸を反転させられる．</p>
 <h3 id="メルカトル図法">メルカトル図法</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s1">&#39;M&lt;size&gt;&#39;</span>
-</span></span></code></pre></div><p>regionの緯度は $\pm 90^\circ$ 
-を含んではいけない．</p>
+</span></span></code></pre></div><p>regionの緯度は{{&lt; math &gt;}} $\pm 90^\circ$ {{&lt; /math &gt;}}を含んではいけない．</p>
 <h3 id="アルベルス正積円錐図法">アルベルス正積円錐図法</h3>
 <p>中緯度で東西に広がる地域に適する．米国，欧州，オーストラリア等．米国地質調査所がよく使用するらしい．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s1">&#39;B&lt;lon0&gt;/&lt;lat0&gt;/&lt;lat1&gt;/&lt;lat2&gt;/&lt;size&gt;&#39;</span>
-</span></span></code></pre></div><p>国土地理院の「全国都道府県市区町村別面積調」に用いられているらしい．中央経線&quot;E&quot; 135°，原点緯度&quot;N&quot; 35°，標準緯線&quot;N&quot; 33°,&ldquo;N&rdquo; 44°としている（[https://ja.wikipedia.org/wiki/</p>
-<!-- E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95)）． -->
+</span></span></code></pre></div><p>国土地理院の「全国都道府県市区町村別面積調」に用いられているらしい．中央経線&quot;E&quot; 135°，原点緯度&quot;N&quot; 35°，標準緯線&quot;N&quot; 33°,&ldquo;N&rdquo; 44°としている（<a href="https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95" target="_blank" rel="noopener">https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%AB%E3%82%B9%E6%AD%A3%E7%A9%8D%E5%86%86%E9%8C%90%E5%9B%B3%E6%B3%95</a>）．</p>
 <h3 id="任意の図法で矩形地図">任意の図法で矩形地図</h3>
 <p><a href="https://docs.generic-mapping-tools.org/latest/cookbook/map-projections.html#rectangular-map" target="_blank" rel="noopener">https://docs.generic-mapping-tools.org/latest/cookbook/map-projections.html#rectangular-map</a></p>
 <p>矩形でない図法でも矩形地図にできる．

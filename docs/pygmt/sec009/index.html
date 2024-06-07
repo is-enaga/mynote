@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="pygmt.Figure.basemap(frame=&lt" />
+  <meta name="description" content="pygmt.Figure.basemap(frame=\&l" />
 
   
   <link rel="alternate" hreflang="ja" href="https://is-enaga.github.io/mynote/docs/pygmt/sec009/" />
@@ -227,7 +227,7 @@
   <meta property="og:site_name" content="K-Notes" />
   <meta property="og:url" content="https://is-enaga.github.io/mynote/docs/pygmt/sec009/" />
   <meta property="og:title" content="第9章　軸・枠回り | K-Notes" />
-  <meta property="og:description" content="pygmt.Figure.basemap(frame=&lt" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="pygmt.Figure.basemap(frame=\&l" /><meta property="og:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://is-enaga.github.io/mynote/media/icon_hu77f5ff57258830e6286a001a8437cebf_35124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="ja" />
   
     
@@ -1393,7 +1393,7 @@
 
       <div class="content text-base">
         <h1>第9章　軸・枠回り</h1>
-        <p><code>pygmt.Figure.basemap(frame=&lt;&gt;)</code>などで枠や軸を作ることができる．
+        <p><code>pygmt.Figure.basemap(frame=\&lt;&gt;)</code>などで枠や軸を作ることができる．
 frameはfig.plot()で指定しても良い．</p>
 <h2 id="軸目盛りグリッドの追加">軸目盛り，グリッドの追加</h2>
 <h3 id="基本">基本</h3>
@@ -1441,7 +1441,8 @@ frameはfig.plot()で指定しても良い．</p>
 <p>なので主目盛りのみにアノテーションを付す場合は，
 警告メッセージが大量に出るがあえて逆に指定する方が図*※相互参照無効*のように目盛り線の長さは自然になる．</p>
 <p>あるいは目盛り線の長さを明示的に指定して調整することもできる (cf. 第*※相互参照無効*節)．</p>
-<!--  % =================================================================== -->
+<!--
+<!--  =================================================================== --> -->
 <h2 id="アノテーションの調整">アノテーションの調整</h2>
 <h3 id="緯度経度の書式">緯度経度の書式</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">with</span> <span class="n">pygmt</span><span class="o">.</span><span class="n">config</span><span class="p">(</span>
@@ -1589,9 +1590,9 @@ frameはfig.plot()で指定しても良い．</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;X&lt;x-size&gt;l/&lt;y-size&gt;l&#39;</span>
 </span></span></code></pre></div><p>projectionで直交座標を指定したうえで，自然対数にしたい軸のサイズの後に「l」をつければよい．</p>
 <p>アノテーションやグリッドの幅はデフォルトだと自動で決まるが，指定する方法がやや独特であまり理解できていない．
-frameでアノテーションなどの間隔を指定するときに，数字の後に「p」をつけると指数表記（$10^n$）になる．
-そして幅の値を負にするとその指数の間隔（-nとすると$10^n$倍間隔）にできるっぽい．
-正の値は1だと10倍間隔，2だとよくわからない，3だと10.1, 10.2,…のように10等分間隔に指定できる$\cdots\cdots$のか？</p>
+frameでアノテーションなどの間隔を指定するときに，数字の後に「p」をつけると指数表記（{{&lt; math &gt;}} $10^n$ {{&lt; /math &gt;}}）になる．
+そして幅の値を負にするとその指数の間隔（-nとすると{{&lt; math &gt;}} $10^n$ {{&lt; /math &gt;}}倍間隔）にできるっぽい．
+正の値は1だと10倍間隔，2だとよくわからない，3だと10.1, 10.2,…のように10等分間隔に指定できる{{&lt; math &gt;}} $\cdots\cdots$ {{&lt; /math &gt;}}のか？</p>
 <p>例）出力：図*※相互参照無効*</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pygmt</span>
@@ -1615,8 +1616,8 @@ frameでアノテーションなどの間隔を指定するときに，数字の
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/log.png"
-    alt="$\sqrt{x}$の両対数軸プロット．"><figcaption>
-      <p>$\sqrt{x}$の両対数軸プロット．</p>
+    alt="{{&amp;lt; math &amp;gt;}} $\sqrt{x}$ {{&amp;lt; /math &amp;gt;}}の両対数軸プロット．"><figcaption>
+      <p>{{&lt; math &gt;}} $\sqrt{x}$ {{&lt; /math &gt;}}の両対数軸プロット．</p>
     </figcaption>
 </figure>
 

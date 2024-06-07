@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -320,140 +320,6 @@
 
 
 
-
-  
-  
-  <link type="text/css" rel="stylesheet" href="/mynote/dist/lib/katex/katex.min.505d5f829022bb7b4f24dfee0aa1141cd7bba67afe411d1240335f820960b5c3.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr&#43;QR0SQDNfgglgtcM=" />
-  
-  
-  <script defer src="/mynote/dist/lib/katex/katex.min.dc84b296ec3e884de093158f760fd9d45b6c7abe58b5381557f4e138f46a58ae.js" integrity="sha256-3ISyluw&#43;iE3gkxWPdg/Z1Ftser5YtTgVV/ThOPRqWK4="></script>
-  
-  
-  
-  
-  <script defer src="/mynote/js/katex-renderer.6579ec9683211cfb952064aedf3a3baea5eeb17a061775b32b70917474637c80.js" integrity="sha256-ZXnsloMhHPuVIGSu3zo7rqXusXoGF3WzK3CRdHRjfIA="></script>
-  
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
 
 
 
@@ -1028,12 +894,6 @@
                 class="hb-docs-link"
               >速度構造(stan)ファイル</a>
             </li>
-          <li>
-              <a
-                href="#%e9%9c%87%e6%ba%90%e7%b5%90%e6%9e%9cfinal%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab"
-                class="hb-docs-link"
-              >震源結果(final)ファイル</a>
-            </li>
           </ul>
   
               
@@ -1419,9 +1279,6 @@
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%80%9f%e5%ba%a6%e6%a7%8b%e9%80%a0stan%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab">速度構造(stan)ファイル</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e9%9c%87%e6%ba%90%e7%b5%90%e6%9e%9cfinal%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab">震源結果(final)ファイル</a>
       </li></ul>
 
 
@@ -1499,45 +1356,6 @@ P, Sの速度を個別に指定することはできず，P波速度(Vp [km/s])�
 <span class="pr-3 pt-1 text-primary-400">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
-  <span class="dark:text-neutral-300"><p>震源決定時の仕様:</p>
-<ul>
-<li>S波速度Vsは, Vp/Vs=1.73として扱われる．</li>
-<li>標高0kmより高い部分のVpは，0kmにおけるVpとする．</li>
-<li>各層の上端のVpを与え，それらを線形で結んだ速度構造として扱う．</li>
-<li>「層の数」の上限は20(層の厚さは21個まで, Vpの数は22個まで)．</li>
-<li>初期震源の時刻の不確かさは入力が必要だが，使われない．</li>
-<li>直接hypomhを使わずにwinで震源決定するときは，初期震源の緯度と経度は使われない（深さは使われるようだ）．</li>
-</ul></span>
-</div>
-<p>ファイルの構成は以下の通り：</p>
-<ul>
-<li>1行目: 初期震源の位置<br>
-緯度，経度，深さ[km]を各10文字区切りで．</li>
-<li>2行目: 層の数と名前<br>
-層の数は5文字の整数．2文字のスペースをあけて，3文字の構造名を記す．</li>
-<li>3行目: 層上端のVp<br>
-各10文字区切り．7つごとに改行する．</li>
-<li>4行目: 各層の厚さ[km]<br>
-各10文字区切り．7つごとに改行する．</li>
-</ul>
-<p><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/win/fig/stan.png"
-    alt="stanファイルの書式．"><figcaption>
-      <p>stanファイルの書式．</p>
-    </figcaption>
-</figure>
-
-ソースコードでは2行目の名前の後に続けて，
-書式「F10.3」の値を二つ読み取っているが，
-マニュアルに未記載で何なのかわからない．
-サンプルファイルには１つ目に「1」とあるが，2つ目は空白．
-要確認．</p>
-<!-- =================================== -->
-<h2 id="震源結果finalファイル">震源結果(final)ファイル</h2>
-<!-- =================================== -->
-<div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
-<span class="pr-3 pt-1 text-primary-400">
-  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
-</span>
   <span class="dark:text-neutral-300"><p>参考：</p>
 <ul>
 <li><a href="https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html" target="_blank" rel="noopener">https://wwweic.eri.u-tokyo.ac.jp/WIN/man.ja/pickfile.html</a></li>
@@ -1589,13 +1407,14 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 <!--    \caption{WINフォーマット1秒ブロックの構成} -->
 <!--    \centering -->
 <!--      \begin{tabular}{lllllll} -->
-<!--      \toprule             % --- booktabs: 上の罫線 --- -->
+<!--      \toprule
+<!--  --- booktabs: 上の罫線 --- --> -->
 <!--      BBBB& -->
 <!--      bbbbbbbb& -->
 <!--      BB& -->
 <!--      b&bB& -->
 <!--      BBBB& -->
-<!--      ...   -->
+<!--      ...\\ -->
 <!--      \midrule -->
 <!--      ファイルサイズ& -->
 <!--      yymmddHHMMDD& -->
@@ -1603,33 +1422,36 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 <!--      サンプルサイズ& -->
 <!--      サンプリングレート& -->
 <!--      1サンプル目& -->
-<!--      ...   -->
-<!--      \bottomrule          % --- booktabs: 底の罫線 --- -->
+<!--      ...\\ -->
+<!--      \bottomrule
+<!--  --- booktabs: 底の罫線 --- --> -->
 <!--      \end{tabular} -->
 <!--  \end{table} -->
 <!--  \begin{table}[H] -->
 <!--    \caption{WINフォーマット1秒ブロックの構成} -->
 <!--    \centering -->
 <!--      \begin{tabular}{lcrrrrrrrc} -->
-<!--      \toprule             % --- booktabs: 上の罫線 --- -->
+<!--      \toprule
+<!--  --- booktabs: 上の罫線 --- --> -->
 <!--      ヘッダー &  -->
 <!--      秒ヘッダー &  -->
 <!--      \multicolumn{4}{l}{1チャネル}& -->
 <!--      2チャネル& -->
-<!--      ...   -->
+<!--      ...\\ -->
 <!--      \cmidrule(lr){3-6} -->
 <!--      & -->
 <!--      & -->
 <!--      チャネル番号 & サンプルサイズ & サンプリングレート (Hz) & 振幅データ & -->
 <!--      & -->
-<!--      ...   -->
+<!--      ...\\ -->
 <!--      \midrule -->
 <!--      4& -->
 <!--      4& -->
 <!--      2 & 0.5 & 1.5 & 可変& -->
 <!--      & -->
-<!--      ...   -->
-<!--      \bottomrule          % --- booktabs: 底の罫線 --- -->
+<!--      ...\\ -->
+<!--      \bottomrule
+<!--  --- booktabs: 底の罫線 --- --> -->
 <!--      \end{tabular} -->
 <!--  \end{table} -->
 <!--  \begin{table}[H] -->
@@ -1637,24 +1459,23 @@ F-P時間は最大振幅が読み取られておらず，かつイベント継�
 <!--    -->
 <!--   \centering -->
 <!--    \begin{tabular}{lcrrrrrrrc} -->
-<!--     \toprule             % --- booktabs: 上の罫線 --- -->
-<!--     物理量 & 単位 & \multicolumn{7}{l}{SI単位系の基本単位} & 他の単位    -->
-<!--     \cmidrule(lr){3-9}   % --- booktabs: 3 から 9 列の罫線 --- -->
-<!--         & 記号 & m & kg & s & A & K & mol & cd    -->
-<!--     \midrule             % --- booktabs: 中間の罫線 --- -->
-<!--     力 & N & 1 & 1 & -2 & & & & &    -->
-<!--     エネルギー & J & 2 & 1 & -2 & & & & & N $\cdot$ 
-m    -->
-<!--     仕事率 & W & 2 & 1 & -3 & & & & & J $\cdot$ 
-s $^{-1}$ 
-    -->
-<!--     \addlinespace[5mm]   % --- booktabs: 行間スペース --- -->
-<!--     電圧 & V & 2 & 1 & -3 & -1 & & & & W $\cdot$ 
-A $^{-1}$ 
-    -->
-<!--     磁束 & Wb & 2 & 1 & -2 & -1 & & & & V $\cdot$ 
-s    -->
-<!--     \bottomrule          % --- booktabs: 底の罫線 --- -->
+<!--     \toprule
+<!--  --- booktabs: 上の罫線 --- --> -->
+<!--     物理量 & 単位 & \multicolumn{7}{l}{SI単位系の基本単位} & 他の単位 \\ -->
+<!--     \cmidrule(lr){3-9}
+<!--  --- booktabs: 3 から 9 列の罫線 --- --> -->
+<!--         & 記号 & m & kg & s & A & K & mol & cd \\ -->
+<!--     \midrule
+<!--  --- booktabs: 中間の罫線 --- --> -->
+<!--     力 & N & 1 & 1 & -2 & & & & & \\ -->
+<!--     エネルギー & J & 2 & 1 & -2 & & & & & N{{\< math >}} $\cdot$ {{\< /math >}}m \\ -->
+<!--     仕事率 & W & 2 & 1 & -3 & & & & & J{{\< math >}} $\cdot$ {{\< /math >}}s{{\< math >}} $^{-1}$ {{\< /math >}} \\ -->
+<!--     \addlinespace[5mm]
+<!--  --- booktabs: 行間スペース --- --> -->
+<!--     電圧 & V & 2 & 1 & -3 & -1 & & & & W{{\< math >}} $\cdot$ {{\< /math >}}A{{\< math >}} $^{-1}$ {{\< /math >}} \\ -->
+<!--     磁束 & Wb & 2 & 1 & -2 & -1 & & & & V{{\< math >}} $\cdot$ {{\< /math >}}s \\ -->
+<!--     \bottomrule
+<!--  --- booktabs: 底の罫線 --- --> -->
 <!--    \end{tabular} -->
 <!--  \end{table} -->
 

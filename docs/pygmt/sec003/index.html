@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1458,11 +1458,10 @@ latex is not installed or not in your executable path - cannot process LaTeX to 
 <!--  要調査． -->
 <h3 id="ギリシャ文字">ギリシャ文字</h3>
 <p>数式に使われるギリシャ文字は，フォントの種類を指定することで利用できる．</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">@</span>
-</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="mi">12</span><span class="o">%&lt;</span><span class="n">text</span><span class="o">&gt;@%%</span> <span class="o">--&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">@%</span><span class="mi">12</span><span class="o">%&lt;</span><span class="n">text</span><span class="o">&gt;@%%</span>
 </span></span><span class="line"><span class="cl"><span class="n">または</span>
 </span></span><span class="line"><span class="cl"><span class="o">@~&lt;</span><span class="n">text</span><span class="o">&gt;@~</span>
-</span></span></code></pre></div><p>文字番号12がギリシャ文字のフォントであるため，これを用いるとギリシャ文字を入力できる．ギリシャ文字は対応するアルファベットで指定する．例えば「$\tau」$なら「t」と入力する．</p>
+</span></span></code></pre></div><p>文字番号12がギリシャ文字のフォントであるため，これを用いるとギリシャ文字を入力できる．ギリシャ文字は対応するアルファベットで指定する．例えば「{{&lt; math &gt;}} $\tau」$ {{&lt; /math &gt;}}なら「t」と入力する．</p>
 <h3 id="度">「度（°）」</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">@.</span>
 </span></span></code></pre></div><p>普通に「°」と入力しようとしても文字化けしてうまくいかない．しかし「@.」と入力すると「°」を入力することができる．ラベルでも軸でもどこでも使える．</p>
@@ -1471,9 +1470,8 @@ latex is not installed or not in your executable path - cannot process LaTeX to 
 <!--  詳しくは参考サイトの20章． -->
 <p>数学記号の入力もこれでとりあえずは可能．文字によってはもっと楽な方法もあるだろうが．</p>
 <!--  出典）[https://docs.generic-mapping-tools.org/6.4/cookbook/octal-codes.html](https://docs.generic-mapping-tools.org/6.4/cookbook/octal-codes.html) -->
-<p>Symbolは@~で挟む．ZapfDingbatsは@\</p>
-<!-- 34\%<code>@\%\%で入力．ただし，pythonではバックスラッシュが特殊文字扱いなので，連続で入力してバックスラッシュを認識させるか，文字列の最初に「r」を付け加えて特殊文字を無効にする必要がある： -->
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;@~  &lt;code&gt;@~&#34;</span>
+<p>Symbolは@~で挟む．ZapfDingbatsは@%34%&lt;code&gt;@%%で入力．ただし，pythonではバックスラッシュが特殊文字扱いなので，連続で入力してバックスラッシュを認識させるか，文字列の最初に「r」を付け加えて特殊文字を無効にする必要がある：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;@~</span><span class="se">\\</span><span class="s2">&lt;code&gt;@~&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="n">または</span>
 </span></span><span class="line"><span class="cl"><span class="sa">r</span><span class="s2">&#34;@~\&lt;code&gt;@~&#34;</span>
 </span></span></code></pre></div><figure><img src="https://raw.githubusercontent.com/is-enaga/mynote/main/pygmt/fig/octalcode.png"
@@ -1485,7 +1483,7 @@ latex is not installed or not in your executable path - cannot process LaTeX to 
 <!--  ============================================================================ -->
 <h2 id="色の指定">色の指定</h2>
 <p>典型的な色は&rsquo;red&rsquo;のように文字列で指定できる．
-また，&rsquo;#<rrggbb>&lsquo;の形でRGBの16進数表記で自由に色を指定可能．</p>
+また，&rsquo;#&lt;rrggbb&gt;&lsquo;の形でRGBの16進数表記で自由に色を指定可能．</p>
 <h3 id="透明度">透明度</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># plot等の引数penやfillでのカラー指定において</span>
 </span></span><span class="line"><span class="cl"><span class="s1">&#39;&lt;color&gt;@&lt;透明度0-100&gt;&#39;</span> <span class="c1"># 0:透明，100:不透明</span>

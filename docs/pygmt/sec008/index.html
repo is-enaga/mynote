@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -1338,7 +1338,7 @@
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
 </span></span></code></pre></div><p>　dataに（x,y,z）の値を入れたnumpyのndarrayを与えると失敗した
 他のプロセスがパッケージを使ってるというエラーが出たり，カーネルが再起動したり．明確な原因はわからなかった．
-そこでdataにはndarrayをnp.savetxt(<outfilename>, <ndarary>, delimiter=’/t’)でtxtに出力したファイルを与えるとうまく動いた．
+そこでdataにはndarrayをnp.savetxt(&lt;outfilename&gt;, &lt;ndarary&gt;, delimiter=’/t’)でtxtに出力したファイルを与えるとうまく動いた．
 しかしデータが大きいとsaveやprojectでいちいち結構な時間がかかる．
 outfileを指定しなければ変数にpandasのdataframeを格納できる．
 outfileを指定するとファイルが出力される代わりに何も返ってこない．</p>

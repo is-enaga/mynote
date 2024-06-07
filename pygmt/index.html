@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: June 2, 2024 --><html lang="ja" dir="ltr"
+<!-- Last Published: June 7, 2024 --><html lang="ja" dir="ltr"
       data-wc-theme-default="light">
   
 <head>
@@ -613,6 +613,12 @@
                 href="#%e5%8f%82%e8%80%83%e3%83%aa%e3%83%b3%e3%82%af"
                 class="hb-docs-link"
               >参考リンク</a>
+            </li>
+          <li>
+              <a
+                href="#next"
+                class="hb-docs-link"
+              >Next</a>
             </li>
           </ul>
   
@@ -1284,6 +1290,9 @@
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#%e4%bb%96%e3%81%ae%e6%97%a5%e6%9c%ac%e8%aa%9e%e8%a7%a3%e8%aa%ac%e3%82%b5%e3%82%a4%e3%83%88">他の日本語解説サイト</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#next">Next</a>
       </li></ul>
 
 
@@ -1314,12 +1323,17 @@
 
       <div class="content text-base">
         <h1>PyGMTの使い方</h1>
-        <p>PCの場合は左のサイドメニューから，
-その他スマートフォンなどの場合は右上のメニューから章を選んでください．</p>
+        <div class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900">
+<span class="pr-3 pt-1 text-primary-400">
+  <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
+</span>
+  <span class="dark:text-neutral-300">PCの場合は左のサイドメニューから，
+その他スマートフォンなどの場合は右上のメニューから章を選んでください．</span>
+</div>
 <p>PyGMTの使い方をまとめた個人的ノートのウェブ版です． 描画要素ごとに広くまとめています．
 session_callの使用やスプライン曲線の描画など，
-あまり解説が見られないものについても触れています．<br>
-個人用ということもあり説明の少ない箇所もあるかと思います．基本を踏まえた初級者から中級者向きでしょう．</p>
+あまり解説が見られないものについても触れています．</p>
+<!-- 個人用ということもあり説明の少ない箇所もあるかと思います．基本を踏まえた初級者から中級者向きでしょう． -->
 <p>PDFファイルを自動でWeb用に変換しているため， 相互参照が無効になっている等の制約があります． ご了承ください．</p>
 <!-- 元のPDF版は以下からダウンロード可能です．
 
@@ -1341,6 +1355,8 @@ session_callの使用やスプライン曲線の描画など，
 <p>PyGMTはGMT(Generic Mapping Tools)をPythonから使用できるライブラリです．<br>
 元のGMTは地図の描画が得意なフリーソフトウェアで，様々な投影図法での地図のプロットや海岸線や球面を考慮した描画が容易です．<br>
 描画だけでなく，地理的条件によるデータの抽出や生成などの処理も可能です．</p>
+<p>作成できる図の雰囲気をつかむためには，公式マニュアルの例を見ると良いでしょう:<br>
+<a href="https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.html" target="_blank" rel="noopener">https://www.pygmt.org/v0.5.0/api/generated/pygmt.Figure.html</a></p>
 <!-- ## Next
 
 
@@ -1409,6 +1425,22 @@ session_callの使用やスプライン曲線の描画など，
 
   <span class="hb-card-title pt-4 px-4">
       <svg style="height: 1em; width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128"><path fill="#767677" d="M109.766 7.281a7.691 7.691 0 0 1-1.09 4.282a7.583 7.583 0 0 1-3.262 2.949a7.49 7.49 0 0 1-4.34.62a7.525 7.525 0 0 1-3.953-1.913A7.642 7.642 0 0 1 95.137 5a7.606 7.606 0 0 1 2.629-3.531a7.509 7.509 0 0 1 4.136-1.461a7.51 7.51 0 0 1 5.422 1.996a7.627 7.627 0 0 1 2.438 5.273zm0 0"/><path fill="#f37726" d="M65.758 96.79c-20.098 0-37.649-7.364-46.766-18.267a49.95 49.95 0 0 0 18.102 24.254a49.251 49.251 0 0 0 28.676 9.215a49.279 49.279 0 0 0 28.675-9.215a49.917 49.917 0 0 0 18.094-24.254C103.406 89.426 85.855 96.79 65.758 96.79m-.008-70.907c20.098 0 37.652 7.367 46.766 18.265a49.95 49.95 0 0 0-18.102-24.253a49.27 49.27 0 0 0-28.672-9.22a49.27 49.27 0 0 0-28.672 9.22a49.909 49.909 0 0 0-18.1 24.253c9.132-10.878 26.682-18.265 46.78-18.265m0 0"/><path fill="#989798" d="M38.164 117.984a9.671 9.671 0 0 1-1.371 5.399a9.5 9.5 0 0 1-9.59 4.504a9.405 9.405 0 0 1-4.98-2.418a9.671 9.671 0 0 1-2.809-4.797a9.73 9.73 0 0 1 .313-5.567a9.624 9.624 0 0 1 3.328-4.453a9.466 9.466 0 0 1 12.043.688a9.63 9.63 0 0 1 3.066 6.648zm0 0"/><path fill="#6f7070" d="M21.285 23.418a5.53 5.53 0 0 1-3.14-.816a5.627 5.627 0 0 1-2.618-5.672a5.612 5.612 0 0 1 1.407-2.95a5.593 5.593 0 0 1 2.789-1.664a5.46 5.46 0 0 1 3.238.184a5.539 5.539 0 0 1 2.586 1.969a5.66 5.66 0 0 1-.399 7.129a5.557 5.557 0 0 1-3.867 1.82zm0 0"/></svg>PyGMT-HOWTO</span><div class="hb-card-subtitle">Takuto Maeda</div></a>
+
+<h2 id="next">Next</h2>
+
+
+
+
+<div class="hb-cards mt-4 grid gap-4 not-prose" style="--hb-cols: 1;">
+  
+  <a
+    class="hb-card group"href="../docs/pygmt/sec001" >
+  
+    <span class="hb-card-title p-4">
+        <svg style="height: 1em; width: 1em;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0"/></svg>第一章</span></a>
+
+
+</div>
 
 
       </div>
